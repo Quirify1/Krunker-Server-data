@@ -1,4 +1,9 @@
-window.JfCzGzvGIQB8rrJX = { isProxy: true };
+{
+  let st = document.createElement("style");
+  st.innerHTML = "#clientExit {display: none !important;}\n.menuItem {display: flex !important;}\n#menuItemContainer { top: 70px !important; }";
+  document.body.append(st);
+}
+window.JfCzGzvGIQB8rrJX = setTimeout;
 (function () {
   "use strict";
   var iïìîíïí = typeof document != "undefined" ? document.currentScript : null;
