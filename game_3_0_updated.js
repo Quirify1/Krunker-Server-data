@@ -1,4 +1,3 @@
-window.JfCzGzvGIQB8rrJX = { isProxy: true };
 (function () {
   "use strict";
   var iííîííí = typeof document != "undefined" ? document.currentScript : null;
