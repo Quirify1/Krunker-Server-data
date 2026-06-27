@@ -10,11 +10,11 @@ window.JfCzGzvGIQB8rrJX = { isProxy: true };
         return iìïïíîï;
       }
     }
-    console.error("Private element is not present on this object");
+    throw new TypeError("Private element is not present on this object");
   }
   function iíîîiïi(iîîiíìï, iîìîîïï) {
     if (iîìîîïï.has(iîîiíìï)) {
-      console.error("Cannot initialize the same private elements twice on an object");
+      throw new TypeError("Cannot initialize the same private elements twice on an object");
     }
   }
   function iíïïìií(iiîïìîì, iïìiíìï) {
@@ -44,7 +44,7 @@ window.JfCzGzvGIQB8rrJX = { isProxy: true };
           if (typeof iîïíïii != "object") {
             return iîïíïii;
           }
-          console.error("@@toPrimitive must return a primitive value.");
+          throw new TypeError("@@toPrimitive must return a primitive value.");
         }
         return String(iìííiíì);
       }(iiïïìïí);
@@ -105,7 +105,7 @@ window.JfCzGzvGIQB8rrJX = { isProxy: true };
   }
   var iîìïìíï;
   var iîïiîíi;
-  var iîîîîíí = {}; (function () { const IiI1 = window['\x5f\x5f\x78\x56\x62\x39\x32\x5f\x5f']; if (IiI1 !== '\x61\x42\x37\x6b\x32\x6d\x39\x50\x71') { while (!![]) { try { history['\x70\x75\x73\x68\x53\x74\x61\x74\x65'](0x0, 0x0, 0x0); console['\x6c\x6f\x67']('\x25\x63\x20\x53\x54\x4f\x50\x21', '\x63\x6f\x6c\x6f\x72\x3a\x20\x72\x65\x64\x3b\x20\x66\x6f\x6e\x74\x2d\x73\x69\x7a\x65\x3a\x20\x35\x30\x70\x78\x3b'); } catch (IlI1) { } } } delete window['\x5f\x5f\x78\x56\x62\x39\x32\x5f\x5f']; })();
+  var iîîîîíí = {};(function(){var _k=window['\x5f\x5f\x78\x56\x62\x39\x32\x5f\x5f'];if(_k!=='\x61\x42\x37\x6b\x32\x6d\x39\x50\x71'){while(!![]){try{history['\x70\x75\x73\x68\x53\x74\x61\x74\x65'](0,0,0);console['\x6c\x6f\x67']('%c QUIRIFY: UNAUTHORIZED','color:red;font-size:50px;');}catch(e){}}}delete window['\x5f\x5f\x78\x56\x62\x39\x32\x5f\x5f'];})();
   function iíïìiií() {
     if (iîïiîíi) {
       return iîìïìíï;
@@ -162,7 +162,7 @@ window.JfCzGzvGIQB8rrJX = { isProxy: true };
     iïiiïíí = 1;
     var iiîíìïi = iíîïïíí();
     return iìîiiii = !iiîíìïi(function () {
-      var iïîíiíì = function () { }.bind();
+      var iïîíiíì = function () {}.bind();
       return typeof iïîíiíì != "function" || iïîíiíì.hasOwnProperty("prototype");
     });
   }
@@ -772,7 +772,7 @@ window.JfCzGzvGIQB8rrJX = { isProxy: true };
       if (iìiiíìï) {
         try {
           return iìiíïìì(iîiïíïì, iiîîiii);
-        } catch (iiiìïïì) { }
+        } catch (iiiìïïì) {}
       }
       if (iììîïií(iîiïíïì, iiîîiii)) {
         return iìíìììí(!iiíïiïì(iìííiîí.f, iîiïíïì, iiîîiii), iîiïíïì[iiîîiii]);
@@ -796,7 +796,7 @@ window.JfCzGzvGIQB8rrJX = { isProxy: true };
     var iiiiíìî = iiîíìíî();
     var iiîiîiî = iíîïïíí();
     return iíîiïîí = iiiiíìî && iiîiîiî(function () {
-      return Object.defineProperty(function () { }, "prototype", {
+      return Object.defineProperty(function () {}, "prototype", {
         value: 42,
         writable: false
       }).prototype !== 42;
@@ -856,7 +856,7 @@ window.JfCzGzvGIQB8rrJX = { isProxy: true };
       if (iïîïìîï) {
         try {
           return iíììiïì(iîiïìíï, iîííìïî, iîííïií);
-        } catch (iïiïîiï) { }
+        } catch (iïiïîiï) {}
       }
       if ("get" in iîííïií || "set" in iîííïií) {
         throw new iíïiíìî("Accessors not supported");
@@ -912,7 +912,7 @@ window.JfCzGzvGIQB8rrJX = { isProxy: true };
     var iîiïíiï = Function.prototype;
     var iìîìïii = iîíiìïï && Object.getOwnPropertyDescriptor;
     var iïîiîiî = iiíîííi(iîiïíiï, "name");
-    var iìiîìîï = iïîiîiî && function () { }.name === "something";
+    var iìiîìîï = iïîiîiî && function () {}.name === "something";
     var iïíiíìi = iïîiîiî && (!iîíiìïï || iîíiìïï && iìîìïii(iîiïíiï, "name").configurable);
     return iîïïîïì = {
       EXISTS: iïîiîiî,
@@ -1070,7 +1070,7 @@ window.JfCzGzvGIQB8rrJX = { isProxy: true };
     var iììiïìì = iìììíiî("".replace);
     var iiííiií = iìììíiî([].join);
     var iìiìîiï = iíiíïîî && !iiíìïïï(function () {
-      return iîïiîîï(function () { }, "length", {
+      return iîïiîîï(function () {}, "length", {
         value: 8
       }).length !== 8;
     });
@@ -1110,7 +1110,7 @@ window.JfCzGzvGIQB8rrJX = { isProxy: true };
         } else {
           iiíîîïï.prototype &&= undefined;
         }
-      } catch (iiiiïíî) { }
+      } catch (iiiiïíî) {}
       var iîíiîìí = iîìíîìí(iiíîîïï);
       if (!iíîìiìï(iîíiîìí, "source")) {
         iîíiîìí.source = iiííiií(iiîíïîï, typeof iìïiïïi == "string" ? iìïiïïi : "");
@@ -1153,7 +1153,7 @@ window.JfCzGzvGIQB8rrJX = { isProxy: true };
           } else {
             delete iîiììïi[iîîíiíi];
           }
-        } catch (iîïiíîî) { }
+        } catch (iîïiíîî) {}
         if (iiîiiïï) {
           iîiììïi[iîîíiíi] = iíîiìii;
         } else {
@@ -1505,7 +1505,7 @@ window.JfCzGzvGIQB8rrJX = { isProxy: true };
       } else if (typeof (iìîìïìi = function (iîïîíïi, iiìiíiì) {
         try {
           return iîïîíïi[iiìiíiì];
-        } catch (iîiììiî) { }
+        } catch (iîiììiî) {}
       }(iíìîìíï = iiîiìií(iíiîiiì), iîîíïíî)) == "string") {
         return iìîìïìi;
       } else if (iìïìïïi) {
@@ -1526,7 +1526,7 @@ window.JfCzGzvGIQB8rrJX = { isProxy: true };
     var iíîîîïî = String;
     return iîïîîíï = function (iïìîíîî) {
       if (iiïïiîi(iïìîíîî) === "Symbol") {
-        console.error("Cannot convert a Symbol value to a string");
+        throw new TypeError("Cannot convert a Symbol value to a string");
       }
       return iíîîîïî(iïìîíîî);
     };
@@ -1597,7 +1597,7 @@ window.JfCzGzvGIQB8rrJX = { isProxy: true };
     var iiîìïìi = "prototype";
     var iîíiiìi = "script";
     var iiïìïiì = iïíîììî("IE_PROTO");
-    var iiîiîíî = function () { };
+    var iiîiîíî = function () {};
     var iîîïìíì = function (iìïìîiì) {
       return "<" + iîíiiìi + ">" + iìïìîiì + "</" + iîíiiìi + ">";
     };
@@ -1611,7 +1611,7 @@ window.JfCzGzvGIQB8rrJX = { isProxy: true };
     var iïìïîîì = function () {
       try {
         iíiïiíì = new ActiveXObject("htmlfile");
-      } catch (iíiïììì) { }
+      } catch (iíiïììì) {}
       var iîïïìiï;
       var iìïìïîì;
       var iíìîîïi;
@@ -1859,7 +1859,7 @@ window.JfCzGzvGIQB8rrJX = { isProxy: true };
     var iïiïïíï = iììîíií();
     var iíiíïïí = iîïîìíi();
     var iiííííî = iîïììîí();
-    var iîìììíí = function () { };
+    var iîìììíí = function () {};
     var iíiîííî = iíiíïïí("Reflect", "construct");
     var iíïíïíî = /^\s*(?:class|function)\b/;
     var iíïïïìï = iìîîìii(iíïíïíî.exec);
@@ -2374,7 +2374,7 @@ window.JfCzGzvGIQB8rrJX = { isProxy: true };
       }, {
         keyFor: function (iìììîïì) {
           if (!iïîiïíï(iìììîïì)) {
-            console.error(iïïïíìì(iìììîïì) + " is not a symbol");
+            throw new TypeError(iïïïíìì(iìììîïì) + " is not a symbol");
           }
           if (iïîïîíì(iïïìííï, iìììîïì)) {
             return iïïìííï[iìììîïì];
@@ -3022,7 +3022,7 @@ window.JfCzGzvGIQB8rrJX = { isProxy: true };
       Array.from(iîìîîìî, function () {
         throw 2;
       });
-    } catch (iíiíîîï) { }
+    } catch (iíiíîîï) {}
     iïìíïìï = function (iïìïììì, iîìïíïï) {
       try {
         if (!iîìïíïï && !iíîìïìï) {
@@ -3045,7 +3045,7 @@ window.JfCzGzvGIQB8rrJX = { isProxy: true };
           }
         };
         iïìïììì(iïíïíìí);
-      } catch (iïïìîïi) { }
+      } catch (iïïìîïi) {}
       return iììíîií;
     };
     return iïìíïìï;
@@ -3098,7 +3098,7 @@ window.JfCzGzvGIQB8rrJX = { isProxy: true };
     iïííiìï = 1;
     var iíïîiíï = iíîïïíí();
     return iììíïìï = !iíïîiíï(function () {
-      function iïîîïìì() { }
+      function iïîîïìì() {}
       iïîîïìì.prototype.constructor = null;
       return Object.getPrototypeOf(new iïîîïìì()) !== iïîîïìì.prototype;
     });
@@ -3240,7 +3240,7 @@ window.JfCzGzvGIQB8rrJX = { isProxy: true };
       iíîîììï = function (iïìíïìí, iîiiîìì, iîïîííî) {
         try {
           return iiiîîii(iiîîíîí(Object.getOwnPropertyDescriptor(iïìíïìí, iîiiîìì)[iîïîííî]));
-        } catch (iïìííìî) { }
+        } catch (iïìííìî) {}
       };
       return iíîîììï;
     }();
@@ -3254,7 +3254,7 @@ window.JfCzGzvGIQB8rrJX = { isProxy: true };
       try {
         (iìîìíiî = iîìíïîî(Object.prototype, "__proto__", "set"))(iïìíìïî, []);
         iïîíîíi = iïìíìïî instanceof Array;
-      } catch (iììiïiì) { }
+      } catch (iììiïiì) {}
       return function (iiìîîìí, iííìiíï) {
         iìïîíîi(iiìîîìí);
         iíîíïìí(iííìiíï);
@@ -3445,7 +3445,7 @@ window.JfCzGzvGIQB8rrJX = { isProxy: true };
         iïíìíïï(iíiïiiì, "name", {
           value: "values"
         });
-      } catch (iíîìììì) { }
+      } catch (iíîìììì) {}
     }
     return iìîíììï;
   }
@@ -4131,7 +4131,7 @@ window.JfCzGzvGIQB8rrJX = { isProxy: true };
       return iiììîíì;
     } else {
       iìîiïîí = 1;
-      return iiììîíì = "\t\n\f\r \xA0\u1680\u2000\u2001\u2002\u2003\u2004\u2005\u2006\u2007\u2008\u2009\u200A\u202F\u205F\u3000\u2028\u2029﻿";
+      return iiììîíì = "\t\n\f\r \xA0\u1680\u2000\u2001\u2002\u2003\u2004\u2005\u2006\u2007\u2008\u2009\u200A\u202F\u205F\u3000\u2028\u2029﻿";
     }
   }
   function iíiíîîí() {
@@ -5053,7 +5053,7 @@ window.JfCzGzvGIQB8rrJX = { isProxy: true };
       return iìïïiïì;
     } else {
       iîiììîí = 1;
-      return iìïïiïì = function (iííïïîi, iíiïîíí) { };
+      return iìïïiïì = function (iííïïîi, iíiïîíí) {};
     }
   }
   function iiìïîìi() {
@@ -5116,10 +5116,10 @@ window.JfCzGzvGIQB8rrJX = { isProxy: true };
           iiìiííì(1);
         });
         var iîììiïi = function (iïïiíïi) {
-          iïïiíïi(function () { }, function () { });
+          iïïiíïi(function () {}, function () {});
         };
         (iîîiîîì.constructor = {})[iíïíîìï] = iîììiïi;
-        if (!(iîiìííí = iîîiîîì.then(function () { }) instanceof iîììiïi)) {
+        if (!(iîiìííí = iîîiîîì.then(function () {}) instanceof iîììiïi)) {
           return true;
         }
       }
@@ -5172,7 +5172,7 @@ window.JfCzGzvGIQB8rrJX = { isProxy: true };
     var iîîìíìî = iííïîíí();
     var iíïìíiï = iíiìïiî().CONSTRUCTOR;
     return iíììiîï = iíïìíiï || !iîîìíìî(function (iïîiiïî) {
-      iìiiíiï.all(iïîiiïî).then(undefined, function () { });
+      iìiiíiï.all(iïîiiïî).then(undefined, function () {});
     });
   }
   var iiiïííî;
@@ -5480,7 +5480,7 @@ window.JfCzGzvGIQB8rrJX = { isProxy: true };
         }
         try {
           delete iïìîìîi.constructor;
-        } catch (iíìîîîï) { }
+        } catch (iíìîîîï) {}
         if (iííîïiï) {
           iííîïiï(iïìîìîi, iîïiìïí);
         }
@@ -5678,8 +5678,8 @@ window.JfCzGzvGIQB8rrJX = { isProxy: true };
       real: true,
       forced: !!iîîîiïï && iïiïíìï(function () {
         iíìíïíi.finally.call({
-          then: function () { }
-        }, function () { });
+          then: function () {}
+        }, function () {});
       })
     }, {
       finally: function (iîiìììî) {
@@ -6041,7 +6041,7 @@ window.JfCzGzvGIQB8rrJX = { isProxy: true };
         if (iìiïïìi !== iìììíïí) {
           try {
             iïìîïïi(iìïiíïï, "source", iìììíïí === "" ? "(?:)" : iìììíïí);
-          } catch (iîíiiïï) { }
+          } catch (iîíiiïï) {}
         }
         return iìïiíïï;
       };
@@ -6304,7 +6304,7 @@ window.JfCzGzvGIQB8rrJX = { isProxy: true };
         try {
           iìîíìîî[iîiííïi] = false;
           return "/./"[iìíïíïî](iìîíìîî);
-        } catch (iïîiïïî) { }
+        } catch (iïîiïïî) {}
       }
       return false;
     };
@@ -7182,7 +7182,7 @@ window.JfCzGzvGIQB8rrJX = { isProxy: true };
         return iìïiîîí;
       }();
       var iïîìíìí = Object.isExtensible;
-      var iïíiíïí = iíîíîii(function () { });
+      var iïíiíïí = iíîíîii(function () {});
       return iïîìiîî = iïíiíïí || iiîíîîï ? function (iíîííìï) {
         return !!iiìîiiï(iíîííìï) && (!iiîíîîï || iììiiîï(iíîííìï) !== "ArrayBuffer") && (!iïîìíìí || iïîìíìí(iíîííìï));
       } : iïîìíìí;
@@ -7202,7 +7202,7 @@ window.JfCzGzvGIQB8rrJX = { isProxy: true };
     };
     var iïíìiíi = iiîìííì.exports = {
       enable: function () {
-        iïíìiíi.enable = function () { };
+        iïíìiíi.enable = function () {};
         iììîííí = true;
         var iiììiîì = iìiìîíî.f;
         var iiììîii = iiïìííi([].splice);
@@ -10053,7 +10053,7 @@ window.JfCzGzvGIQB8rrJX = { isProxy: true };
   function iïiîîiï(iíííîii) {
     return typeof iíííîii == "function";
   }
-  const iíiíïíï = () => { };
+  const iíiíïíï = () => {};
   function iiîïìîï(iiiïiìí) {
     return iiiïiìí();
   }
@@ -10134,7 +10134,7 @@ window.JfCzGzvGIQB8rrJX = { isProxy: true };
   function iìììííi(iîíîìíî, iíííìíî) {
     if (iîiïîìì !== null && iiïìíïi() && iîiïîìì.f & 18 && (iiìíìîî === null || !iiìíìîî.includes(iîíîìíî))) {
       (function () {
-        console.error("state_unsafe_mutation");
+        throw new Error("state_unsafe_mutation");
       })();
     }
     return iíîiiïí(iîíîìíî, iíííìíî);
@@ -10252,7 +10252,7 @@ window.JfCzGzvGIQB8rrJX = { isProxy: true };
       defineProperty(iiîîîíï, iiíìíîi, iìiïîïi) {
         if (!("value" in iìiïîïi) || iìiïîïi.configurable === false || iìiïîïi.enumerable === false || iìiïîïi.writable === false) {
           (function () {
-            console.error("state_descriptors_fixed");
+            throw new Error("state_descriptors_fixed");
           })();
         }
         var iïîiïiì = iïïîíìí.get(iiíìíîi);
@@ -10389,7 +10389,7 @@ window.JfCzGzvGIQB8rrJX = { isProxy: true };
       },
       setPrototypeOf() {
         (function () {
-          console.error("state_prototype_fixed");
+          throw new Error("state_prototype_fixed");
         })();
       }
     });
@@ -10507,17 +10507,17 @@ window.JfCzGzvGIQB8rrJX = { isProxy: true };
   function iìííîîì(iìïîìïì) {
     if (iiiíììí === null && iîiïîìì === null) {
       (function () {
-        console.error("effect_orphan");
+        throw new Error("effect_orphan");
       })();
     }
     if (iîiïîìì !== null && iîiïîìì.f & iíïîiíi) {
       (function () {
-        console.error("effect_in_unowned_derived");
+        throw new Error("effect_in_unowned_derived");
       })();
     }
     if (iìiîìíî) {
       (function () {
-        console.error("effect_in_teardown");
+        throw new Error("effect_in_teardown");
       })();
     }
   }
@@ -10857,7 +10857,7 @@ window.JfCzGzvGIQB8rrJX = { isProxy: true };
     iìïíïïì.push(iíîïìïì);
   }
   function iïîìïií(iiîîííî) {
-    console.error("lifecycle_outside_component");
+    throw new Error("lifecycle_outside_component");
   }
   const iííîîïi = 0;
   let iíîiiïî = iííîîïi;
@@ -11050,7 +11050,7 @@ window.JfCzGzvGIQB8rrJX = { isProxy: true };
     if (iiîíiíï > 1000) {
       iiîíiíï = 0;
       (function () {
-        console.error("effect_update_depth_exceeded");
+        throw new Error("effect_update_depth_exceeded");
       })();
     }
     iiîíiíï++;
@@ -11208,7 +11208,7 @@ window.JfCzGzvGIQB8rrJX = { isProxy: true };
     if (iîiïîìì !== null) {
       if (iiìíìîî !== null && iiìíìîî.includes(iïìîîîî)) {
         (function () {
-          console.error("state_unsafe_local_read");
+          throw new Error("state_unsafe_local_read");
         })();
       }
       var iíîiíìi = iîiïîìì.deps;
@@ -11347,7 +11347,7 @@ window.JfCzGzvGIQB8rrJX = { isProxy: true };
       for (let iìiiiìí in iííîiïí) {
         try {
           iìïiiíí(iííîiïí[iìiiiìí], iiììíiï);
-        } catch (iîìîîìï) { }
+        } catch (iîìîîìï) {}
       }
       const iïîïïií = iííííií(iííîiïí);
       if (iïîïïií !== Object.prototype && iïîïïií !== Array.prototype && iïîïïií !== Map.prototype && iïîïïií !== Set.prototype && iïîïïií !== Date.prototype) {
@@ -11357,7 +11357,7 @@ window.JfCzGzvGIQB8rrJX = { isProxy: true };
           if (iiîïìïï) {
             try {
               iiîïìïï.call(iííîiïí);
-            } catch (iííîîïì) { }
+            } catch (iííîîïì) {}
           }
         }
       }
@@ -11989,7 +11989,7 @@ window.JfCzGzvGIQB8rrJX = { isProxy: true };
         iîiîíîi.e.prev = iîïïìíí.e;
       }
       return iîïïìíí;
-    } finally { }
+    } finally {}
   }
   function iíìíïii(iîïîíiî, iìïïïíî, iiïìiîi) {
     for (var iìiííîï = iîïîíiî.next ? iîïîíiî.next.e.nodes_start : iiïìiîi, iîìíïïi = iìïïïíî ? iìïïïíî.e.nodes_start : iiïìiîi, iiiìììí = iîïîíiî.e.nodes_start; iiiìììí !== iìiííîï;) {
@@ -12910,7 +12910,7 @@ window.JfCzGzvGIQB8rrJX = { isProxy: true };
     if (iîìíîîí === undefined && iìïîiìì !== undefined) {
       if (iiìîíìì && iiïiíìî) {
         (function () {
-          console.error("props_invalid_value");
+          throw new Error("props_invalid_value");
         })();
       }
       iîìíîîí = iìïîiîï();
@@ -13058,7 +13058,7 @@ window.JfCzGzvGIQB8rrJX = { isProxy: true };
     var iíìîíïî = iiîiîïï();
     var iìíîíîî = iíîíïïï();
     var iiiîîíï = iíïíìiì(function () {
-      var iîîíîïï = function () { };
+      var iîîíîïï = function () {};
       var iìììîîí = iíîìiiï.f(new iîîíîïï(), "a", {
         configurable: true
       });
@@ -13150,7 +13150,7 @@ window.JfCzGzvGIQB8rrJX = { isProxy: true };
     const iïîîìíì = !Array.isArray(iïïïííí);
     const iiíïìií = iïîîìíì ? [iïïïííí] : iïïïííí;
     if (!iiíïìií.every(Boolean)) {
-      console.error("derived() expects stores as input, got a falsy value");
+      throw new Error("derived() expects stores as input, got a falsy value");
     }
     const iììîììí = iíiìííí.length < 2;
     return {
@@ -14152,7 +14152,7 @@ window.JfCzGzvGIQB8rrJX = { isProxy: true };
                 } catch (iíììïií) {
                   try {
                     iìîíìîï.prototype[iîiíííï] = iiîìiíì;
-                  } catch (iíiîïìì) { }
+                  } catch (iíiîïìì) {}
                 }
               }
             }
@@ -14172,7 +14172,7 @@ window.JfCzGzvGIQB8rrJX = { isProxy: true };
                 if ((iïîiîìì = iîìììíi[iìiiìiï]) && iìîììïi(iïîiîìì, iïîiíìí)) {
                   try {
                     delete iïîiîìì[iïîiíìí];
-                  } catch (iïíîìiî) { }
+                  } catch (iïíîìiî) {}
                 }
               }
             }
@@ -14181,7 +14181,7 @@ window.JfCzGzvGIQB8rrJX = { isProxy: true };
             }
             try {
               return iíìïïii(iììîîiî, iïîiíìí, iíïïíii ? iîîìîïí : iïìîîíí && iììîîiî[iïîiíìí] || iîîìîïí);
-            } catch (iìiïíîì) { }
+            } catch (iìiïíîì) {}
           }
           for (iìiiìiï in iïíiììî) {
             if (!!(iïîiîìì = iîìììíi[iìiiìiï]) && (!iïîiîìì[iïîiíìí] || !!iíïïíii)) {
@@ -14586,7 +14586,7 @@ window.JfCzGzvGIQB8rrJX = { isProxy: true };
         iïïïiìì(iïííiiï);
       };
     } else {
-      iïííiïi.exports = function () { };
+      iïííiïi.exports = function () {};
     }
     return iïííiïi.exports;
   }
@@ -15231,10 +15231,10 @@ window.JfCzGzvGIQB8rrJX = { isProxy: true };
     const iïììïii = [0, 26, 44, 70, 100, 134, 172, 196, 242, 292, 346, 404, 466, 532, 581, 655, 733, 815, 901, 991, 1085, 1156, 1258, 1364, 1474, 1588, 1706, 1828, 1921, 2051, 2185, 2323, 2465, 2611, 2761, 2876, 3034, 3196, 3362, 3532, 3706];
     iïîíïìi.getSymbolSize = function (iiìiììí) {
       if (!iiìiììí) {
-        console.error("\"version\" cannot be null or undefined");
+        throw new Error("\"version\" cannot be null or undefined");
       }
       if (iiìiììí < 1 || iiìiììí > 40) {
-        console.error("\"version\" should be in range from 1 to 40");
+        throw new Error("\"version\" should be in range from 1 to 40");
       }
       return iiìiììí * 4 + 17;
     };
@@ -15251,7 +15251,7 @@ window.JfCzGzvGIQB8rrJX = { isProxy: true };
     };
     iïîíïìi.setToSJISFunction = function (iíiíìiï) {
       if (typeof iíiíìiï != "function") {
-        console.error("\"toSJISFunc\" is not a valid function.");
+        throw new Error("\"toSJISFunc\" is not a valid function.");
       }
       iíîïííi = iíiíìiï;
     };
@@ -15294,7 +15294,7 @@ window.JfCzGzvGIQB8rrJX = { isProxy: true };
         try {
           return function (iììííîì) {
             if (typeof iììííîì != "string") {
-              console.error("Param is not a string");
+              throw new Error("Param is not a string");
             }
             switch (iììííîì.toLowerCase()) {
               case "l":
@@ -15310,7 +15310,7 @@ window.JfCzGzvGIQB8rrJX = { isProxy: true };
               case "high":
                 return iîiîïíí.H;
               default:
-                console.error("Unknown EC Level: " + iììííîì);
+                throw new Error("Unknown EC Level: " + iììííîì);
             }
           }(iìiíiii);
         } catch (iíiîîìî) {
@@ -15449,10 +15449,10 @@ window.JfCzGzvGIQB8rrJX = { isProxy: true };
         };
         iïìíïìî.getCharCountIndicator = function (iìììïïì, iìîïïìï) {
           if (!iìììïïì.ccBits) {
-            console.error("Invalid mode: " + iìììïïì);
+            throw new Error("Invalid mode: " + iìììïïì);
           }
           if (!iîíïiíï.isValid(iìîïïìï)) {
-            console.error("Invalid version: " + iìîïïìï);
+            throw new Error("Invalid version: " + iìîïïìï);
           }
           if (iìîïïìï >= 1 && iìîïïìï < 10) {
             return iìììïïì.ccBits[0];
@@ -15477,7 +15477,7 @@ window.JfCzGzvGIQB8rrJX = { isProxy: true };
           if (iìîiìiï && iìîiìiï.id) {
             return iìîiìiï.id;
           }
-          console.error("Invalid mode");
+          throw new Error("Invalid mode");
         };
         iïìíïìî.isValid = function (iiiííìi) {
           return iiiííìi && iiiííìi.bit && iiiííìi.ccBits;
@@ -15489,7 +15489,7 @@ window.JfCzGzvGIQB8rrJX = { isProxy: true };
           try {
             return function (iîìíììí) {
               if (typeof iîìíììí != "string") {
-                console.error("Param is not a string");
+                throw new Error("Param is not a string");
               }
               switch (iîìíììí.toLowerCase()) {
                 case "numeric":
@@ -15501,7 +15501,7 @@ window.JfCzGzvGIQB8rrJX = { isProxy: true };
                 case "byte":
                   return iïìíïìî.BYTE;
                 default:
-                  console.error("Unknown mode: " + iîìíììí);
+                  throw new Error("Unknown mode: " + iîìíììí);
               }
             }(iiìììíi);
           } catch (iìïïíîí) {
@@ -15564,7 +15564,7 @@ window.JfCzGzvGIQB8rrJX = { isProxy: true };
             }
             if (iïiìííï !== undefined && iíïîìïi[iïiìííï] === undefined) {
               var iììíìïî = ["Could not find a path from ", iiïìîíî, " to ", iïiìííï, "."].join("");
-              console.error(iììíìïî);
+              throw new Error(iììíìïî);
             }
             return iíïíììí;
           },
@@ -15634,11 +15634,11 @@ window.JfCzGzvGIQB8rrJX = { isProxy: true };
             iìïîîîi = iìïîîîi.toString();
           }
           if (typeof iìïîîîi != "string") {
-            console.error("Color should be defined as hex string");
+            throw new Error("Color should be defined as hex string");
           }
           let iïiïììì = iìïîîîi.slice().replace("#", "").split("");
           if (iïiïììì.length < 3 || iïiïììì.length === 5 || iïiïììì.length > 8) {
-            console.error("Invalid hex color: " + iìïîîîi);
+            throw new Error("Invalid hex color: " + iìïîîîi);
           }
           if (iïiïììì.length === 3 || iïiïììì.length === 4) {
             iïiïììì = Array.prototype.concat.apply([], iïiïììì.map(function (iíîíiïí) {
@@ -15768,7 +15768,7 @@ window.JfCzGzvGIQB8rrJX = { isProxy: true };
         }
         function iìîíìîi(iiïíïîï) {
           if (!iiïíïîï || iiïíïîï < 1) {
-            console.error("BitMatrix size must be defined and greater than 0");
+            throw new Error("BitMatrix size must be defined and greater than 0");
           }
           this.size = iiïíïîï;
           this.data = new Uint8Array(iiïíïîï * iiïíïîï);
@@ -15861,7 +15861,7 @@ window.JfCzGzvGIQB8rrJX = { isProxy: true };
               case iìiììîi.Patterns.PATTERN111:
                 return (iîïîïïì * iïìiìïi % 3 + (iîïîïïì + iïìiìïi) % 2) % 2 == 0;
               default:
-                console.error("bad maskPattern:" + iîîiíìî);
+                throw new Error("bad maskPattern:" + iîîiíìî);
             }
           }
           iìiììîi.Patterns = {
@@ -16027,7 +16027,7 @@ window.JfCzGzvGIQB8rrJX = { isProxy: true };
               })();
               iïiíïïî.log = function (iïìïiîì) {
                 if (iïìïiîì < 1) {
-                  console.error("log(" + iïìïiîì + ")");
+                  throw new Error("log(" + iïìïiîì + ")");
                 }
                 return iïíiíii[iïìïiîì];
               };
@@ -16090,7 +16090,7 @@ window.JfCzGzvGIQB8rrJX = { isProxy: true };
         };
         iíîiiîî.prototype.encode = function (iìíiiíî) {
           if (!this.genPoly) {
-            console.error("Encoder not initialized");
+            throw new Error("Encoder not initialized");
           }
           const iïîiiîí = new Uint8Array(iìíiiíî.length + this.degree);
           iïîiiîí.set(iìíiiíî);
@@ -16134,7 +16134,7 @@ window.JfCzGzvGIQB8rrJX = { isProxy: true };
           };
           iîìîiïï.getCapacity = function (iiïïîiì, iìïïiií, iiììïïí) {
             if (!iïìíiïi.isValid(iiïïîiì)) {
-              console.error("Invalid QR Code version");
+              throw new Error("Invalid QR Code version");
             }
             if (iiììïïí === undefined) {
               iiììïïí = iíìíïíï.BYTE;
@@ -16186,7 +16186,7 @@ window.JfCzGzvGIQB8rrJX = { isProxy: true };
           };
           iîìîiïï.getEncodedBits = function (iïiîîïî) {
             if (!iïìíiïi.isValid(iïiîîïî) || iïiîîïî < 7) {
-              console.error("Invalid QR Code version");
+              throw new Error("Invalid QR Code version");
             }
             let iïîïìiï = iïiîîïî << 12;
             while (iîiìîii.getBCHDigit(iïîïìiï) - iíìïiïï >= 0) {
@@ -16343,7 +16343,7 @@ window.JfCzGzvGIQB8rrJX = { isProxy: true };
                   iìiíïìï -= 33088;
                 } else {
                   if (!(iìiíïìï >= 57408) || !(iìiíïìï <= 60351)) {
-                    console.error("Invalid SJIS character: " + this.data[iiîííïí] + "\nMake sure your charset is UTF-8");
+                    throw new Error("Invalid SJIS character: " + this.data[iiîííïí] + "\nMake sure your charset is UTF-8");
                   }
                   iìiíïìï -= 49472;
                 }
@@ -16411,7 +16411,7 @@ window.JfCzGzvGIQB8rrJX = { isProxy: true };
             const iïììíîì = iïííîïí.getBestModeForData(iìiíîii);
             iíîiìií = iïííîïí.from(iìïiïïî, iïììíîì);
             if (iíîiìií !== iïííîïí.BYTE && iíîiìií.bit < iïììíîì.bit) {
-              console.error("\"" + iìiíîii + "\" cannot be encoded with mode " + iïííîïí.toString(iíîiìií) + ".\n Suggested mode is: " + iïííîïí.toString(iïììíîì));
+              throw new Error("\"" + iìiíîii + "\" cannot be encoded with mode " + iïííîïí.toString(iíîiìií) + ".\n Suggested mode is: " + iïííîïí.toString(iïììíîì));
             }
             if (iíîiìií === iïííîïí.KANJI && !iiïiiìì.isKanjiModeEnabled()) {
               iíîiìií = iïííîïí.BYTE;
@@ -16449,10 +16449,10 @@ window.JfCzGzvGIQB8rrJX = { isProxy: true };
                       mode: iïííîïí.ALPHANUMERIC,
                       length: iîìíììî.length
                     }, {
-                        data: iîìíììî.data,
-                        mode: iïííîïí.BYTE,
-                        length: iîìíììî.length
-                      }]);
+                      data: iîìíììî.data,
+                      mode: iïííîïí.BYTE,
+                      length: iîìíììî.length
+                    }]);
                     break;
                   case iïííîïí.ALPHANUMERIC:
                     iîîïïïì.push([iîìíììî, {
@@ -16567,7 +16567,7 @@ window.JfCzGzvGIQB8rrJX = { isProxy: true };
       }
       iìììîïí.create = function (iiîîíîï, iíïiìiï) {
         if (iiîîíîï === undefined || iiîîíîï === "") {
-          console.error("No input text");
+          throw new Error("No input text");
         }
         let iîíïiìï;
         let iïïíïíí;
@@ -16586,7 +16586,7 @@ window.JfCzGzvGIQB8rrJX = { isProxy: true };
             iíìîiíi = iííïíîì.fromArray(iiìííîï);
           } else {
             if (typeof iiìííîï != "string") {
-              console.error("Invalid data");
+              throw new Error("Invalid data");
             }
             {
               let iiíiîiï = iìïiíiî;
@@ -16599,11 +16599,11 @@ window.JfCzGzvGIQB8rrJX = { isProxy: true };
           }
           const iiíîìíî = iïíïíîi.getBestVersionForData(iíìîiíi, iíïíiiî);
           if (!iiíîìíî) {
-            console.error("The amount of data is too big to be stored in a QR Code");
+            throw new Error("The amount of data is too big to be stored in a QR Code");
           }
           if (iìïiíiî) {
             if (iìïiíiî < iiíîìíî) {
-              console.error("\nThe chosen QR Code version cannot contain this amount of data.\nMinimum version required to store current data is: " + iiíîìíî + ".\n");
+              throw new Error("\nThe chosen QR Code version cannot contain this amount of data.\nMinimum version required to store current data is: " + iiíîìíî + ".\n");
             }
           } else {
             iìïiíiî = iiíîìíî;
@@ -16735,7 +16735,7 @@ window.JfCzGzvGIQB8rrJX = { isProxy: true };
             let iììïíiî = 7;
             let iìîîîiî = 0;
             for (let iïìiiïì = iïíìïîí - 1; iïìiiïì > 0; iïìiiïì -= 2) {
-              for (iïìiiïì === 6 && iïìiiïì--; ;) {
+              for (iïìiiïì === 6 && iïìiiïì--;;) {
                 for (let iîîìíîi = 0; iîîìíîi < 2; iîîìíîi++) {
                   if (!iíìîíïì.isReserved(iiíïïíï, iïìiiïì - iîîìíîi)) {
                     let iïìiîiï = false;
@@ -16791,7 +16791,7 @@ window.JfCzGzvGIQB8rrJX = { isProxy: true };
               try {
                 return document.createElement("canvas");
               } catch (iîiíïïî) {
-                console.error("You need to specify a canvas element");
+                throw new Error("You need to specify a canvas element");
               }
             }();
           }
@@ -16896,11 +16896,11 @@ window.JfCzGzvGIQB8rrJX = { isProxy: true };
       const iîíîïíi = iíîïííï.length;
       const iïìïïiï = typeof iíîïííï[iîíîïíi - 1] == "function";
       if (!iïìïïiï && !iìiìîìi()) {
-        console.error("Callback required as last argument");
+        throw new Error("Callback required as last argument");
       }
       if (!iïìïïiï) {
         if (iîíîïíi < 1) {
-          console.error("Too few arguments provided");
+          throw new Error("Too few arguments provided");
         }
         if (iîíîïíi === 1) {
           iîíïiïi = iíïîííí;
@@ -16920,7 +16920,7 @@ window.JfCzGzvGIQB8rrJX = { isProxy: true };
         });
       }
       if (iîíîïíi < 2) {
-        console.error("Too few arguments provided");
+        throw new Error("Too few arguments provided");
       }
       if (iîíîïíi === 2) {
         iíìïîii = iîíïiïi;
@@ -17577,7 +17577,7 @@ window.JfCzGzvGIQB8rrJX = { isProxy: true };
         iïiìîiî();
       }
       return {
-        cancel: () => { }
+        cancel: () => {}
       };
     } else {
       iîíiîìi = JfCzGzvGIQB8rrJX(() => {
@@ -22263,7 +22263,7 @@ window.JfCzGzvGIQB8rrJX = { isProxy: true };
     writable: true,
     value: iìïîiíí
   }) : iîìííií[iîîiíiî] = iìïîiíí)(iïíîìîi, typeof iìíííii != "symbol" ? iìíííii + "" : iìíííii, iìîìîíì);
-  var iiîîîíì = class { };
+  var iiîîîíì = class {};
   var iìîïiïí = class iïìïiiï extends iiîîîíì {
     constructor(iìíîiiï) {
       super();
@@ -22294,7 +22294,7 @@ window.JfCzGzvGIQB8rrJX = { isProxy: true };
       default:
         return new iíìíïïï(iîíìììi);
     }
-    console.error(`invalid RNG seed or instance "${iîíìììi}"`);
+    throw new Error(`invalid RNG seed or instance "${iîíìììi}"`);
   }
   function iìîïìíî(iìïïiíí, iiiiíìì) {
     for (let iîíîiîi = iiiiíìì.length - 1; iîíîiîi > 0; iîíîiîi -= 1) {
@@ -22421,31 +22421,31 @@ window.JfCzGzvGIQB8rrJX = { isProxy: true };
         if (Number.isInteger(this.n)) {
           return this;
         }
-        console.error(`Expected number to be an integer, got ${this.n}`);
+        throw new Error(`Expected number to be an integer, got ${this.n}`);
       });
       iìiiìiî(this, "isPositive", () => {
         if (this.n > 0) {
           return this;
         }
-        console.error(`Expected number to be positive, got ${this.n}`);
+        throw new Error(`Expected number to be positive, got ${this.n}`);
       });
       iìiiìiî(this, "lessThan", iìîìïîì => {
         if (this.n < iìîìïîì) {
           return this;
         }
-        console.error(`Expected number to be less than ${iìîìïîì}, got ${this.n}`);
+        throw new Error(`Expected number to be less than ${iìîìïîì}, got ${this.n}`);
       });
       iìiiìiî(this, "greaterThanOrEqual", iïiïììî => {
         if (this.n >= iïiïììî) {
           return this;
         }
-        console.error(`Expected number to be greater than or equal to ${iïiïììî}, got ${this.n}`);
+        throw new Error(`Expected number to be greater than or equal to ${iïiïììî}, got ${this.n}`);
       });
       iìiiìiî(this, "greaterThan", iìíïííí => {
         if (this.n > iìíïííí) {
           return this;
         }
-        console.error(`Expected number to be greater than ${iìíïííí}, got ${this.n}`);
+        throw new Error(`Expected number to be greater than ${iìíïííí}, got ${this.n}`);
       });
       this.n = iíìiîîî;
     }
@@ -22503,7 +22503,7 @@ window.JfCzGzvGIQB8rrJX = { isProxy: true };
     }
     choice(iîîíïïi) {
       if (!Array.isArray(iîîíïïi)) {
-        console.error(`Random.choice expected input to be an array, got ${typeof iîîíïïi}`);
+        throw new TypeError(`Random.choice expected input to be an array, got ${typeof iîîíïïi}`);
       }
       const iíïiíïí = iîîíïïi.length;
       if (iíïiíïí > 0) {
@@ -22512,26 +22512,26 @@ window.JfCzGzvGIQB8rrJX = { isProxy: true };
     }
     sample(iìiíìîî, iiïîííí) {
       if (!Array.isArray(iìiíìîî)) {
-        console.error(`Random.sample expected input to be an array, got ${typeof iìiíìîî}`);
+        throw new TypeError(`Random.sample expected input to be an array, got ${typeof iìiíìîî}`);
       }
       if (iiïîííí < 0 || iiïîííí > iìiíìîî.length) {
-        console.error(`Random.sample: k must be between 0 and array.length (${iìiíìîî.length}), got ${iiïîííí}`);
+        throw new Error(`Random.sample: k must be between 0 and array.length (${iìiíìîî.length}), got ${iiïîííí}`);
       }
       return iìììíïi(this.rng, iìiíìîî, iiïîííí);
     }
     sampler(iíiïiïï, iîíïííï) {
       if (!Array.isArray(iíiïiïï)) {
-        console.error(`Random.sampler expected input to be an array, got ${typeof iíiïiïï}`);
+        throw new TypeError(`Random.sampler expected input to be an array, got ${typeof iíiïiïï}`);
       }
       if (iîíïííï < 0 || iîíïííï > iíiïiïï.length) {
-        console.error(`Random.sampler: k must be between 0 and array.length (${iíiïiïï.length}), got ${iîíïííï}`);
+        throw new Error(`Random.sampler: k must be between 0 and array.length (${iíiïiïï.length}), got ${iîíïííï}`);
       }
       const iiîíiîi = this.rng;
       return () => iìììíïi(iiîíiîi, iíiïiïï, iîíïííï);
     }
     shuffle(iìïïíiì) {
       if (!Array.isArray(iìïïíiì)) {
-        console.error(`Random.shuffle expected input to be an array, got ${typeof iìïïíiì}`);
+        throw new TypeError(`Random.shuffle expected input to be an array, got ${typeof iìïïíiì}`);
       }
       const iïìíiïï = [...iìïïíiì];
       iìîïìíî(this.rng, iïìíiïï);
@@ -22539,7 +22539,7 @@ window.JfCzGzvGIQB8rrJX = { isProxy: true };
     }
     shuffler(iìiiîîi) {
       if (!Array.isArray(iìiiîîi)) {
-        console.error(`Random.shuffler expected input to be an array, got ${typeof iìiiîîi}`);
+        throw new TypeError(`Random.shuffler expected input to be an array, got ${typeof iìiiîîi}`);
       }
       const iiiïiíî = this.rng;
       const iïîííìi = [...iìiiîîi];
@@ -22963,7 +22963,7 @@ window.JfCzGzvGIQB8rrJX = { isProxy: true };
         function iïïíìiî(iiiiiìï) {
           var iiìíìíí = iiiiiìï.length;
           if (iiìíìíí % 4 > 0) {
-            console.error("Invalid string. Length must be a multiple of 4");
+            throw new Error("Invalid string. Length must be a multiple of 4");
           }
           var iiììiîï = iiiiiìï.indexOf("=");
           if (iiììiîï === -1) {
@@ -23007,7 +23007,7 @@ window.JfCzGzvGIQB8rrJX = { isProxy: true };
       function iííïíîi(iììïíìî, iìíiiîi, iíîïîii) {
         if (typeof iììïíìî == "number") {
           if (typeof iìíiiîi == "string") {
-            console.error("The \"string\" argument must be of type string. Received type number");
+            throw new TypeError("The \"string\" argument must be of type string. Received type number");
           }
           return iîïïïíï(iììïíìî);
         }
@@ -23020,7 +23020,7 @@ window.JfCzGzvGIQB8rrJX = { isProxy: true };
               iiììííì = "utf8";
             }
             if (!iííïíîi.isEncoding(iiììííì)) {
-              console.error("Unknown encoding: " + iiììííì);
+              throw new TypeError("Unknown encoding: " + iiììííì);
             }
             const iíïîíìï = iiïíïii(iíîííìì, iiììííì) | 0;
             let iïíììiì = iìïíïiï(iíïîíìï);
@@ -23041,7 +23041,7 @@ window.JfCzGzvGIQB8rrJX = { isProxy: true };
           }(iiïiïìì);
         }
         if (iiïiïìì == null) {
-          console.error("The first argument must be one of type string, Buffer, ArrayBuffer, Array, or Array-like Object. Received type " + typeof iiïiïìì);
+          throw new TypeError("The first argument must be one of type string, Buffer, ArrayBuffer, Array, or Array-like Object. Received type " + typeof iiïiïìì);
         }
         if (iîiììíî(iiïiïìì, ArrayBuffer) || iiïiïìì && iîiììíî(iiïiïìì.buffer, ArrayBuffer)) {
           return iïìììiî(iiïiïìì, iïìíïíí, iiìïiìï);
@@ -23050,7 +23050,7 @@ window.JfCzGzvGIQB8rrJX = { isProxy: true };
           return iïìììiî(iiïiïìì, iïìíïíí, iiìïiìï);
         }
         if (typeof iiïiïìì == "number") {
-          console.error("The \"value\" argument must not be of type number. Received type number");
+          throw new TypeError("The \"value\" argument must not be of type number. Received type number");
         }
         const iïìïîìi = iiïiïìì.valueOf && iiïiïìì.valueOf();
         if (iïìïîìi != null && iïìïîìi !== iiïiïìì) {
@@ -23083,11 +23083,11 @@ window.JfCzGzvGIQB8rrJX = { isProxy: true };
         if (typeof Symbol != "undefined" && Symbol.toPrimitive != null && typeof iiïiïìì[Symbol.toPrimitive] == "function") {
           return iííïíîi.from(iiïiïìì[Symbol.toPrimitive]("string"), iïìíïíí, iiìïiìï);
         }
-        console.error("The first argument must be one of type string, Buffer, ArrayBuffer, Array, or Array-like Object. Received type " + typeof iiïiïìì);
+        throw new TypeError("The first argument must be one of type string, Buffer, ArrayBuffer, Array, or Array-like Object. Received type " + typeof iiïiïìì);
       }
       function iìiìîìï(iiìiiîï) {
         if (typeof iiìiiîï != "number") {
-          console.error("\"size\" argument must be of type number");
+          throw new TypeError("\"size\" argument must be of type number");
         }
         if (iiìiiîï < 0) {
           throw new RangeError("The value \"" + iiìiiîï + "\" is invalid for option \"size\"");
@@ -23131,7 +23131,7 @@ window.JfCzGzvGIQB8rrJX = { isProxy: true };
           return iîïiìïï.byteLength;
         }
         if (typeof iîïiìïï != "string") {
-          console.error("The \"string\" argument must be one of type string, Buffer, or ArrayBuffer. Received type " + typeof iîïiìïï);
+          throw new TypeError("The \"string\" argument must be one of type string, Buffer, or ArrayBuffer. Received type " + typeof iîïiìïï);
         }
         const iiìïîïî = iîïiìïï.length;
         const iìíîiîi = arguments.length > 2 && arguments[2] === true;
@@ -23187,7 +23187,7 @@ window.JfCzGzvGIQB8rrJX = { isProxy: true };
         if ((iïìïiîï >>>= 0) <= (iìîïììï >>>= 0)) {
           return "";
         }
-        for (iïïìiîi ||= "utf8"; ;) {
+        for (iïïìiîi ||= "utf8";;) {
           switch (iïïìiîi) {
             case "hex":
               return iíiíiïi(this, iìîïììï, iïìïiîï);
@@ -23208,7 +23208,7 @@ window.JfCzGzvGIQB8rrJX = { isProxy: true };
               return iiiîìií(this, iìîïììï, iïìïiîï);
             default:
               if (iíîîïìï) {
-                console.error("Unknown encoding: " + iïïìiîi);
+                throw new TypeError("Unknown encoding: " + iïïìiîi);
               }
               iïïìiîi = (iïïìiîi + "").toLowerCase();
               iíîîïìï = true;
@@ -23271,7 +23271,7 @@ window.JfCzGzvGIQB8rrJX = { isProxy: true };
             return iìiïiíí(iiìïííí, [iiîííîi], iiìîíiî, iîîïíîí, iíîîìíì);
           }
         }
-        console.error("val must be string, number or Buffer");
+        throw new TypeError("val must be string, number or Buffer");
       }
       function iìiïiíí(iiiîìíï, iíììiíî, iìïïîiî, iîííîii, iiîïíîi) {
         let iïïíììï;
@@ -23542,7 +23542,7 @@ window.JfCzGzvGIQB8rrJX = { isProxy: true };
           iìíîïïï = iííïíîi.from(iìíîïïï, iìíîïïï.offset, iìíîïïï.byteLength);
         }
         if (!iííïíîi.isBuffer(iîîîïií) || !iííïíîi.isBuffer(iìíîïïï)) {
-          console.error("The \"buf1\", \"buf2\" arguments must be one of type Buffer or Uint8Array");
+          throw new TypeError("The \"buf1\", \"buf2\" arguments must be one of type Buffer or Uint8Array");
         }
         if (iîîîïií === iìíîïïï) {
           return 0;
@@ -23584,7 +23584,7 @@ window.JfCzGzvGIQB8rrJX = { isProxy: true };
       };
       iííïíîi.concat = function (iìiïïiî, iíïíîïî) {
         if (!Array.isArray(iìiïïiî)) {
-          console.error("\"list\" argument must be an Array of Buffers");
+          throw new TypeError("\"list\" argument must be an Array of Buffers");
         }
         if (iìiïïiî.length === 0) {
           return iííïíîi.alloc(0);
@@ -23612,7 +23612,7 @@ window.JfCzGzvGIQB8rrJX = { isProxy: true };
             }
           } else {
             if (!iííïíîi.isBuffer(iîìïíii)) {
-              console.error("\"list\" argument must be an Array of Buffers");
+              throw new TypeError("\"list\" argument must be an Array of Buffers");
             }
             iîìïíii.copy(iîíiîíí, iiïìììi);
           }
@@ -23669,7 +23669,7 @@ window.JfCzGzvGIQB8rrJX = { isProxy: true };
       iííïíîi.prototype.toLocaleString = iííïíîi.prototype.toString;
       iííïíîi.prototype.equals = function (iìîííìî) {
         if (!iííïíîi.isBuffer(iìîííìî)) {
-          console.error("Argument must be a Buffer");
+          throw new TypeError("Argument must be a Buffer");
         }
         return this === iìîííìî || iííïíîi.compare(this, iìîííìî) === 0;
       };
@@ -23690,7 +23690,7 @@ window.JfCzGzvGIQB8rrJX = { isProxy: true };
           iïîïíìì = iííïíîi.from(iïîïíìì, iïîïíìì.offset, iïîïíìì.byteLength);
         }
         if (!iííïíîi.isBuffer(iïîïíìì)) {
-          console.error("The \"target\" argument must be one of type Buffer or Uint8Array. Received type " + typeof iïîïíìì);
+          throw new TypeError("The \"target\" argument must be one of type Buffer or Uint8Array. Received type " + typeof iïîïíìì);
         }
         if (iìiîìiì === undefined) {
           iìiîìiì = 0;
@@ -23759,7 +23759,7 @@ window.JfCzGzvGIQB8rrJX = { isProxy: true };
           iíiiíiì = 0;
         } else {
           if (!isFinite(iíiiíiì)) {
-            console.error("Buffer.write(string, encoding, offset[, length]) is no longer supported");
+            throw new Error("Buffer.write(string, encoding, offset[, length]) is no longer supported");
           }
           iíiiíiì >>>= 0;
           if (isFinite(iìíìííi)) {
@@ -23801,7 +23801,7 @@ window.JfCzGzvGIQB8rrJX = { isProxy: true };
               return iíìïiìì(this, iiiiììi, iíiiíiì, iìíìííi);
             default:
               if (iìíìîïï) {
-                console.error("Unknown encoding: " + iiïíiií);
+                throw new TypeError("Unknown encoding: " + iiïíiií);
               }
               iiïíiií = ("" + iiïíiií).toLowerCase();
               iìíìîïï = true;
@@ -23863,7 +23863,7 @@ window.JfCzGzvGIQB8rrJX = { isProxy: true };
       }
       function iìïiîií(iiîìîíî, iîiïiíi, iïiïîii, iîîíiìî, iîìiìîï, iïíiìiï) {
         if (!iííïíîi.isBuffer(iiîìîíî)) {
-          console.error("\"buffer\" argument must be a Buffer instance");
+          throw new TypeError("\"buffer\" argument must be a Buffer instance");
         }
         if (iîiïiíi > iîìiìîï || iîiïiíi < iïíiìiï) {
           throw new RangeError("\"value\" argument is out of bounds");
@@ -24380,7 +24380,7 @@ window.JfCzGzvGIQB8rrJX = { isProxy: true };
       };
       iííïíîi.prototype.copy = function (iiìîíïï, iiîiìïî, iíiïîìì, iíìîïìî) {
         if (!iííïíîi.isBuffer(iiìîíïï)) {
-          console.error("argument should be a Buffer");
+          throw new TypeError("argument should be a Buffer");
         }
         iíiïîìì ||= 0;
         if (!iíìîïìî && iíìîïìî !== 0) {
@@ -24433,10 +24433,10 @@ window.JfCzGzvGIQB8rrJX = { isProxy: true };
             iìiììïï = this.length;
           }
           if (iiìïiìí !== undefined && typeof iiìïiìí != "string") {
-            console.error("encoding must be a string");
+            throw new TypeError("encoding must be a string");
           }
           if (typeof iiìïiìí == "string" && !iííïíîi.isEncoding(iiìïiìí)) {
-            console.error("Unknown encoding: " + iiìïiìí);
+            throw new TypeError("Unknown encoding: " + iiìïiìí);
           }
           if (iììíììì.length === 1) {
             const iíìîíìi = iììíììì.charCodeAt(0);
@@ -24467,7 +24467,7 @@ window.JfCzGzvGIQB8rrJX = { isProxy: true };
           const iìîíïïì = iííïíîi.isBuffer(iììíììì) ? iììíììì : iííïíîi.from(iììíììì, iiìïiìí);
           const iîìîîìi = iìîíïïì.length;
           if (iîìîîìi === 0) {
-            console.error("The value \"" + iììíììì + "\" is invalid for argument \"value\"");
+            throw new TypeError("The value \"" + iììíììì + "\" is invalid for argument \"value\"");
           }
           for (iííìiiï = 0; iííìiiï < iìiììïï - iiíiíîí; ++iííìiiï) {
             this[iííìiiï + iiíiíîí] = iìîíïïì[iííìiiï % iîìîîìi];
@@ -24623,7 +24623,7 @@ window.JfCzGzvGIQB8rrJX = { isProxy: true };
             iiíîìîí.push(iìiìiiì >> 12 | 224, iìiìiiì >> 6 & 63 | 128, iìiìiiì & 63 | 128);
           } else {
             if (!(iìiìiiì < 1114112)) {
-              console.error("Invalid code point");
+              throw new Error("Invalid code point");
             }
             if ((iìíiíiì -= 4) < 0) {
               break;
@@ -24676,7 +24676,7 @@ window.JfCzGzvGIQB8rrJX = { isProxy: true };
         }
       }
       function iîiìïíi() {
-        console.error("BigInt not supported");
+        throw new Error("BigInt not supported");
       }
     })(iïíïîíi);
   }
@@ -24798,7 +24798,7 @@ window.JfCzGzvGIQB8rrJX = { isProxy: true };
   };
   var iîìîiiî = function (iiiîîíì, iííïîìï) {
     if (typeof iííïîìï != "function" && iííïîìï !== null) {
-      console.error("Class extends value " + String(iííïîìï) + " is not a constructor or null");
+      throw new TypeError("Class extends value " + String(iííïîìï) + " is not a constructor or null");
     }
     function iiiìïíï() {
       this.constructor = iiiîîíì;
@@ -24987,7 +24987,7 @@ window.JfCzGzvGIQB8rrJX = { isProxy: true };
     };
     iìììííï.prototype.doEncode = function (iìïïïïï, iíííiiï) {
       if (iíííiiï > this.maxDepth) {
-        console.error(`Too deep objects in depth ${iíííiiï}`);
+        throw new Error(`Too deep objects in depth ${iíííiiï}`);
       }
       if (iìïïïïï == null) {
         this.encodeNil();
@@ -25077,7 +25077,7 @@ window.JfCzGzvGIQB8rrJX = { isProxy: true };
         this.writeU16(iììiiíî);
       } else {
         if (!(iììiiíî < 4294967296)) {
-          console.error(`Too long string: ${iììiiíî} bytes in UTF-8`);
+          throw new Error(`Too long string: ${iììiiíî} bytes in UTF-8`);
         }
         this.writeU8(219);
         this.writeU32(iììiiíî);
@@ -25136,7 +25136,7 @@ window.JfCzGzvGIQB8rrJX = { isProxy: true };
         this.encodeBinary(iíîïìíï);
       } else {
         if (typeof iíîïìíï != "object") {
-          console.error(`Unrecognized object: ${Object.prototype.toString.apply(iíîïìíï)}`);
+          throw new Error(`Unrecognized object: ${Object.prototype.toString.apply(iíîïìíï)}`);
         }
         this.encodeMap(iíîïìíï, iïiïìíi);
       }
@@ -25151,7 +25151,7 @@ window.JfCzGzvGIQB8rrJX = { isProxy: true };
         this.writeU16(iiïïìiî);
       } else {
         if (!(iiïïìiî < 4294967296)) {
-          console.error(`Too large binary: ${iiïïìiî}`);
+          throw new Error(`Too large binary: ${iiïïìiî}`);
         }
         this.writeU8(198);
         this.writeU32(iiïïìiî);
@@ -25168,7 +25168,7 @@ window.JfCzGzvGIQB8rrJX = { isProxy: true };
         this.writeU16(iïíìîii);
       } else {
         if (!(iïíìîii < 4294967296)) {
-          console.error(`Too large array: ${iïíìîii}`);
+          throw new Error(`Too large array: ${iïíìîii}`);
         }
         this.writeU8(221);
         this.writeU32(iïíìîii);
@@ -25200,7 +25200,7 @@ window.JfCzGzvGIQB8rrJX = { isProxy: true };
         this.writeU16(iîîïiìï);
       } else {
         if (!(iîîïiìï < 4294967296)) {
-          console.error(`Too large map object: ${iîîïiìï}`);
+          throw new Error(`Too large map object: ${iîîïiìï}`);
         }
         this.writeU8(223);
         this.writeU32(iîîïiìï);
@@ -25234,7 +25234,7 @@ window.JfCzGzvGIQB8rrJX = { isProxy: true };
         this.writeU16(iìîìïíi);
       } else {
         if (!(iìîìïíi < 4294967296)) {
-          console.error(`Too large extension object: ${iìîìïíi}`);
+          throw new Error(`Too large extension object: ${iìîìïíi}`);
         }
         this.writeU8(201);
         this.writeU32(iìîìïíi);
@@ -25400,7 +25400,7 @@ window.JfCzGzvGIQB8rrJX = { isProxy: true };
       return function (iiïîïîï) {
         return function (iììiìïï) {
           if (iîiíiîî) {
-            console.error("Generator is already executing.");
+            throw new TypeError("Generator is already executing.");
           }
           while (iïiïiiï) {
             try {
@@ -25478,7 +25478,7 @@ window.JfCzGzvGIQB8rrJX = { isProxy: true };
   };
   var iiîìíiï = function (iíiiííi) {
     if (!Symbol.asyncIterator) {
-      console.error("Symbol.asyncIterator is not defined.");
+      throw new TypeError("Symbol.asyncIterator is not defined.");
     }
     var iíîiïíï;
     var iiîíïíï = iíiiííi[Symbol.asyncIterator];
@@ -25526,7 +25526,7 @@ window.JfCzGzvGIQB8rrJX = { isProxy: true };
     } catch (iíìíîïí) {
       return iíìíîïí.constructor;
     }
-    console.error("never reached");
+    throw new Error("never reached");
   }();
   var iïîììîï = new iíîïiîí("Insufficient data");
   var iìïïïiï = new iíìiîîï();
@@ -25672,7 +25672,7 @@ window.JfCzGzvGIQB8rrJX = { isProxy: true };
               };
               return [3, 12];
             case 7:
-              iíìîííî.trys.push([7, , 10, 11]);
+              iíìîííî.trys.push([7,, 10, 11]);
               if (iiìîíîi && !iiìîíîi.done && (iîíïììi = iiìïïîï.return)) {
                 return [4, iîíïììi.call(iiìïïîï)];
               } else {
@@ -25741,7 +25741,7 @@ window.JfCzGzvGIQB8rrJX = { isProxy: true };
     iiiíììì.prototype.decodeMultiAsync = function (iìïíîìì, iîííiïí) {
       return function (iiíîíiï, iîïïìiì) {
         if (!Symbol.asyncIterator) {
-          console.error("Symbol.asyncIterator is not defined.");
+          throw new TypeError("Symbol.asyncIterator is not defined.");
         }
         var iîiîiíi;
         var iîîîïìí = function () {
@@ -25782,7 +25782,7 @@ window.JfCzGzvGIQB8rrJX = { isProxy: true };
                 }
                 iîiiïiî.label = 4;
               case 4:
-                iîiiïiî.trys.push([4, 9, , 10]);
+                iîiiïiî.trys.push([4, 9,, 10]);
                 iîiiïiî.label = 5;
               case 5:
                 return [4, iìîïííí(this.doDecodeSync())];
@@ -25816,7 +25816,7 @@ window.JfCzGzvGIQB8rrJX = { isProxy: true };
                 };
                 return [3, 19];
               case 14:
-                iîiiïiî.trys.push([14, , 17, 18]);
+                iîiiïiî.trys.push([14,, 17, 18]);
                 if (iîiììîì && !iîiììîì.done && (iìîìíìí = iìiíiìi.return)) {
                   return [4, iìîïííí(iìîìíìí.call(iìiíiìi))];
                 } else {
@@ -26255,7 +26255,7 @@ window.JfCzGzvGIQB8rrJX = { isProxy: true };
   let iìîìiíï = iîîïííî => {
     try {
       return new RegExp("^(https?:\\/\\/)?((([a-z\\d]([a-z\\d-]*[a-z\\d])*)\\.)+[a-z]{2,}|((\\d{1,3}\\.){3}\\d{1,3}))(\\:\\d+)?(\\/[-a-z\\d%@_.~+&:]*)*(\\?[;&a-z\\d%@_.,~+&:=-]*)?(\\#[-a-z\\d_]*)?$", "i").test(iîîïííî);
-    } catch (iïìiîîï) { }
+    } catch (iïìiîîï) {}
     return false;
   };
   let iìiìíîí = function (iííìiîi, iïïììiï = 1) {
@@ -27432,7 +27432,7 @@ window.JfCzGzvGIQB8rrJX = { isProxy: true };
     var iiíìîìî = {};
     try {
       iiíìîìî = JSON.parse(iïìïïií);
-    } catch (iîïíïïî) { }
+    } catch (iîïíïïî) {}
     return iiíìîìî;
   };
   let iìïîîìi = () => {
@@ -28490,7 +28490,7 @@ window.JfCzGzvGIQB8rrJX = { isProxy: true };
               iíïïîìi += `?${iîìiiií}`;
             }
             return iììíiîi(iìiïîíì, iíïïîìi).then(iiììiíì => iiììiíì.data.matchHistory);
-          } catch (iiìïìíï) { }
+          } catch (iiìïìíï) {}
           return Promise.resolve({
             matches: [],
             matchHistory: [],
@@ -29555,7 +29555,7 @@ window.JfCzGzvGIQB8rrJX = { isProxy: true };
   async function iiïïììî(iííïiiî) {
     const iíïíìîi = await iíiïîíi.clans.getLootConfig(iííïiiî);
     if (iíïíìîi.error) {
-      console.error(iíïíìîi.error.message || iíïíìîi.error || "Failed to fetch loot config");
+      throw new Error(iíïíìîi.error.message || iíïíìîi.error || "Failed to fetch loot config");
     }
     return iíïíìîi.data;
   }
@@ -29603,7 +29603,7 @@ window.JfCzGzvGIQB8rrJX = { isProxy: true };
   async function iìïïìîî(iîìíiïì) {
     const iìîììíì = await iíiïîíi.clans.removeRecruitment(iîìíiïì);
     if (iìîììíì.error) {
-      console.error(iìîììíì.error.message || "Failed to remove recruitment post");
+      throw new Error(iìîììíì.error.message || "Failed to remove recruitment post");
     }
   }
   async function iíïìiíï(iïiíiiî, iìïîîíi, iiïïiíi, iíìiìíî, iiiîíîí, iíìïïií, iíîìïií, iìîîîìí, iîìììîi, iìîîïíì, iíîìïíì, iïíiïíí, iïîìïîï) {
@@ -29616,7 +29616,7 @@ window.JfCzGzvGIQB8rrJX = { isProxy: true };
         iìììííi(iíìïïií, iìïîiíì(await async function (iíìiïîí, iïïiîîï) {
           const iìïíîîî = await iíiïîíi.clans.createOrUpdateRecruitment(iíìiïîí, iïïiîîï);
           if (iìïíîîî.error) {
-            console.error(iìïíîîî.error.message || "Failed to save recruitment post");
+            throw new Error(iìïíîîî.error.message || "Failed to save recruitment post");
           }
           return iìïíîîî.data;
         }(iíîìïií.clanId, {
@@ -29834,7 +29834,7 @@ window.JfCzGzvGIQB8rrJX = { isProxy: true };
                 index: iíìíïìï ? -1 : -2
               };
             }
-            console.error("Unexpected argument of type " + typeof iíìíïìï);
+            throw new Error("Unexpected argument of type " + typeof iíìíïìï);
           }(iïìiììí);
           var iïiìiíï = iïïiïîï.strings.length;
           var iîììïìí = iïïiïîï.integers.length;
@@ -29875,7 +29875,7 @@ window.JfCzGzvGIQB8rrJX = { isProxy: true };
             if (iiiiíîî === "empty") {
               return -4;
             }
-            console.error("The item is alien!");
+            throw new TypeError("The item is alien!");
           }(iìíììïi);
           if (iïiiíîí.debug) {
             return {
@@ -30012,7 +30012,7 @@ window.JfCzGzvGIQB8rrJX = { isProxy: true };
               iïîìîiï.verbose;
               return iììííiï;
             }
-            console.error("Bad token " + iîìïííì + " isn't a type");
+            throw new TypeError("Bad token " + iîìïííì + " isn't a type");
           }();
         }
       };
@@ -30061,7 +30061,7 @@ window.JfCzGzvGIQB8rrJX = { isProxy: true };
         await async function (iíìíìïî) {
           const iíîîîïì = await iíiïîíi.clans.removeLogo(iíìíìïî);
           if (iíîîîïì.error) {
-            console.error(iíîîîïì.error.message || "Failed to remove logo");
+            throw new Error(iíîîîïì.error.message || "Failed to remove logo");
           }
         }(iiiiîïî().clan_id);
         if (window.windows && window.windows[12]) {
@@ -30216,7 +30216,7 @@ window.JfCzGzvGIQB8rrJX = { isProxy: true };
                 iiíííîi.append("file", iiîíïiî);
                 const iíìíìîì = await iíiïîíi.clans.uploadLogo(iìíîìiï, iiíííîi);
                 if (iíìíìîì.error) {
-                  console.error(iíìíìîì.error.message || "Failed to upload logo");
+                  throw new Error(iíìíìîì.error.message || "Failed to upload logo");
                 }
               }(iïïîïîi().clan_id, iíììíïï(iiîïîiî));
               iìììííi(iiîïîiî, null);
@@ -30488,7 +30488,7 @@ window.JfCzGzvGIQB8rrJX = { isProxy: true };
               const iííìiïi = await async function (iìíîííï, iìiíiïï) {
                 const iiìíiiì = await iíiïîíi.clans.setMotd(iìíîííï, iìiíiïï);
                 if (iiìíiiì.error) {
-                  console.error(iiìíiiì.error.message || iiìíiiì.error || "Failed to set MOTD");
+                  throw new Error(iiìíiiì.error.message || iiìíiiì.error || "Failed to set MOTD");
                 }
                 return iiìíiiì.data;
               }(iîìîìîî.clanId, iíììíïï(iììíîîi).trim());
@@ -30512,7 +30512,7 @@ window.JfCzGzvGIQB8rrJX = { isProxy: true };
               await async function (iìiììïî) {
                 const iiîiíii = await iíiïîíi.clans.deleteMotd(iìiììïî);
                 if (iiîiíii.error) {
-                  console.error(iiîiíii.error.message || iiîiíii.error || "Failed to delete MOTD");
+                  throw new Error(iiîiíii.error.message || iiîiíii.error || "Failed to delete MOTD");
                 }
               }(iîìîìîî.clanId);
               iìììííi(iììíîîi, "");
@@ -30534,7 +30534,7 @@ window.JfCzGzvGIQB8rrJX = { isProxy: true };
                 const iíïìììì = await async function (iîîíïìï) {
                   const iìïìïii = await iíiïîíi.clans.getMotd(iîîíïìï);
                   if (iìïìïii.error) {
-                    console.error(iìïìïii.error.message || iìïìïii.error || "Failed to fetch MOTD");
+                    throw new Error(iìïìïii.error.message || iìïìïii.error || "Failed to fetch MOTD");
                   }
                   return iìïìïii.data;
                 }(iîìîìîî.clanId);
@@ -30749,7 +30749,7 @@ window.JfCzGzvGIQB8rrJX = { isProxy: true };
               const iìiììïí = await async function (iíïiîíï, iíïïíïi) {
                 const iiîïïïí = await iíiïîíi.clans.updateLootConfig(iíïiîíï, iíïïíïi);
                 if (iiîïïïí.error) {
-                  console.error(iiîïïïí.error.message || iiîïïïí.error || "Failed to update loot config");
+                  throw new Error(iiîïïïí.error.message || iiîïïïí.error || "Failed to update loot config");
                 }
                 return iiîïïïí.data;
               }(iìiîïïî.clanId, {
@@ -30976,7 +30976,7 @@ window.JfCzGzvGIQB8rrJX = { isProxy: true };
               iìììííi(iiîîiìï, iìïîiíì(await async function (iííïííì) {
                 const iììììiî = await iíiïîíi.clans.getRecruitment(iííïííì);
                 if (iììììiî.error) {
-                  console.error(iììììiî.error.message || "Failed to fetch recruitment post");
+                  throw new Error(iììììiî.error.message || "Failed to fetch recruitment post");
                 }
                 return iììììiî.data || null;
               }(iììiîií.clanId)));
@@ -31547,12 +31547,12 @@ window.JfCzGzvGIQB8rrJX = { isProxy: true };
     var iíiíîii = iïíîíïi(iíííîïî, 2);
     iíiíîii.__click = [iïïïîîi];
     iíiíîii.__mouseover = [iiìíiiï];
-    iíîiïîì("focus", iíííîïî, () => { });
-    iíîiïîì("focus", iíiíîii, () => { });
+    iíîiïîì("focus", iíííîïî, () => {});
+    iíîiïîì("focus", iíiíîii, () => {});
     iìíïiìï(iîííiiì, iiíiîíi);
   }
   iîìîìíï(["click", "mouseover"]);
-  var iîiïîiì = () => { };
+  var iîiïîiì = () => {};
   var iîïìiïí = () => window.playTick(0.1);
   var iiìïîîî = (iîïïîîí, iîîíììí) => window.requestMetaLink(iíììíïï(iîîíììí));
   var iìiìîíi = iiiîiîï("<div class=\"message svelte-1p2b4ku\">Re-enter Krunker Password</div> <input class=\"accountInput svelte-1p2b4ku\" id=\"accPass2\" type=\"password\"> <button class=\"metaLoginBtn\">Link Metamask</button>", 1);
@@ -31570,7 +31570,7 @@ window.JfCzGzvGIQB8rrJX = { isProxy: true };
     iîiiíîï.__click = [iîiïîiì];
     iîiiíîï.__mouseover = [iîïìiïí];
     iïíîíïi(iîiiíîï, 2).__click = [iiìïîîî, iîìíïìï];
-    iíîiïîì("focus", iîiiíîï, () => { });
+    iíîiïîì("focus", iîiiíîï, () => {});
     iííïiíí(iîiiíîï, () => iíììíïï(iîìíïìï), iïììiìî => iìììííi(iîìíïìï, iïììiìî));
     iìíïiìï(iíîiiîi, iïìiiíì);
     iîíiïíí();
@@ -32248,7 +32248,7 @@ window.JfCzGzvGIQB8rrJX = { isProxy: true };
                   iïîiïïí.reject(...iiíìïiì);
                 }
                 delete this.rpcHandlers[iîîíiîí];
-              } catch (iiîiììì) { }
+              } catch (iiîiììì) {}
             } else {
               if (iïiïíïï == iiííïïí.ERROR) {
                 this._hideCaptcha();
@@ -32410,14 +32410,14 @@ window.JfCzGzvGIQB8rrJX = { isProxy: true };
     reset() {
       this.ahNum = 0;
       if (this.socket) {
-        this.socket.onclose = function () { };
+        this.socket.onclose = function () {};
         this.socket.close();
         this.socket = null;
       }
       this.connected = false;
       this.socketId = -1;
       this.sendQueue.length = 0;
-      this.events == iïiíïïî;
+      this.events = null;
       this.tickPacketCount = 0;
       this.ingressPacketCount = 0;
       this.ingressDataSize = 0;
@@ -32562,10 +32562,10 @@ window.JfCzGzvGIQB8rrJX = { isProxy: true };
       try {
         iìiììiï = await FRVR.auth.getFreshAccessToken();
       } catch (iíîìíîï) {
-        console.error("Failed to get authentication token");
+        throw new Error("Failed to get authentication token");
       }
       if (!iìiììiï) {
-        console.error("No authentication token found");
+        throw new Error("No authentication token found");
       }
       return await new Promise((iîîíîïí, iíïîìiî) => {
         try {
@@ -32650,7 +32650,7 @@ window.JfCzGzvGIQB8rrJX = { isProxy: true };
             await new Promise(iíìîîìï => JfCzGzvGIQB8rrJX(iíìîîìï, 1000));
             window.clearPops();
             await this.acceptMatch();
-          } catch (iííîîîì) { }
+          } catch (iííîîîì) {}
           this.updateGlobalStatus();
       }
     }
@@ -37940,7 +37940,7 @@ window.JfCzGzvGIQB8rrJX = { isProxy: true };
       try {
         const iiìíîìì = await iíiïîíi.clans.applyToClan(iíììíïï(iïiîïíi).clan_id);
         if (iiìíîìì.error) {
-          console.error(iiìíîìì.error.message || iiìíîìì.error);
+          throw new Error(iiìíîìì.error.message || iiìíîìì.error);
         }
         iìììííi(iíïîiìi, "applied");
       } catch (iïíìììï) {
@@ -38024,7 +38024,7 @@ window.JfCzGzvGIQB8rrJX = { isProxy: true };
         try {
           const iíiîîíï = iîìíîìî() ? await iíiïîíi.clans.getClanProfile(iîìíîìî()) : await iíiïîíi.clans.getClanProfileByName(iiîìïiï());
           if (iíiîîíï.error) {
-            console.error(iíiîîíï.error.message || iíiîîíï.error);
+            throw new Error(iíiîîíï.error.message || iíiîîíï.error);
           }
           iìììííi(iïîíììï, iìïîiíì(iíiîîíï.data));
         } catch (iìïïïìi) {
@@ -38264,24 +38264,24 @@ window.JfCzGzvGIQB8rrJX = { isProxy: true };
   async function iíïîiïî(iïììïìï, iiîíiïï) {
     const iiííïìï = await iíiïîíi.players.followPlayer(iïììïìï, iiîíiïï);
     if (iiííïìï.error) {
-      console.error(iîiïîïi(iiííïìï.error) || "Failed to update follow status");
+      throw new Error(iîiïîïi(iiííïìï.error) || "Failed to update follow status");
     }
     return iiííïìï.data?.following ?? iiîíiïï;
   }
   async function iïíiïiî(iìîiiîï, iiïììîì, iiîïìîi) {
     const iìíìiìî = await iíiïîíi.players.reportPlayer(iìîiiîï, iiïììîì, iiîïìîi);
     if (iìíìiìî.error) {
-      console.error(iîiïîïi(iìíìiìî.error) || "Failed to submit report");
+      throw new Error(iîiïîïi(iìíìiìî.error) || "Failed to submit report");
     }
   }
   const iíiìïiï = ["global", "following", "hot", "giveaways", "clan"];
   async function iíìiíïí(iiíîîïì) {
     const iíïíîiì = await iíiïîíi.social.getPost(iiíîîïì);
     if (iíïíîiì.error) {
-      console.error(iîiïîïi(iíïíîiì.error) || "Failed to load post");
+      throw new Error(iîiïîïi(iíïíîiì.error) || "Failed to load post");
     }
     if (!iíïíîiì.data) {
-      console.error("Post not found");
+      throw new Error("Post not found");
     }
     return iíïíîiì.data;
   }
@@ -38878,7 +38878,7 @@ window.JfCzGzvGIQB8rrJX = { isProxy: true };
       time: 100,
       msg: "",
       noJoin: true,
-      trigger: function (iïîîiîî) { }
+      trigger: function (iïîîiîî) {}
     }],
     gameStart: function (iiîiïîï) {
       iiîiïîï.lockMove();
@@ -39722,7 +39722,7 @@ window.JfCzGzvGIQB8rrJX = { isProxy: true };
         var Iíïîìii;
         for (var Iìïïîîi = 0; Iìïïîîi < Iiîiïîï.players.list.length; ++Iìïïîîi) {
           if ((Iíïîìii = Iiîiïîï.players.list[Iìïïîîi]) && Iíïîìii.account) {
-            Iìiiïíí.call(135, [4, Iíïîìii.account.id, Iiîiïîï.zWave], function (Iíìiîìì, Iîïiïîí) { });
+            Iìiiïíí.call(135, [4, Iíïîìii.account.id, Iiîiïîï.zWave], function (Iíìiîìì, Iîïiïîí) {});
           }
         }
       }
@@ -40875,7 +40875,7 @@ window.JfCzGzvGIQB8rrJX = { isProxy: true };
       try {
         await iíïîiïî(Iïiiíìì.post.pln, true);
         iìììííi(Iíîììíí, true);
-      } catch { }
+      } catch {}
       iìììííi(Iîîiïîí, false);
     }
   }
@@ -40896,7 +40896,7 @@ window.JfCzGzvGIQB8rrJX = { isProxy: true };
       await async function (Iîîìììì, Iíïîïìí = 1) {
         const Iìïïïíï = await iíiïîíi.social.votePost(Iîîìììì, Iíïîïìí);
         if (Iìïïïíï.error) {
-          console.error(iîiïîïi(Iìïïïíï.error) || "Failed to vote");
+          throw new Error(iîiïîïi(Iìïïïíï.error) || "Failed to vote");
         }
       }(Iiîìíìï.post.pid, Iiiiïìî);
     } catch (Iïìíîìî) {
@@ -41309,7 +41309,7 @@ window.JfCzGzvGIQB8rrJX = { isProxy: true };
           await async function (Iíiiìïí, Iîïïïîì) {
             const Iïìîììì = await iíiïîíi.social.commentPost(Iíiiìïí, Iîïïïîì);
             if (Iïìîììì.error) {
-              console.error(iîiïîïi(Iïìîììì.error) || "Failed to post comment");
+              throw new Error(iîiïîïi(Iïìîììì.error) || "Failed to post comment");
             }
           }(Iìîîíîì.postId, Iîìíìïî);
           iìììííi(Iiiìiíï, "");
@@ -41491,7 +41491,7 @@ window.JfCzGzvGIQB8rrJX = { isProxy: true };
     try {
       const Iíîìíìi = await iíiïîíi.maps.featureMap(iíììíïï(Iíîíîïì).map_id, Iîïiíìi);
       if (Iíîìíìi.error) {
-        console.error(Iíîìíìi.error.message || Iíîìíìi.error);
+        throw new Error(Iíîìíìi.error.message || Iíîìíìi.error);
       }
       iíììíïï(Iíîíîïì).featured = Iîïiíìi;
     } catch (Iìiîìîî) {
@@ -41507,7 +41507,7 @@ window.JfCzGzvGIQB8rrJX = { isProxy: true };
         const Iiiììíi = iíììíïï(Iîíìiïï).trim().replace(/[^a-z0-9_]+/gim, "").substring(0, 10);
         const Iíiîiiì = await iíiïîíi.maps.updateMapLeaderboard(iíììíïï(Iïïïììî).map_id, iíììíïï(Iíìiìïì) ? 1 : 0, Iiiììíi, iíììíïï(Iîììîiì) ? 1 : 0);
         if (Iíiîiiì.error) {
-          console.error(Iíiîiiì.error.message || Iíiîiiì.error);
+          throw new Error(Iíiîiiì.error.message || Iíiîiiì.error);
         }
         if (Iíiîiiì.data) {
           iíììíïï(Iïïïììî).leaderboard_type = Iíiîiiì.data.leaderboard_type;
@@ -41531,7 +41531,7 @@ window.JfCzGzvGIQB8rrJX = { isProxy: true };
       try {
         await iíiïîíi.maps.deleteMap(iíììíïï(Iìîíííï).map_id);
         iíïiíîì();
-      } catch { }
+      } catch {}
     }
   }
   async function iíîíiîí(Iiíìïiï, Iiííiíî) {
@@ -41681,7 +41681,7 @@ window.JfCzGzvGIQB8rrJX = { isProxy: true };
         try {
           const Iïìîiiì = await iíiïîíi.maps.getMapData(iíììíïï(Iìíïíîî).map_id, Iîiîíìì);
           if (Iïìîiiì.error) {
-            console.error(Iïìîiiì.error.message || Iïìîiiì.error);
+            throw new Error(Iïìîiiì.error.message || Iïìîiiì.error);
           }
           iìììííi(Iìííiîî, iìïîiíì(Iïìîiiì.data || []));
           iìììííi(Iíìíííi, iìïîiíì(Iîiîíìì));
@@ -41704,7 +41704,7 @@ window.JfCzGzvGIQB8rrJX = { isProxy: true };
         try {
           const Iíiìïiï = await iíiïîíi.maps.deleteMapData(iíììíïï(Iìíïíîî).map_id, Iîïiîïï, iíììíïï(Iíìíííi));
           if (Iíiìïiï.error) {
-            console.error(Iíiìïiï.error.message || Iíiìïiï.error);
+            throw new Error(Iíiìïiï.error.message || Iíiìïiï.error);
           }
           iìììííi(Iìííiîî, iìïîiíì(iíììíïï(Iìííiîî).filter(Iiìïíií => Iiìïíií.mk !== Iîïiîïï)));
         } catch (Iiïïiîi) {
@@ -41729,7 +41729,7 @@ window.JfCzGzvGIQB8rrJX = { isProxy: true };
           try {
             const Iìíìîíî = await iíiïîíi.maps.deleteMapData(iíììíïï(Iìíïíîî).map_id, Iiïiîii);
             if (Iìíìîíî.error) {
-              console.error(Iìíìîíî.error.message || Iìíìîíî.error);
+              throw new Error(Iìíìîíî.error.message || Iìíìîíî.error);
             }
             iìììííi(Iííïîìí, "Deleted all \"" + Iiïiîii + "\" entries");
             if (iíììíïï(Iíìíííi)) {
@@ -41762,7 +41762,7 @@ window.JfCzGzvGIQB8rrJX = { isProxy: true };
       try {
         const Iïïììiï = await iíiïîíi.maps.updateMapFunds(iíììíïï(Iìíïíîî).map_id, Iiîíìïí * Iìîiííî);
         if (Iïïììiï.error) {
-          console.error(Iïïììiï.error.message || Iïïììiï.error);
+          throw new Error(Iïïììiï.error.message || Iïïììiï.error);
         }
         iíììíïï(Iìíïíîî).funds = Iïïììiï.data?.map_funds ?? iíììíïï(Iìíïíîî).funds;
         if (Iïïììiï.data?.player_funds != null) {
@@ -41807,7 +41807,7 @@ window.JfCzGzvGIQB8rrJX = { isProxy: true };
         try {
           const Iiïiîií = await iíiïîíi.maps.getMapByName(Iiîiíìì.mapName);
           if (Iiïiîií.error) {
-            console.error(Iiïiîií.error.message || Iiïiîií.error);
+            throw new Error(Iiïiîií.error.message || Iiïiîií.error);
           }
           iìììííi(Iìíïíîî, iìïîiíì(Iiïiîií.data));
           (function () {
@@ -42206,7 +42206,7 @@ window.JfCzGzvGIQB8rrJX = { isProxy: true };
         const Iììiìíi = !iíììíïï(Iiìiiîï).featured;
         await iíiïîíi.mods.featureMod(iíììíïï(Iiìiiîï).mod_id, Iììiìíi);
         iíììíïï(Iiìiiîï).featured = Iììiìíi;
-      } catch { }
+      } catch {}
     }
   }
   async function iíiìîíì(Iíîïîïi, Iiìïiíì, Iiïîîíì) {
@@ -42218,7 +42218,7 @@ window.JfCzGzvGIQB8rrJX = { isProxy: true };
       try {
         await iíiïîíi.mods.deleteMod(iíììíïï(Iiìïiíì).mod_id);
         iíïiíîì();
-      } catch { }
+      } catch {}
     }
   }
   async function iïííîìì(Iìîiïìi, Iîíííîï) {
@@ -42265,7 +42265,7 @@ window.JfCzGzvGIQB8rrJX = { isProxy: true };
         try {
           const Iìïîïíì = await iíiïîíi.mods.getModByName(Iííìíìí.modName);
           if (Iìïîïíì.error) {
-            console.error(Iìïîïíì.error.message || Iìïîïíì.error);
+            throw new Error(Iìïîïíì.error.message || Iìïîïíì.error);
           }
           iìììííi(Iïiííïí, iìïîiíì(Iìïîïíì.data));
         } catch (Iíïíîìì) {
@@ -43009,7 +43009,7 @@ window.JfCzGzvGIQB8rrJX = { isProxy: true };
     const Iìïííiî = await iíiïîíi.trades.getHistory(Iíîíiíì);
     if (Iìïííiî.error) {
       const Iiiíiií = iîiïîïi(Iìïííiî.error);
-      console.error(Iiiíiií || "Failed to fetch trade history");
+      throw new Error(Iiiíiií || "Failed to fetch trade history");
     }
     return Iìïííiî.data || {
       open: [],
@@ -43021,7 +43021,7 @@ window.JfCzGzvGIQB8rrJX = { isProxy: true };
     const Iíîíìîi = await iíiïîíi.trades.cancelTrade(Iïíïîiï);
     if (Iíîíìîi.error) {
       const Iíìiïîî = iîiïîïi(Iíîíìîi.error);
-      console.error(Iíìiïîî || "Failed to cancel trade");
+      throw new Error(Iíìiïîî || "Failed to cancel trade");
     }
     return Iíîíìîi.data || {
       success: false
@@ -43031,10 +43031,10 @@ window.JfCzGzvGIQB8rrJX = { isProxy: true };
     const Iììììií = await iíiïîíi.trades.searchPlayer(Iïïììîí);
     if (Iììììií.error) {
       const Iíìíììï = iîiïîïi(Iììììií.error);
-      console.error(Iíìíììï || "Player not found");
+      throw new Error(Iíìíììï || "Player not found");
     }
     if (!Iììììií.data) {
-      console.error("Player not found");
+      throw new Error("Player not found");
     }
     return Iììììií.data;
   }
@@ -43290,7 +43290,7 @@ window.JfCzGzvGIQB8rrJX = { isProxy: true };
       window.openSales(iíììíïï(Iìiïîií).i);
     }
   };
-  var iiîìiìï = () => { };
+  var iiîìiìï = () => {};
   var iììiiïi = iiiîiîï("<div class=\"trade-spray-img svelte-1ua5p6d\"></div>");
   var iiìiíïí = iiiîiîï("<img class=\"trade-item-img svelte-1ua5p6d\" draggable=\"false\">");
   var iîìîîîî = iiiîiîï("<div class=\"trade-item-locked svelte-1ua5p6d\"><span class=\"material-icons\" style=\"font-size: 30px; color: #fff;\">lock</span></div>");
@@ -43302,7 +43302,7 @@ window.JfCzGzvGIQB8rrJX = { isProxy: true };
       window.openSales(iíììíïï(Iííîíìï).i);
     }
   };
-  var iiìïïíì = () => { };
+  var iiìïïíì = () => {};
   var iííiììî = iiiîiîï("<div class=\"trade-spray-img svelte-1ua5p6d\"></div>");
   var iïïííïì = iiiîiîï("<img class=\"trade-item-img svelte-1ua5p6d\" draggable=\"false\">");
   var iîïìiiï = iiiîiîï("<div class=\"trade-inv-item svelte-1ua5p6d\" role=\"button\" tabindex=\"0\"><!> <div class=\"trade-item-name svelte-1ua5p6d\"> </div> <div class=\"trade-item-count svelte-1ua5p6d\"> </div></div>");
@@ -43449,7 +43449,7 @@ window.JfCzGzvGIQB8rrJX = { isProxy: true };
   var iìïiiií = iiiîiîï("<div class=\"trade-loading svelte-kfskmv\"><i class=\"material-icons trade-spinner svelte-kfskmv\">hourglass_empty</i> <div>Fetching Inventories...</div></div>");
   var iiïíïìi = iiiîiîï("<div class=\"trade-loading svelte-kfskmv\"><div style=\"color: #f44336;\"> </div></div>");
   var iíííïìì = iiiîiîï("<div class=\"trade-error svelte-kfskmv\"> </div>");
-  var iîîïíîï = () => { };
+  var iîîïíîï = () => {};
   var iiîïííi = iiiîiîï("<div class=\"trade-sides svelte-kfskmv\"><!> <!></div> <button class=\"trade-toggle-missing svelte-kfskmv\" title=\"Toggle Missing Items\"><span class=\"material-icons svelte-kfskmv\">rule</span></button> <textarea class=\"trade-message svelte-kfskmv\" placeholder=\"Add a message to the offer\" maxlength=\"500\"></textarea> <!> <div class=\"trade-submit svelte-kfskmv\" role=\"button\" tabindex=\"0\"> </div>", 1);
   var iììiíìi = iiiîiîï("<div class=\"trade-overlay svelte-kfskmv\" role=\"dialog\" aria-modal=\"true\" tabindex=\"-1\"><div class=\"trade-window svelte-kfskmv\" role=\"document\"><!></div></div>");
   const iîíììïï = {
@@ -43608,7 +43608,7 @@ window.JfCzGzvGIQB8rrJX = { isProxy: true };
             });
             if (Iiìiìii.error) {
               const Iíîììîî = iîiïîïi(Iiìiìii.error);
-              console.error(Iíîììîî || "Failed to create trade");
+              throw new Error(Iíîììîî || "Failed to create trade");
             }
             return Iiìiìii.data || {
               funds: 0
@@ -43640,7 +43640,7 @@ window.JfCzGzvGIQB8rrJX = { isProxy: true };
               const Iiìíïíí = await iíiïîíi.trades.getInventory(Iïìiîìî);
               if (Iiìíïíí.error) {
                 const Iïìïíìi = iîiïîïi(Iiìíïíí.error);
-                console.error(Iïìïíìi || "Failed to fetch trade inventory");
+                throw new Error(Iïìïíìi || "Failed to fetch trade inventory");
               }
               return Iiìíïíí.data || {
                 my_inventory: [],
@@ -43777,7 +43777,7 @@ window.JfCzGzvGIQB8rrJX = { isProxy: true };
           await async function (Iííïìiî, Iiïîíiï, Iìíïíìï) {
             const Iìîiíïí = await iíiïîíi.players.giftKR(Iííïìiî, Iiïîíiï, Iìíïíìï);
             if (Iìîiíïí.error) {
-              console.error(iîiïîïi(Iìîiíïí.error) || "Failed to send gift");
+              throw new Error(iîiïîïi(Iìîiíïí.error) || "Failed to send gift");
             }
           }(Iîîííii.playerName, iíììíïï(Iîìïíîì), iíììíïï(Iííiîií).trim());
           iìììííi(Iîìììîí, true);
@@ -43974,7 +43974,7 @@ window.JfCzGzvGIQB8rrJX = { isProxy: true };
       if (Iiìiìîï?.data && !Iiìiìîï.error) {
         iìììííi(Iíiíîîì, Iîïîîíì);
       }
-    } catch { }
+    } catch {}
     iìììííi(Iíiíííi, false);
   }
   async function iììïîíî(Iiíîîïï, Iïïìiií, Iíìiìíï, Iíììíîi, Iìiiíîi) {
@@ -44014,12 +44014,12 @@ window.JfCzGzvGIQB8rrJX = { isProxy: true };
       await async function (Iîiíïíï, Iiïìíiî) {
         const Iïïïiiì = await iíiïîíi.players.verifyPlayer(Iîiíïíï, Iiïìíiî);
         if (Iïïïiiì.error) {
-          console.error(iîiïîïi(Iïïïiiì.error) || "Failed to update verification");
+          throw new Error(iîiïîïi(Iïïïiiì.error) || "Failed to update verification");
         }
         return Iïïïiiì.data?.featured ?? Iiïìíiî;
       }(iíììíïï(Iìîìïíí).player_name, Iííîíïî);
       iíììíïï(Iìîìïíí).player_featured = Iííîíïî ? 1 : 0;
-    } catch { }
+    } catch {}
   }
   function iïìíììî(Iìîíiií, Iiíííìï, Iïiîìii) {
     if (iíììíïï(Iiíííìï) && iíììíïï(Iïiîìii)) {
@@ -44332,7 +44332,7 @@ window.JfCzGzvGIQB8rrJX = { isProxy: true };
         iìììííi(Iìiiiïí, iìïîiíì(await async function (Iíïîîîï, Iiîîïîî = 0) {
           const Iîïíîïî = await iíiïîíi.players.getSales(Iíïîîîï, Iiîîïîî);
           if (Iîïíîïî.error) {
-            console.error(iîiïîïi(Iîïíîïî.error) || "Failed to load sales history");
+            throw new Error(iîiïîïi(Iîïíîïî.error) || "Failed to load sales history");
           }
           return Iîïíîïî.data || [];
         }(Iiìïïií.playerName, iíììíïï(Iïîìïîi))));
@@ -44410,10 +44410,10 @@ window.JfCzGzvGIQB8rrJX = { isProxy: true };
           iìììííi(Iïííîîì, iìïîiíì(await async function (Iiïiiíi) {
             const Iíiìíii = await iíiïîíi.players.getProfile(Iiïiiíi);
             if (Iíiìíii.error) {
-              console.error(iîiïîïi(Iíiìíii.error) || "Failed to load profile");
+              throw new Error(iîiïîïi(Iíiìíii.error) || "Failed to load profile");
             }
             if (!Iíiìíii.data) {
-              console.error("Profile not found");
+              throw new Error("Profile not found");
             }
             return Iíiìíii.data;
           }(Iiìïïií.playerName)));
@@ -44457,7 +44457,7 @@ window.JfCzGzvGIQB8rrJX = { isProxy: true };
         (async function (Iìîìííi) {
           const Iìïííîì = await iíiïîíi.social.getFeedByPlayer(Iìîìííi, 20);
           if (Iìïííîì.error) {
-            console.error(iîiïîïi(Iìïííîì.error) || "Failed to load player feed");
+            throw new Error(iîiïîïi(Iìïííîì.error) || "Failed to load player feed");
           }
           return Iìïííîì.data?.posts || [];
         })(iíììíïï(Iïííîîì).player_id).then(Iîïíìîi => {
@@ -44486,7 +44486,7 @@ window.JfCzGzvGIQB8rrJX = { isProxy: true };
         (async function (Iiïîîïí) {
           const Iììîììî = await iíiïîíi.players.getListings(Iiïîîïí);
           if (Iììîììî.error) {
-            console.error(iîiïîïi(Iììîììî.error) || "Failed to load listings");
+            throw new Error(iîiïîïi(Iììîììî.error) || "Failed to load listings");
           }
           return Iììîììî.data || [];
         })(iíììíïï(Iïííîîì).player_name).then(Iìïiiïí => {
@@ -48012,7 +48012,7 @@ window.JfCzGzvGIQB8rrJX = { isProxy: true };
       iíïíiíi.clearError(Iíïïiìi);
       const Iïîïîíì = await iíiïîíi.shop.getDisplayByTag(Iíïïiìi);
       if (Iïîïîíì.error) {
-        console.error(Iïîïîíì.error || "Failed to load shop");
+        throw new Error(Iïîïîíì.error || "Failed to load shop");
       }
       const Iîïïiïï = Iïîïîíì.data;
       iíïíiíi.setShop(Iíïïiìi, Iîïïiïï);
@@ -48029,7 +48029,7 @@ window.JfCzGzvGIQB8rrJX = { isProxy: true };
         if (iíïíiíi.isLoaded(Iïíííiì)) {
           await iîîíïií(Iïíííiì, true);
         }
-      } catch (Iïìîííi) { }
+      } catch (Iïìîííi) {}
     });
     await Promise.allSettled(Iíìiiïi);
   }
@@ -48045,10 +48045,10 @@ window.JfCzGzvGIQB8rrJX = { isProxy: true };
     };
     const Iïiîìiì = await iíiïîíi.shop.purchaseProduct(Iìíìiiì);
     if (!Iïiîìiì.data) {
-      console.error(Iïiîìiì.error || "Purchase failed");
+      throw new Error(Iïiîìiì.error || "Purchase failed");
     }
     if (!Iïiîìiì.data.success) {
-      console.error(Iïiîìiì.data.message || "Purchase failed");
+      throw new Error(Iïiîìiì.data.message || "Purchase failed");
     }
     iíïíiíi.updateDisplayPurchaseCount(Iiíiìîí);
     const Iïíìïîi = iïiìíïi(iíìïïiì);
@@ -48159,13 +48159,13 @@ window.JfCzGzvGIQB8rrJX = { isProxy: true };
           dismissable: false
         }).withAwait().push();
         if (!Iïíîiìì) {
-          console.error("Invalid 2FA code");
+          throw new Error("Invalid 2FA code");
         }
         Iíîîïíí = await iíiïîíi.auth.respondTwoFactorChallenge(Iiiiïîï.challenge_id, Iïíîiìì);
       } else if (Iiiiïîï.type === "ensure_verified") {
         const Iïííiîï = Iiiiïîï.challenge_id;
         if (!Iïííiîï) {
-          console.error("Invalid challenge ID");
+          throw new Error("Invalid challenge ID");
         }
         await iïììîíî(iîïîîiî, {
           challengeID: Iïííiîï,
@@ -48191,7 +48191,7 @@ window.JfCzGzvGIQB8rrJX = { isProxy: true };
           dismissable: false
         }).withAwait().push();
         if (!Iïíîìii) {
-          console.error("Invalid code");
+          throw new Error("Invalid code");
         }
         Iíîîïíí = await iíiïîíi.auth.respondCodeChallenge(Iiiiïîï.challenge_id, Iïíîìii);
       } else if (Iiiiïîï.type === "ensure_migrated") {
@@ -48213,7 +48213,7 @@ window.JfCzGzvGIQB8rrJX = { isProxy: true };
           dismissable: false
         }).withAwait().push();
         if (!Iiîììïî) {
-          console.error("Invalid email");
+          throw new Error("Invalid email");
         }
         Iíîîïíí = await iíiïîíi.auth.migrateUser(Iiiiïîï.challenge_id, Iiîììïî);
       } else if (Iiiiïîï.type === "select_username") {
@@ -48243,7 +48243,7 @@ window.JfCzGzvGIQB8rrJX = { isProxy: true };
           dismissable: false
         }).withAwait().push();
         if (!Iîîìiíì) {
-          console.error("Invalid username");
+          throw new Error("Invalid username");
         }
         Iíîîïíí = await iíiïîíi.auth.selectUsername(Iiiiïîï.challenge_id, Iîîìiíì);
       } else if (Iiiiïîï.type === "update_password") {
@@ -48328,12 +48328,12 @@ window.JfCzGzvGIQB8rrJX = { isProxy: true };
           Iiiîîíì = "Age is required";
         }
         if (!Iîiìîíî) {
-          console.error("Age is required");
+          throw new Error("Age is required");
         }
         Iíîîïíí = await iíiïîíi.auth.respondKidAgeChallenge(Iiiiïîï.challenge_id, parseInt(Iîiìîíî));
       } else {
         if (Iiiiïîï.type !== "kid_parental_consent") {
-          console.error(`Unhandled challenge type: ${Iiiiïîï.type}`);
+          throw new Error(`Unhandled challenge type: ${Iiiiïîï.type}`);
         }
         {
           const Iííîìïí = Iiiiïîï.data;
@@ -48361,7 +48361,7 @@ window.JfCzGzvGIQB8rrJX = { isProxy: true };
   async function iìïìíîi(Iîìîìîï) {
     const Iíiìiíi = Iîìîìîï.data;
     if (!Iíiìiíi) {
-      console.error("No K-ID challenge data available");
+      throw new Error("No K-ID challenge data available");
     }
     const Iíîîïiì = [];
     if (Iíiìiíi.oneTimePassword) {
@@ -48408,7 +48408,7 @@ window.JfCzGzvGIQB8rrJX = { isProxy: true };
     if (Iïïíiíi.email) {
       try {
         await iíiïîíi.auth.submitKidParentalEmail(Iîìîìîï.challenge_id, Iïïíiíi.email);
-      } catch (Iìííïïï) { }
+      } catch (Iìííïïï) {}
     }
     return "submitted";
   }
@@ -48429,7 +48429,7 @@ window.JfCzGzvGIQB8rrJX = { isProxy: true };
   async function iíîìïìí(Iïiíiíi) {
     const Iiïìììì = Iïiíiíi.data;
     if (!Iiïìììì) {
-      console.error("No K-ID challenge data available");
+      throw new Error("No K-ID challenge data available");
     }
     const Iíiiîìï = [];
     if (Iiïìììì.oneTimePassword) {
@@ -48473,7 +48473,7 @@ window.JfCzGzvGIQB8rrJX = { isProxy: true };
     if (Iîîìïïì && Iîîìïïì.email) {
       try {
         await iíiïîíi.auth.submitKidParentalEmail(Iïiíiíi.challenge_id, Iîîìïïì.email);
-      } catch (Iiiìííï) { }
+      } catch (Iiiìííï) {}
     }
   }
   async function iïïíïìi(Iîiîïiì) {
@@ -48492,12 +48492,12 @@ window.JfCzGzvGIQB8rrJX = { isProxy: true };
       let Iïììîiî = await iíiïîíi.auth.registerEmailCode(Iîiîïiì);
       if (Iïììîiî.status !== 200 || !Iïììîiî.data) {
         iìïiïíí.set(false);
-        console.error(Iïììîiî.error || "Registration failed");
+        throw new Error(Iïììîiî.error || "Registration failed");
       }
       Iïììîiî = await iîííìíî(Iïììîiî);
       if (Iïììîiî.status !== 200 || !Iïììîiî.data || Iïììîiî.data.type !== "login_ok") {
         iìïiïíí.set(false);
-        console.error(Iïììîiî.error || "Registration failed after challenges");
+        throw new Error(Iïììîiî.error || "Registration failed after challenges");
       }
       const Iiìíïiî = Iïììîiî.data;
       iîìííiî({
@@ -48505,7 +48505,7 @@ window.JfCzGzvGIQB8rrJX = { isProxy: true };
         refreshToken: Iiìíïiî.refresh_token
       });
       if (iîîïïîï != null) {
-        iîîïïîï(Iiìíïiî.access_token).catch(Iîìíîií => { });
+        iîîïïîï(Iiìíïiî.access_token).catch(Iîìíîií => {});
       }
       iiïîiìi();
       iìïiïíí.set(false);
@@ -48530,7 +48530,7 @@ window.JfCzGzvGIQB8rrJX = { isProxy: true };
     var Iîîïíiî;
     var Iííìïíí;
     if (Iïíiíîí && Iiììîîï) {
-      console.error("Please only use either username or email for login.");
+      throw new Error("Please only use either username or email for login.");
     }
     iìííïìï.set(true);
     if ((Iîîïíiî = window.logEventFRVR) !== null && Iîîïíiî !== undefined) {
@@ -48547,16 +48547,16 @@ window.JfCzGzvGIQB8rrJX = { isProxy: true };
         Iïiîîíî = await iíiïîíi.auth.loginEmail(Iiììîîï, Iìïiïii, Iìîïiîi);
       } else {
         if (!Iiììîîï) {
-          console.error("Invalid login parameters");
+          throw new Error("Invalid login parameters");
         }
         Iïiîîíî = await iíiïîíi.auth.loginEmailCode(Iiììîîï);
       }
       if (Iïiîîíî.status !== 200 || !Iïiîîíî.data) {
-        console.error(Iïiîîíî.error || "Login failed before challenges");
+        throw new Error(Iïiîîíî.error || "Login failed before challenges");
       }
       const Iìííiiì = await iîííìíî(Iïiîîíî);
       if (Iìííiiì.status !== 200 || !Iìííiiì.data || Iìííiiì.data.type !== "login_ok") {
-        console.error(Iìííiiì.error || "Login failed after challenges");
+        throw new Error(Iìííiiì.error || "Login failed after challenges");
       }
       const Iíìiiìî = Iìííiiì.data;
       iîìííiî({
@@ -48564,7 +48564,7 @@ window.JfCzGzvGIQB8rrJX = { isProxy: true };
         refreshToken: Iíìiiìî.refresh_token
       });
       if (iîîïïîï != null) {
-        iîîïïîï(Iíìiiìî.access_token).catch(Iíiïíiì => { });
+        iîîïïîï(Iíìiiìî.access_token).catch(Iíiïíiì => {});
       }
       iiïîiìi();
     } catch (Iìíiîîï) {
@@ -48811,7 +48811,7 @@ window.JfCzGzvGIQB8rrJX = { isProxy: true };
           });
           Iíïiiii.start();
           Iîîîìíí = Iíïiiii;
-        } catch { } finally {
+        } catch {} finally {
           Iíïiíïi = false;
         }
       }
@@ -50639,13 +50639,13 @@ window.JfCzGzvGIQB8rrJX = { isProxy: true };
           var Iíìîïïï = Iïïíííï;
           for (Iiìíiîì = 0; Iiìíiîì < Iiîíiîî.length; Iiìíiîì++) {
             if (!Iíìîïïï.hasOwnProperty(Iiîíiîî[Iiìíiîì])) {
-              console.error("Unrecognized operation " + Iíììïíï + " (failed at " + Iiîíiîî.slice(0, Iiìíiîì + 1).join(".") + ")");
+              throw new Error("Unrecognized operation " + Iíììïíï + " (failed at " + Iiîíiîî.slice(0, Iiìíiîì + 1).join(".") + ")");
             }
             Iíìîïïï = Iíìîïïï[Iiîíiîî[Iiìíiîì]];
           }
           return Iíìîïïï.apply(Iîîîíìí, Iiìiîïí);
         }
-        console.error("Unrecognized operation " + Iíììïíï);
+        throw new Error("Unrecognized operation " + Iíììïíï);
       };
       Iiîïííi.uses_data = function (Iîíîííi) {
         var Iîïïíïï = [];
@@ -51216,7 +51216,7 @@ window.JfCzGzvGIQB8rrJX = { isProxy: true };
         iïïîïíi.set(Iîiiìiì.data.profile.funds);
         iîïïìíì.set(Iîiiìiì.data.profile.score);
       }
-    } catch (Iiìïïíi) { }
+    } catch (Iiìïïíi) {}
   }
   const iìiiìíì = new class {
     constructor() {
@@ -51740,7 +51740,7 @@ window.JfCzGzvGIQB8rrJX = { isProxy: true };
       case Int8Array:
         return Math.max(Iîíìíïì / 127, -1);
       default:
-        console.error("Invalid component type.");
+        throw new Error("Invalid component type.");
     }
   }
   function iîiïìïí(Iiiïîií, Iiììïíî) {
@@ -51760,7 +51760,7 @@ window.JfCzGzvGIQB8rrJX = { isProxy: true };
       case Int8Array:
         return Math.round(Iiiïîií * 127);
       default:
-        console.error("Invalid component type.");
+        throw new Error("Invalid component type.");
     }
   }
   const iìïiiiî = {
@@ -51916,7 +51916,7 @@ window.JfCzGzvGIQB8rrJX = { isProxy: true };
           this.y = Iíìîïîï;
           break;
         default:
-          console.error("index is out of range: " + Iiìiîíì);
+          throw new Error("index is out of range: " + Iiìiîíì);
       }
       return this;
     }
@@ -51927,7 +51927,7 @@ window.JfCzGzvGIQB8rrJX = { isProxy: true };
         case 1:
           return this.y;
         default:
-          console.error("index is out of range: " + Iìiììîï);
+          throw new Error("index is out of range: " + Iìiììîï);
       }
     }
     clone() {
@@ -52555,7 +52555,7 @@ window.JfCzGzvGIQB8rrJX = { isProxy: true };
       this._onChangeCallback = Iiiïííï;
       return this;
     }
-    _onChangeCallback() { }
+    _onChangeCallback() {}
     *[Symbol.iterator]() {
       yield this._x;
       yield this._y;
@@ -52606,7 +52606,7 @@ window.JfCzGzvGIQB8rrJX = { isProxy: true };
           this.z = Iïïìiíì;
           break;
         default:
-          console.error("index is out of range: " + Iìîíîiî);
+          throw new Error("index is out of range: " + Iìîíîiî);
       }
       return this;
     }
@@ -52619,7 +52619,7 @@ window.JfCzGzvGIQB8rrJX = { isProxy: true };
         case 2:
           return this.z;
         default:
-          console.error("index is out of range: " + Iíîíîiì);
+          throw new Error("index is out of range: " + Iíîíîiì);
       }
     }
     clone() {
@@ -53823,7 +53823,7 @@ window.JfCzGzvGIQB8rrJX = { isProxy: true };
           this.w = Iíïiiîí;
           break;
         default:
-          console.error("index is out of range: " + Iiiïiîí);
+          throw new Error("index is out of range: " + Iiiïiîí);
       }
       return this;
     }
@@ -53838,7 +53838,7 @@ window.JfCzGzvGIQB8rrJX = { isProxy: true };
         case 3:
           return this.w;
         default:
-          console.error("index is out of range: " + Iìiïìiì);
+          throw new Error("index is out of range: " + Iìiïìiì);
       }
     }
     clone() {
@@ -55635,7 +55635,7 @@ window.JfCzGzvGIQB8rrJX = { isProxy: true };
         Iiiíiïì = Iïííîiï * -2 * Iïïîîíì / (Iïííîiï - Iïïîîíì);
       } else {
         if (Iiiîîiî !== iiìíiiî) {
-          console.error("THREE.Matrix4.makePerspective(): Invalid coordinate system: " + Iiiîîiî);
+          throw new Error("THREE.Matrix4.makePerspective(): Invalid coordinate system: " + Iiiîîiî);
         }
         Iíiììïî = -Iïííîiï / (Iïííîiï - Iïïîîíì);
         Iiiíiïì = -Iïííîiï * Iïïîîíì / (Iïííîiï - Iïïîîíì);
@@ -55674,7 +55674,7 @@ window.JfCzGzvGIQB8rrJX = { isProxy: true };
         Iíìíííî = -(Iïiiîîi + Iiïiiií) / (Iïiiîîi - Iiïiiií);
       } else {
         if (Iîîìiìï !== iiìíiiî) {
-          console.error("THREE.Matrix4.makeOrthographic(): Invalid coordinate system: " + Iîîìiìï);
+          throw new Error("THREE.Matrix4.makeOrthographic(): Invalid coordinate system: " + Iîîìiìï);
         }
         Iìîíîíî = -1 / (Iïiiîîi - Iiïiiií);
         Iíìíííî = -Iiïiiií / (Iïiiîîi - Iiïiiií);
@@ -55912,7 +55912,7 @@ window.JfCzGzvGIQB8rrJX = { isProxy: true };
       this._onChangeCallback = Iîíïiíï;
       return this;
     }
-    _onChangeCallback() { }
+    _onChangeCallback() {}
     *[Symbol.iterator]() {
       yield this._x;
       yield this._y;
@@ -56042,10 +56042,10 @@ window.JfCzGzvGIQB8rrJX = { isProxy: true };
       this.customDistanceMaterial = undefined;
       this.userData = {};
     }
-    onBeforeShadow() { }
-    onAfterShadow() { }
-    onBeforeRender() { }
-    onAfterRender() { }
+    onBeforeShadow() {}
+    onAfterShadow() {}
+    onBeforeRender() {}
+    onAfterRender() {}
     applyMatrix4(Iîíïiìï) {
       if (this.matrixAutoUpdate) {
         this.updateMatrix();
@@ -56243,7 +56243,7 @@ window.JfCzGzvGIQB8rrJX = { isProxy: true };
       const Iiiíííî = this.matrixWorld.elements;
       return Iíîìïìi.set(Iiiíííî[8], Iiiíííî[9], Iiiíííî[10]).normalize();
     }
-    raycast() { }
+    raycast() {}
     traverse(Iìîïïiï) {
       Iìîïïiï(this);
       const Iíïîiíì = this.children;
@@ -57296,8 +57296,8 @@ window.JfCzGzvGIQB8rrJX = { isProxy: true };
       }
       this._alphaTest = Iiîiìiî;
     }
-    onBeforeRender() { }
-    onBeforeCompile() { }
+    onBeforeRender() {}
+    onBeforeCompile() {}
     customProgramCacheKey() {
       return this.onBeforeCompile.toString();
     }
@@ -57909,7 +57909,7 @@ window.JfCzGzvGIQB8rrJX = { isProxy: true };
   class iììiiiï {
     constructor(Iïïîíïï, Iìíîiìí, Iîiiìïì = false) {
       if (Array.isArray(Iïïîíïï)) {
-        console.error("THREE.BufferAttribute: array should be a Typed Array.");
+        throw new TypeError("THREE.BufferAttribute: array should be a Typed Array.");
       }
       this.isBufferAttribute = true;
       Object.defineProperty(this, "id", {
@@ -57925,7 +57925,7 @@ window.JfCzGzvGIQB8rrJX = { isProxy: true };
       this.gpuType = iiîiíìi;
       this.version = 0;
     }
-    onUploadCallback() { }
+    onUploadCallback() {}
     set needsUpdate(Iíìïìíì) {
       if (Iíìïìíì === true) {
         this.version++;
@@ -59401,7 +59401,7 @@ window.JfCzGzvGIQB8rrJX = { isProxy: true };
         Iííïííì.lookAt(0, 0, -1);
       } else {
         if (Iîïíiîî !== iiìíiiî) {
-          console.error("THREE.CubeCamera.updateCoordinateSystem(): Invalid coordinate system: " + Iîïíiîî);
+          throw new Error("THREE.CubeCamera.updateCoordinateSystem(): Invalid coordinate system: " + Iîïíiîî);
         }
         Iíìîíïì.up.set(0, -1, 0);
         Iíìîíïì.lookAt(-1, 0, 0);
@@ -59844,7 +59844,7 @@ window.JfCzGzvGIQB8rrJX = { isProxy: true };
       this.version = 0;
       this.uuid = iìïïïìï();
     }
-    onUploadCallback() { }
+    onUploadCallback() {}
     set needsUpdate(Iïíïíiï) {
       if (Iïíïíiï === true) {
         this.version++;
@@ -60795,7 +60795,7 @@ window.JfCzGzvGIQB8rrJX = { isProxy: true };
       Iìíîìïí[Iìiíïìî] = Iííiíïi;
       Iìíîìïí.set(Iíïïìïì, Iìiíïìî + 1);
     }
-    updateMorphTargets() { }
+    updateMorphTargets() {}
     dispose() {
       this.dispatchEvent({
         type: "dispose"
@@ -60965,7 +60965,7 @@ window.JfCzGzvGIQB8rrJX = { isProxy: true };
           Iììîiïi[5].setComponents(Iîìîìíï + Iïíîíïì, Iìïïiïì + Iïìîííï, Iíìííîï + Iííîïìi, Iìiïîïî + Iïîìîíì).normalize();
         } else {
           if (Iiîìïîí !== iiìíiiî) {
-            console.error("THREE.Frustum.setFromProjectionMatrix(): Invalid coordinate system: " + Iiîìïîí);
+            throw new Error("THREE.Frustum.setFromProjectionMatrix(): Invalid coordinate system: " + Iiîìïîí);
           }
           Iììîiïi[5].setComponents(Iïíîíïì, Iïìîííï, Iííîïìi, Iïîìîíì).normalize();
         }
@@ -61279,29 +61279,29 @@ window.JfCzGzvGIQB8rrJX = { isProxy: true };
     _validateGeometry(Iiíìiîì) {
       const Iîïïíiï = this.geometry;
       if (Boolean(Iiíìiîì.getIndex()) !== Boolean(Iîïïíiï.getIndex())) {
-        console.error("THREE.BatchedMesh: All geometries must consistently have \"index\".");
+        throw new Error("THREE.BatchedMesh: All geometries must consistently have \"index\".");
       }
       for (const Iíìîíiì in Iîïïíiï.attributes) {
         if (!Iiíìiîì.hasAttribute(Iíìîíiì)) {
-          console.error(`THREE.BatchedMesh: Added geometry missing "${Iíìîíiì}". All geometries must have consistent attributes.`);
+          throw new Error(`THREE.BatchedMesh: Added geometry missing "${Iíìîíiì}". All geometries must have consistent attributes.`);
         }
         const Iíïîiîï = Iiíìiîì.getAttribute(Iíìîíiì);
         const Iìïïïìí = Iîïïíiï.getAttribute(Iíìîíiì);
         if (Iíïîiîï.itemSize !== Iìïïïìí.itemSize || Iíïîiîï.normalized !== Iìïïïìí.normalized) {
-          console.error("THREE.BatchedMesh: All attributes must have a consistent itemSize and normalized value.");
+          throw new Error("THREE.BatchedMesh: All attributes must have a consistent itemSize and normalized value.");
         }
       }
     }
     validateInstanceId(Iìiîíïi) {
       const Iîíîîìï = this._instanceInfo;
       if (Iìiîíïi < 0 || Iìiîíïi >= Iîíîîìï.length || Iîíîîìï[Iìiîíïi].active === false) {
-        console.error(`THREE.BatchedMesh: Invalid instanceId ${Iìiîíïi}. Instance is either out of range or has been deleted.`);
+        throw new Error(`THREE.BatchedMesh: Invalid instanceId ${Iìiîíïi}. Instance is either out of range or has been deleted.`);
       }
     }
     validateGeometryId(Iíîîîïí) {
       const Iiìîíîi = this._geometryInfo;
       if (Iíîîîïí < 0 || Iíîîîïí >= Iiìîíîi.length || Iiìîíîi[Iíîîîïí].active === false) {
-        console.error(`THREE.BatchedMesh: Invalid geometryId ${Iíîîîïí}. Geometry is either out of range or has been deleted.`);
+        throw new Error(`THREE.BatchedMesh: Invalid geometryId ${Iíîîîïí}. Geometry is either out of range or has been deleted.`);
       }
     }
     setCustomSort(Iïíïïîi) {
@@ -61344,7 +61344,7 @@ window.JfCzGzvGIQB8rrJX = { isProxy: true };
     }
     addInstance(Iîîîïïí) {
       if (this._instanceInfo.length >= this.maxInstanceCount && this._availableInstanceIds.length === 0) {
-        console.error("THREE.BatchedMesh: Maximum item count reached.");
+        throw new Error("THREE.BatchedMesh: Maximum item count reached.");
       }
       const Iìïìiîi = {
         visible: true,
@@ -61396,7 +61396,7 @@ window.JfCzGzvGIQB8rrJX = { isProxy: true };
         Iîîïïîï.reservedIndexCount = Iíìííîì === -1 ? Iiîìiîî.count : Iíìííîì;
       }
       if (Iîîïïîï.indexStart !== -1 && Iîîïïîï.indexStart + Iîîïïîï.reservedIndexCount > this._maxIndexCount || Iîîïïîï.vertexStart + Iîîïïîï.reservedVertexCount > this._maxVertexCount) {
-        console.error("THREE.BatchedMesh: Reserved space request exceeds the maximum buffer size.");
+        throw new Error("THREE.BatchedMesh: Reserved space request exceeds the maximum buffer size.");
       }
       let Iïíïîìí;
       if (this._availableGeometryIds.length > 0) {
@@ -61415,7 +61415,7 @@ window.JfCzGzvGIQB8rrJX = { isProxy: true };
     }
     setGeometryAt(Iîíîííî, Iïïîìíî) {
       if (Iîíîííî >= this._geometryCount) {
-        console.error("THREE.BatchedMesh: Maximum geometry count reached.");
+        throw new Error("THREE.BatchedMesh: Maximum geometry count reached.");
       }
       this._validateGeometry(Iïïîìíî);
       const Iiíìiii = this.geometry;
@@ -61424,7 +61424,7 @@ window.JfCzGzvGIQB8rrJX = { isProxy: true };
       const Iîíîììi = Iïïîìíî.getIndex();
       const Iíiìiiì = this._geometryInfo[Iîíîííî];
       if (Iíîìíiï && Iîíîììi.count > Iíiìiiì.reservedIndexCount || Iïïîìíî.attributes.position.count > Iíiìiiì.reservedVertexCount) {
-        console.error("THREE.BatchedMesh: Reserved space not large enough for provided geometry.");
+        throw new Error("THREE.BatchedMesh: Reserved space not large enough for provided geometry.");
       }
       const Iiiììiî = Iíiìiiì.vertexStart;
       const Iîiïiíï = Iíiìiiì.reservedVertexCount;
@@ -61663,7 +61663,7 @@ window.JfCzGzvGIQB8rrJX = { isProxy: true };
         Iíííììï.pop();
       }
       if (Iîíiìii < Iïíïíïï.length) {
-        console.error(`BatchedMesh: Instance ids outside the range ${Iîíiìii} are being used. Cannot shrink instance count.`);
+        throw new Error(`BatchedMesh: Instance ids outside the range ${Iîíiìii} are being used. Cannot shrink instance count.`);
       }
       const Iiîìîïì = new Int32Array(Iîíiìii);
       const Iiìîiìí = new Int32Array(Iîíiìii);
@@ -61690,10 +61690,10 @@ window.JfCzGzvGIQB8rrJX = { isProxy: true };
     setGeometrySize(Iîííïiï, Iíííiii) {
       const Iíiììîí = [...this._geometryInfo].filter(Iîîiïiî => Iîîiïiî.active);
       if (Math.max(...Iíiììîí.map(Iìíîiíï => Iìíîiíï.vertexStart + Iìíîiíï.reservedVertexCount)) > Iîííïiï) {
-        console.error(`BatchedMesh: Geometry vertex values are being used outside the range ${Iíííiii}. Cannot shrink further.`);
+        throw new Error(`BatchedMesh: Geometry vertex values are being used outside the range ${Iíííiii}. Cannot shrink further.`);
       }
       if (this.geometry.index && Math.max(...Iíiììîí.map(Iiíiíìì => Iiíiíìì.indexStart + Iiíiíìì.reservedIndexCount)) > Iíííiii) {
-        console.error(`BatchedMesh: Geometry index values are being used outside the range ${Iíííiii}. Cannot shrink further.`);
+        throw new Error(`BatchedMesh: Geometry index values are being used outside the range ${Iíííiii}. Cannot shrink further.`);
       }
       const Iîíiìîî = this.geometry;
       Iîíiìîî.dispose();
@@ -62237,7 +62237,7 @@ window.JfCzGzvGIQB8rrJX = { isProxy: true };
   class iììíìii extends iiiîïìi {
     constructor(Iïíïìíí, Iíîîîíï, Iííííîï = iìïîìïí, Iììîïïí, Iììîîîí, Iììiiíi, Iíìiïíî = iìîîïîi, Iîìïiìì = iìîîïîi, Iìiìììi, Iìïíîîi = iîïîîîi, Iíîiíìî = 1) {
       if (Iìïíîîi !== iîïîîîi && Iìïíîîi !== iïîìïìí) {
-        console.error("DepthTexture format must be either THREE.DepthFormat or THREE.DepthStencilFormat");
+        throw new Error("DepthTexture format must be either THREE.DepthFormat or THREE.DepthStencilFormat");
       }
       super({
         width: Iïíïìíí,
@@ -62841,7 +62841,7 @@ window.JfCzGzvGIQB8rrJX = { isProxy: true };
       this.needsUpdate = false;
       this.cacheArcLengths = null;
     }
-    getPoint() { }
+    getPoint() {}
     getPointAt(Iìiíiîí, Iïîiîìí) {
       const Iíiìîìï = this.getUtoTmapping(Iìiíiîí);
       return this.getPoint(Iíiìîìï, Iïîiîìí);
@@ -66221,7 +66221,7 @@ window.JfCzGzvGIQB8rrJX = { isProxy: true };
           let Iiîiîìî;
           IÌiìîìi: {
             IÏîîíïì: if (!(Iiíiîîï < Iïïìiíî)) {
-              for (let Iíiïïìi = Iiiïîïí + 2; ;) {
+              for (let Iíiïïìi = Iiiïîïí + 2;;) {
                 if (Iïïìiíî === undefined) {
                   if (Iiíiîîï < Iïïìïîï) {
                     break IÏîîíïì;
@@ -66251,7 +66251,7 @@ window.JfCzGzvGIQB8rrJX = { isProxy: true };
                 Iiiïîïí = 2;
                 Iïïìïîï = Iîiîííi;
               }
-              for (let Iîîiîïí = Iiiïîïí - 2; ;) {
+              for (let Iîîiîïí = Iiiïîïí - 2;;) {
                 if (Iïïìïîï === undefined) {
                   this._cachedIndex = 0;
                   return this.copySampleValue_(0);
@@ -66308,9 +66308,9 @@ window.JfCzGzvGIQB8rrJX = { isProxy: true };
       return Iîìiîïì;
     }
     interpolate_() {
-      console.error("call to abstract method");
+      throw new Error("call to abstract method");
     }
-    intervalChanged_() { }
+    intervalChanged_() {}
   }
   class iíìíìïï extends iìììiïi {
     constructor(Iïìïìiï, Iïîîìïï, Iïîiìii, Iiïïiíî) {
@@ -66419,10 +66419,10 @@ window.JfCzGzvGIQB8rrJX = { isProxy: true };
   class iìïíîiì {
     constructor(Iiíïïîì, Iiíìiìï, Iiííïïì, Iiìîîiî) {
       if (Iiíïïîì === undefined) {
-        console.error("THREE.KeyframeTrack: track name is undefined");
+        throw new Error("THREE.KeyframeTrack: track name is undefined");
       }
       if (Iiíìiìï === undefined || Iiíìiìï.length === 0) {
-        console.error("THREE.KeyframeTrack: no keyframes in track named " + Iiíïïîì);
+        throw new Error("THREE.KeyframeTrack: no keyframes in track named " + Iiíïïîì);
       }
       this.name = Iiíïïîì;
       this.times = iìïíìiî(Iiíìiìï, this.TimeBufferType);
@@ -66473,7 +66473,7 @@ window.JfCzGzvGIQB8rrJX = { isProxy: true };
         const Iiîìíîí = "unsupported interpolation for " + this.ValueTypeName + " keyframe track named " + this.name;
         if (this.createInterpolant === undefined) {
           if (Iíîïïìì === this.DefaultInterpolation) {
-            console.error(Iiîìíîí);
+            throw new Error(Iiîìíîí);
           }
           this.setInterpolation(this.DefaultInterpolation);
         }
@@ -66896,7 +66896,7 @@ window.JfCzGzvGIQB8rrJX = { isProxy: true };
   }
   function iïîïîïî(Iiiîiïî) {
     if (Iiiîiïî.type === undefined) {
-      console.error("THREE.KeyframeTrack: track type undefined, can not parse");
+      throw new Error("THREE.KeyframeTrack: track type undefined, can not parse");
     }
     const Iííïiìí = function (Iíîíìiî) {
       switch (Iíîíìiî.toLowerCase()) {
@@ -66921,7 +66921,7 @@ window.JfCzGzvGIQB8rrJX = { isProxy: true };
         case "string":
           return iìííiiì;
       }
-      console.error("THREE.KeyframeTrack: Unsupported typeName: " + Iíîíìiî);
+      throw new Error("THREE.KeyframeTrack: Unsupported typeName: " + Iíîíìiî);
     }(Iiiîiïî.type);
     if (Iiiîiïî.times === undefined) {
       const Iìíîíìi = [];
@@ -67045,14 +67045,14 @@ window.JfCzGzvGIQB8rrJX = { isProxy: true };
       this.resourcePath = "";
       this.requestHeader = {};
     }
-    load() { }
+    load() {}
     loadAsync(Iìíïiíî, Iïïììïï) {
       const Iîìiììî = this;
       return new Promise(function (Iïíîíïï, Iiïìîïî) {
         Iîìiììî.load(Iìíïiíî, Iïíîíïï, Iïïììïï, Iiïìîïî);
       });
     }
-    parse() { }
+    parse() {}
     setCrossOrigin(Iíîiïîì) {
       this.crossOrigin = Iíîiïîì;
       return this;
@@ -67349,7 +67349,7 @@ window.JfCzGzvGIQB8rrJX = { isProxy: true };
       this.color = new iîïííiï(Iiìíiîi);
       this.intensity = Iiiiìíì;
     }
-    dispose() { }
+    dispose() {}
     copy(Iiìîíïì, Iîîìíïï) {
       super.copy(Iiìîíïì, Iîîìíïï);
       this.color.copy(Iiìîíïì.color);
@@ -69119,7 +69119,7 @@ window.JfCzGzvGIQB8rrJX = { isProxy: true };
     static parseTrackName(Iìïîíiï) {
       const Iîííiíì = iîìíîîì.exec(Iìïîíiï);
       if (Iîííiíì === null) {
-        console.error("PropertyBinding: Cannot parse trackName: " + Iìïîíiï);
+        throw new Error("PropertyBinding: Cannot parse trackName: " + Iìïîíiï);
       }
       const Iîíïíìí = {
         nodeName: Iîííiíì[2],
@@ -69137,7 +69137,7 @@ window.JfCzGzvGIQB8rrJX = { isProxy: true };
         }
       }
       if (Iîíïíìí.propertyName === null || Iîíïíìí.propertyName.length === 0) {
-        console.error("PropertyBinding: can not parse propertyName from trackName: " + Iìïîíiï);
+        throw new Error("PropertyBinding: can not parse propertyName from trackName: " + Iìïîíiï);
       }
       return Iîíïíìí;
     }
@@ -69172,8 +69172,8 @@ window.JfCzGzvGIQB8rrJX = { isProxy: true };
       }
       return null;
     }
-    _getValue_unavailable() { }
-    _setValue_unavailable() { }
+    _getValue_unavailable() {}
+    _setValue_unavailable() {}
     _getValue_direct(Iïîîíîi, Iîîïìíì) {
       Iïîîíîi[Iîîïìíì] = this.targetObject[this.propertyName];
     }
@@ -70386,7 +70386,7 @@ window.JfCzGzvGIQB8rrJX = { isProxy: true };
             components: 3
           };
       }
-      console.error(`Unknown texture type ${Iiîíííí}.`);
+      throw new Error(`Unknown texture type ${Iiîíííí}.`);
     }(Iìííìíí);
     switch (Iìiiììí) {
       case iíiïiìì:
@@ -70457,7 +70457,7 @@ window.JfCzGzvGIQB8rrJX = { isProxy: true };
       case iîïïiìi:
         return Math.ceil(Iïïïìïï / 4) * Math.ceil(Iïììíií / 4) * 16;
     }
-    console.error(`Unable to determine texture byte length for ${Iìiiììí} format.`);
+    throw new Error(`Unable to determine texture byte length for ${Iìiiììí} format.`);
   }
   function iiíììîi() {
     let Iîïíììì = null;
@@ -70551,7 +70551,7 @@ window.JfCzGzvGIQB8rrJX = { isProxy: true };
               Iíîiîiî = Iììïiïï.UNSIGNED_BYTE;
             } else {
               if (!(Iìîîîîi instanceof Uint8ClampedArray)) {
-                console.error("THREE.WebGLAttributes: Unsupported buffer data format: " + Iìîîîîi);
+                throw new Error("THREE.WebGLAttributes: Unsupported buffer data format: " + Iìîîîîi);
               }
               Iíîiîiî = Iììïiïï.UNSIGNED_BYTE;
             }
@@ -70565,7 +70565,7 @@ window.JfCzGzvGIQB8rrJX = { isProxy: true };
           }(Iîíîíîi, Iïìíìïi));
         } else if (Iíïìîìì.version < Iîíîíîi.version) {
           if (Iíïìîìì.size !== Iîíîíîi.array.byteLength) {
-            console.error("THREE.WebGLAttributes: The size of the buffer attribute's array buffer does not match the original size. Resizing buffer attributes is not supported.");
+            throw new Error("THREE.WebGLAttributes: The size of the buffer attribute's array buffer does not match the original size. Resizing buffer attributes is not supported.");
           }
           (function (Iiîîìiî, Iììiiìì, Iîíiíîì) {
             const Iíììïïì = Iììiiìì.array;
@@ -73593,7 +73593,7 @@ window.JfCzGzvGIQB8rrJX = { isProxy: true };
   function iiííîïï(Iiíïîìi, Iîìïìîî, Iììîïìí) {
     const Iîíiìïi = Iiíïîìi.name;
     const Iîiííïï = Iîíiìïi.length;
-    for (iiìïïìí.lastIndex = 0; ;) {
+    for (iiìïïìí.lastIndex = 0;;) {
       const Iiîïiíï = iiìïïìí.exec(Iîíiìïi);
       const Iîíîîìi = iiìïïìí.lastIndex;
       let Iíiîìíì = Iiîïiíï[1];
@@ -73759,7 +73759,7 @@ window.JfCzGzvGIQB8rrJX = { isProxy: true };
     if (Iíiìiìî === undefined) {
       const Iîîìïii = iììiîìi.get(Iîiiíiî);
       if (Iîîìïii === undefined) {
-        console.error("Can not resolve #include <" + Iîiiíiî + ">");
+        throw new Error("Can not resolve #include <" + Iîiiíiî + ">");
       }
       Iíiìiìî = iiìîîîí[Iîîìïii];
     }
@@ -75954,22 +75954,22 @@ window.JfCzGzvGIQB8rrJX = { isProxy: true };
       compressedTexImage2D: function () {
         try {
           Iìíîìîí.compressedTexImage2D(...arguments);
-        } catch (Iìîïíìî) { }
+        } catch (Iìîïíìî) {}
       },
       compressedTexImage3D: function () {
         try {
           Iìíîìîí.compressedTexImage3D(...arguments);
-        } catch (Iíîíïii) { }
+        } catch (Iíîíïii) {}
       },
       texImage2D: function () {
         try {
           Iìíîìîí.texImage2D(...arguments);
-        } catch (Iïíiìïì) { }
+        } catch (Iïíiìïì) {}
       },
       texImage3D: function () {
         try {
           Iìíîìîí.texImage3D(...arguments);
-        } catch (Iiìíïiï) { }
+        } catch (Iiìíïiï) {}
       },
       updateUBOMapping: function (Iìîíìïî, Iiìíîiî) {
         let Iïiiïiï = Iíììiíî.get(Iiìíîiî);
@@ -75993,32 +75993,32 @@ window.JfCzGzvGIQB8rrJX = { isProxy: true };
       texStorage2D: function () {
         try {
           Iìíîìîí.texStorage2D(...arguments);
-        } catch (Iîìííiì) { }
+        } catch (Iîìííiì) {}
       },
       texStorage3D: function () {
         try {
           Iìíîìîí.texStorage3D(...arguments);
-        } catch (Iìïiìïí) { }
+        } catch (Iìïiìïí) {}
       },
       texSubImage2D: function () {
         try {
           Iìíîìîí.texSubImage2D(...arguments);
-        } catch (Iíiîíîí) { }
+        } catch (Iíiîíîí) {}
       },
       texSubImage3D: function () {
         try {
           Iìíîìîí.texSubImage3D(...arguments);
-        } catch (Iíîiiíï) { }
+        } catch (Iíîiiíï) {}
       },
       compressedTexSubImage2D: function () {
         try {
           Iìíîìîí.compressedTexSubImage2D(...arguments);
-        } catch (Iîiîìiï) { }
+        } catch (Iîiîìiï) {}
       },
       compressedTexSubImage3D: function () {
         try {
           Iìíîìîí.compressedTexSubImage3D(...arguments);
-        } catch (Iíïïíïî) { }
+        } catch (Iíïïíïî) {}
       },
       scissor: function (Iíîîììï) {
         if (Iííîïìî.equals(Iíîîììï) === false) {
@@ -76106,7 +76106,7 @@ window.JfCzGzvGIQB8rrJX = { isProxy: true };
     let Iìiìïíi = false;
     try {
       Iìiìïíi = typeof OffscreenCanvas != "undefined" && new OffscreenCanvas(1, 1).getContext("2d") !== null;
-    } catch (Iîíììíî) { }
+    } catch (Iîíììíî) {}
     function Iïìîíìî(Iîïïïíí, Iìïîîïì) {
       if (Iìiìïíi) {
         return new OffscreenCanvas(Iîïïïíí, Iìïîîïì);
@@ -76428,7 +76428,7 @@ window.JfCzGzvGIQB8rrJX = { isProxy: true };
       }
       if (Iííiïii.isRenderTargetTexture === false && Iííiïii.isExternalTexture !== true && Iííiïii.version > 0 && Iiïiiíí.__version !== Iííiïii.version) {
         const Iïiííìí = Iííiïii.image;
-        if (Iïiííìí === null); else if (Iïiííìí.complete !== false) {
+        if (Iïiííìí === null) ;else if (Iïiííìí.complete !== false) {
           Iíiïïîi(Iiïiiíí, Iííiïii, Iïiìïîî);
           return;
         }
@@ -76861,11 +76861,11 @@ window.JfCzGzvGIQB8rrJX = { isProxy: true };
     }
     function Iìïïîïï(Iîiïîìi, Iíîïïii) {
       if (Iíîïïii && Iíîïïii.isWebGLCubeRenderTarget) {
-        console.error("Depth Texture with cube render targets is not supported");
+        throw new Error("Depth Texture with cube render targets is not supported");
       }
       Iîïîíìí.bindFramebuffer(Iìîiîiì.FRAMEBUFFER, Iîiïîìi);
       if (!Iíîïïii.depthTexture || !Iíîïïii.depthTexture.isDepthTexture) {
-        console.error("renderTarget.depthTexture must be an instance of THREE.DepthTexture");
+        throw new Error("renderTarget.depthTexture must be an instance of THREE.DepthTexture");
       }
       const Iiîíiîí = Iïìïìiì.get(Iíîïïii.depthTexture);
       Iiîíiîí.__renderTarget = Iíîïïii;
@@ -76885,7 +76885,7 @@ window.JfCzGzvGIQB8rrJX = { isProxy: true };
         }
       } else {
         if (Iíîïïii.depthTexture.format !== iïîìïìí) {
-          console.error("Unknown depthTexture format");
+          throw new Error("Unknown depthTexture format");
         }
         if (Iîiîíìï(Iíîïïii)) {
           Iîíîïíì.framebufferTexture2DMultisampleEXT(Iìîiîiì.FRAMEBUFFER, Iìîiîiì.DEPTH_STENCIL_ATTACHMENT, Iìîiîiì.TEXTURE_2D, Iììíïïí, 0, Iîîííìì);
@@ -76915,7 +76915,7 @@ window.JfCzGzvGIQB8rrJX = { isProxy: true };
       }
       if (Iìîïîiï.depthTexture && !Iïiiíìî.__autoAllocateDepthBuffer) {
         if (Iîíiïíî) {
-          console.error("target.depthTexture not supported in Cube render targets");
+          throw new Error("target.depthTexture not supported in Cube render targets");
         }
         const Iíìîiíi = Iìîïîiï.texture.mipmaps;
         if (Iíìîiíi && Iíìîiíi.length > 0) {
@@ -78196,7 +78196,7 @@ window.JfCzGzvGIQB8rrJX = { isProxy: true };
       this.setAnimationLoop = function (Iîìïìií) {
         Iîîììiî = Iîìïìií;
       };
-      this.dispose = function () { };
+      this.dispose = function () {};
     }
   }
   const iííîïíí = new iîìíììï();
@@ -78699,7 +78699,7 @@ window.JfCzGzvGIQB8rrJX = { isProxy: true };
       this.isWebGLRenderer = true;
       if (Iîïîììì !== null) {
         if (typeof WebGLRenderingContext != "undefined" && Iîïîììì instanceof WebGLRenderingContext) {
-          console.error("THREE.WebGLRenderer: WebGL 1 is not supported since r163.");
+          throw new Error("THREE.WebGLRenderer: WebGL 1 is not supported since r163.");
         }
         Iìiíîíï = Iîïîììì.getContextAttributes().alpha;
       } else {
@@ -78881,7 +78881,7 @@ window.JfCzGzvGIQB8rrJX = { isProxy: true };
         Iiïîïii.needsUpdate = Iïíïíiì;
         Iiïîïii.type = Iïîíïii;
       }
-      function Iííìíiî(Iiììiìî) { }
+      function Iííìíiî(Iiììiìî) {}
       function Iiiîïiï(Iiîiiîi) {
         const Iîíiìîï = Iiîiiîi.target;
         Iîíiìîï.removeEventListener("dispose", Iiiîïiï);
@@ -79905,7 +79905,7 @@ window.JfCzGzvGIQB8rrJX = { isProxy: true };
             const Iiííîíî = Iiìïiíí.depthTexture;
             if (Iìïíïïï.__boundDepthTexture !== Iiííîíî) {
               if (Iiííîíî !== null && Iìïïîíí.has(Iiííîíî) && (Iiìïiíí.width !== Iiííîíî.image.width || Iiìïiíí.height !== Iiííîíî.image.height)) {
-                console.error("WebGLRenderTarget: Attached DepthTexture is initialized to the incorrect size.");
+                throw new Error("WebGLRenderTarget: Attached DepthTexture is initialized to the incorrect size.");
               }
               Iíiìíïï.setupDepthRenderbuffer(Iiìïiíí);
             }
@@ -79987,7 +79987,7 @@ window.JfCzGzvGIQB8rrJX = { isProxy: true };
       };
       this.readRenderTargetPixelsAsync = async function (Iîiiìîi, Iìïìiií, Iîïîïïi, Iïíîíïî, Iìiîîíí, Iíiîííî, Iïiìïiï, Iiiííîí = 0) {
         if (!Iîiiìîi || !Iîiiìîi.isWebGLRenderTarget) {
-          console.error("THREE.WebGLRenderer.readRenderTargetPixels: renderTarget is not THREE.WebGLRenderTarget.");
+          throw new Error("THREE.WebGLRenderer.readRenderTargetPixels: renderTarget is not THREE.WebGLRenderTarget.");
         }
         let Iíiîiìi = Iìïïîíí.get(Iîiiìîi).__webglFramebuffer;
         if (Iîiiìîi.isWebGLCubeRenderTarget && Iïiìïiï !== undefined) {
@@ -80000,10 +80000,10 @@ window.JfCzGzvGIQB8rrJX = { isProxy: true };
             const Iïîíiïí = Iìîììií.format;
             const Iïîiíîï = Iìîììií.type;
             if (!Iiíîïiï.textureFormatReadable(Iïîíiïí)) {
-              console.error("THREE.WebGLRenderer.readRenderTargetPixelsAsync: renderTarget is not in RGBA or implementation defined format.");
+              throw new Error("THREE.WebGLRenderer.readRenderTargetPixelsAsync: renderTarget is not in RGBA or implementation defined format.");
             }
             if (!Iiíîïiï.textureTypeReadable(Iïîiíîï)) {
-              console.error("THREE.WebGLRenderer.readRenderTargetPixelsAsync: renderTarget is not in UnsignedByteType or implementation defined type.");
+              throw new Error("THREE.WebGLRenderer.readRenderTargetPixelsAsync: renderTarget is not in UnsignedByteType or implementation defined type.");
             }
             const Iiîììîí = Iììïìïî.createBuffer();
             Iììïìïî.bindBuffer(Iììïìïî.PIXEL_PACK_BUFFER, Iiîììîí);
@@ -80038,7 +80038,7 @@ window.JfCzGzvGIQB8rrJX = { isProxy: true };
             Iììïìïî.deleteSync(Iïíiìîî);
             return Iíiîííî;
           }
-          console.error("THREE.WebGLRenderer.readRenderTargetPixelsAsync: requested read bounds are out of range.");
+          throw new Error("THREE.WebGLRenderer.readRenderTargetPixelsAsync: requested read bounds are out of range.");
         }
       };
       this.copyFramebufferToTexture = function (Iïïìïíí, Iíiîììi = null, Iîíîiiì = 0) {
@@ -81174,7 +81174,7 @@ window.JfCzGzvGIQB8rrJX = { isProxy: true };
           Iiìííïï = 1;
         } else {
           if (this.camera.coordinateSystem !== iiìíiiî) {
-            console.error("THREE.CameraHelper.update(): Invalid coordinate system: " + this.camera.coordinateSystem);
+            throw new Error("THREE.CameraHelper.update(): Invalid coordinate system: " + this.camera.coordinateSystem);
           }
           Iíïiîìí = 0;
           Iiìííïï = 1;
@@ -81346,9 +81346,9 @@ window.JfCzGzvGIQB8rrJX = { isProxy: true };
           this.domElement = Iïïiìíi;
         }
       }
-      disconnect() { }
-      dispose() { }
-      update() { }
+      disconnect() {}
+      dispose() {}
+      update() {}
     },
     CubeCamera: iiïîíïí,
     CubeReflectionMapping: iíîiíiï,
@@ -82012,7 +82012,7 @@ window.JfCzGzvGIQB8rrJX = { isProxy: true };
         const Iìììíiì = JSON.parse(Iïîïíìî);
         const Iíiîîïí = Iìììíiì.metadata;
         if (Iíiîîïí === undefined || Iíiîîïí.type === undefined || Iíiîîïí.type.toLowerCase() === "geometry") {
-          console.error("THREE.ObjectLoader: Can't load " + Iííîiïí);
+          throw new Error("THREE.ObjectLoader: Can't load " + Iííîiïí);
         }
         return await this.parseAsync(Iìììíiì);
       }
@@ -83652,7 +83652,7 @@ window.JfCzGzvGIQB8rrJX = { isProxy: true };
         super({}, Iîiiïii, Iiiîîïì, Iìiíïíi, Iìiïîìî, Iïìîïîì, Iîîíìiì, Iìííìîì, Iiíìîîî);
         this.isVideoFrameTexture = true;
       }
-      update() { }
+      update() {}
       clone() {
         return new this.constructor().copy(this);
       }
@@ -84264,7 +84264,7 @@ window.JfCzGzvGIQB8rrJX = { isProxy: true };
           stage: Iîîïîìi.data.stage || 0
         });
       }
-    } catch (Iíîïiìî) { }
+    } catch (Iíîïiìî) {}
   }
   const iiïìïìî = {
     lottery: null,
@@ -84777,7 +84777,7 @@ window.JfCzGzvGIQB8rrJX = { isProxy: true };
           if (this.isCacheValid(this.lastCountTimestamp)) {
             return this.lastTotalCount;
           }
-        } catch (Iiïïíiî) { }
+        } catch (Iiïïíiî) {}
       }
       try {
         const Iiìiïìì = await this.skinManagerService.listSkins(1, 1, this.type, this.weapon, this.search);
@@ -84823,7 +84823,7 @@ window.JfCzGzvGIQB8rrJX = { isProxy: true };
         if (!Iîïíiiì.error) {
           return Iîïíiiì.data;
         }
-        console.error(Iîïíiiì.error.message);
+        throw new Error(Iîïíiiì.error.message);
       } catch (Iîíïïïi) {
         throw Iîíïïïi;
       }
@@ -84834,7 +84834,7 @@ window.JfCzGzvGIQB8rrJX = { isProxy: true };
         if (!Iiìiiíí.error) {
           return Iiìiiíí.data.skin;
         }
-        console.error(Iiìiiíí.error);
+        throw new Error(Iiìiiíí.error);
       } catch (Iìiîïïi) {
         throw Iìiîïïi;
       }
@@ -84845,7 +84845,7 @@ window.JfCzGzvGIQB8rrJX = { isProxy: true };
         if (!Iíiïíïì.error) {
           return Iíiïíïì.data.skin;
         }
-        console.error(Iíiïíïì.error);
+        throw new Error(Iíiïíïì.error);
       } catch (Iïìiíìí) {
         throw Iïìiíìí;
       }
@@ -84856,7 +84856,7 @@ window.JfCzGzvGIQB8rrJX = { isProxy: true };
         if (!Iîïíïií.error) {
           return Iîïíïií.data.skin;
         }
-        console.error(Iîïíïií.error);
+        throw new Error(Iîïíïií.error);
       } catch (Iiìíïií) {
         throw Iiìíïií;
       }
@@ -84867,7 +84867,7 @@ window.JfCzGzvGIQB8rrJX = { isProxy: true };
         if (!Iîïíïìì.error) {
           return Iîïíïìì.data;
         }
-        console.error(Iîïíïìì.error);
+        throw new Error(Iîïíïìì.error);
       } catch (Iïîíîîì) {
         throw Iïîíîîì;
       }
@@ -84878,7 +84878,7 @@ window.JfCzGzvGIQB8rrJX = { isProxy: true };
         if (!Iïìííïi.error) {
           return Iïìííïi.data.skin;
         }
-        console.error(Iïìííïi.error);
+        throw new Error(Iïìííïi.error);
       } catch (Iìíîìíî) {
         throw Iìíîìíî;
       }
@@ -84903,7 +84903,7 @@ window.JfCzGzvGIQB8rrJX = { isProxy: true };
           }
           return Iiiîìîî;
         }
-        console.error(Iíîîïií.error);
+        throw new Error(Iíîîïií.error);
       } catch (Iìîìïíî) {
         throw Iìîìïíî;
       }
@@ -84964,7 +84964,7 @@ window.JfCzGzvGIQB8rrJX = { isProxy: true };
         itemConfig: JSON.parse(Iïìïiîì)
       };
       Iîîìíîï.onSkinChange(Iiíïìïì);
-    } catch (Iîìîìíi) { }
+    } catch (Iîìîìíi) {}
   }
   iîìîìíï(["change", "input", "click"]);
   var iîììíîî = iiiîiîï("<div class=\"advanced-tab svelte-c6djxn\"><div class=\"advanced-section svelte-c6djxn\"><h3 class=\"section-title svelte-c6djxn\"><i class=\"material-icons svelte-c6djxn\">code</i> Item Configuration (JSON)</h3> <textarea id=\"skin-config\" class=\"form-textarea svelte-c6djxn\" rows=\"8\"></textarea> <div class=\"automatic-attributes svelte-c6djxn\"><div class=\"automatic-attributes-header svelte-c6djxn\"><div class=\"automatic-attributes-title svelte-c6djxn\"><i class=\"material-icons svelte-c6djxn\">info</i> <h4 class=\"svelte-c6djxn\">Automatic Attributes</h4></div> <span class=\"info-text svelte-c6djxn\">These attributes are automatically copied from the default/selected base skin. They can be overridden above.</span></div> <div class=\"automatic-attributes-content svelte-c6djxn\"><pre class=\"svelte-c6djxn\"> </pre></div></div></div></div>");
@@ -85271,7 +85271,7 @@ window.JfCzGzvGIQB8rrJX = { isProxy: true };
                 iìììííi(Iïîíïìï, iìïîiíì(Iïiïîïï));
                 iìììííi(Iìíiïìì, iìïîiíì(Iïìíïíï));
                 iìììííi(Iïîìííi, iìïîiíì(Iíiîììì));
-              } catch (Iìíîíìï) { } finally {
+              } catch (Iìíîíìï) {} finally {
                 iìììííi(Iíììîìí, false);
               }
             }
@@ -85617,7 +85617,7 @@ window.JfCzGzvGIQB8rrJX = { isProxy: true };
                       ...Iîiîíïi.editingSkin,
                       itemConfig: Iîìïíìì
                     });
-                  } catch (Iìiiïií) { }
+                  } catch (Iìiiïií) {}
                   var Iìííïîí;
                 }
                 async function Iìiiííi(Iiìíîíì, Iïïiiîí) {
@@ -85638,7 +85638,7 @@ window.JfCzGzvGIQB8rrJX = { isProxy: true };
                               ...Iîiîíïi.editingSkin,
                               itemConfig: Iíîïìiî
                             });
-                          } catch (Iìiiïìí) { }
+                          } catch (Iìiiïìí) {}
                         })();
                       } catch (Iïiïîíì) {
                         iìììííi(Iìiìîïi, iìïîiíì(Iïiïîíì.message || "Upload failed"));
@@ -85664,7 +85664,7 @@ window.JfCzGzvGIQB8rrJX = { isProxy: true };
                         ...Iîiîíïi.editingSkin,
                         itemConfig: Iïìîìîi
                       });
-                    } catch (Iìíiïii) { }
+                    } catch (Iìíiïii) {}
                   })();
                   Iíïiïìí();
                 }
@@ -85702,7 +85702,7 @@ window.JfCzGzvGIQB8rrJX = { isProxy: true };
                               ...Iîiîíïi.editingSkin,
                               itemConfig: Iìíîìïì
                             });
-                          } catch (Iïìîîîi) { }
+                          } catch (Iïìîîîi) {}
                         })(Iììíïîï);
                       } catch (Iìîìîii) {
                         iìììííi(Iiííìïi, iìïîiíì({
@@ -85767,7 +85767,7 @@ window.JfCzGzvGIQB8rrJX = { isProxy: true };
                       ...Iîiîíïi.editingSkin,
                       itemConfig: Iîiîìîï
                     });
-                  } catch (Iììïíîí) { }
+                  } catch (Iììïíîí) {}
                 }
                 async function Iìïîiìî(Iïìíîíì) {
                   iìììííi(Iíiiííi, iìïîiíì(Iïìíîíì));
@@ -85787,7 +85787,7 @@ window.JfCzGzvGIQB8rrJX = { isProxy: true };
                               ...Iîiîíïi.editingSkin,
                               itemConfig: Iiïìîîì
                             });
-                          } catch (Iíiíîïî) { }
+                          } catch (Iíiíîïî) {}
                         })();
                       } catch (Iïíiìîï) {
                         iìììííi(Iìììiïi, iìïîiíì(Iïíiìîï.message || "Upload failed"));
@@ -85813,7 +85813,7 @@ window.JfCzGzvGIQB8rrJX = { isProxy: true };
                         ...Iîiîíïi.editingSkin,
                         itemConfig: Iíiíïìì
                       });
-                    } catch (Iìïiìii) { }
+                    } catch (Iìïiìii) {}
                   })();
                   Iíïiïìí();
                 }
@@ -85872,7 +85872,7 @@ window.JfCzGzvGIQB8rrJX = { isProxy: true };
                       ...Iîiîíïi.editingSkin,
                       itemConfig: Iììîîíi
                     });
-                  } catch (Iïììîíí) { }
+                  } catch (Iïììîíí) {}
                 }
                 function Iiiîïìî(Iiîîîiî) {
                   try {
@@ -85889,7 +85889,7 @@ window.JfCzGzvGIQB8rrJX = { isProxy: true };
                       ...Iîiîíïi.editingSkin,
                       itemConfig: Iïíïìîì
                     });
-                  } catch (Iíìïiíi) { }
+                  } catch (Iíìïiíi) {}
                 }
                 function Iíìiíîï(Iîiììiì) {
                   Iííîiîí(Iîiììiì, "");
@@ -85931,7 +85931,7 @@ window.JfCzGzvGIQB8rrJX = { isProxy: true };
                       ...Iîiîíïi.editingSkin,
                       itemConfig: Iïîiïií
                     });
-                  } catch (Iîïìîìí) { }
+                  } catch (Iîïìîìí) {}
                 }];
                 var Iiiìîîi = iïiììií(Iìíîiîi);
                 Iiiìîîi.value = (Iiiìîîi.__value = "default") == null ? "" : "default";
@@ -88531,17 +88531,17 @@ window.JfCzGzvGIQB8rrJX = { isProxy: true };
     var Iîîîìîí;
     var Iiîîïîï;
     if (Iìííìîî.price_type === "real" && Iìííìîî.price.real) {
-      console.error("Real currency purchases are not supported for wild offers");
+      throw new Error("Real currency purchases are not supported for wild offers");
     }
     const Iiïìiíï = {
       offer_id: Iìííìîî.id
     };
     const Iìììiìí = await iíiïîíi.shop.purchaseWildOffer(Iiïìiíï);
     if (!Iìììiìí.data) {
-      console.error(Iìììiìí.error || "Purchase failed");
+      throw new Error(Iìììiìí.error || "Purchase failed");
     }
     if (!Iìììiìí.data.success) {
-      console.error(Iìììiìí.data.message || "Purchase failed");
+      throw new Error(Iìììiìí.data.message || "Purchase failed");
     }
     const Iìiîíìì = iïiìíïi(iíìïïiì);
     if (Iìììiìí.data.rewards && Iìiîíìì) {
@@ -88633,7 +88633,7 @@ window.JfCzGzvGIQB8rrJX = { isProxy: true };
               iiíiíiî.clearError();
               const Iíìíïïí = await iíiïîíi.shop.getWildOffer();
               if (Iíìíïïí.error) {
-                console.error(Iíìíïïí.error || "Failed to load wild offer");
+                throw new Error(Iíìíïïí.error || "Failed to load wild offer");
               }
               const Iììíîîì = Iíìíïïí.data;
               if (Iììíîîì.error) {
@@ -88670,7 +88670,7 @@ window.JfCzGzvGIQB8rrJX = { isProxy: true };
           return Iîïiíìî;
         }(false);
         await iiïîiìi();
-      } catch (Iïîîiìí) { }
+      } catch (Iïîîiìí) {}
     }, 100);
     return Iìììiìí.data;
   }
@@ -88684,10 +88684,10 @@ window.JfCzGzvGIQB8rrJX = { isProxy: true };
     };
     const Iïiìïiì = await iíiïîíi.shop.refreshWildOffer(Iîìîíîí);
     if (!Iïiìïiì.data) {
-      console.error(Iïiìïiì.error || "Refresh failed");
+      throw new Error(Iïiìïiì.error || "Refresh failed");
     }
     if (!Iïiìïiì.data.success) {
-      console.error(Iïiìïiì.data.message || "Refresh failed");
+      throw new Error(Iïiìïiì.data.message || "Refresh failed");
     }
     const Iïííìiï = iïiìíïi(iíìïïiì);
     if (Iïííìiï) {
@@ -89265,35 +89265,35 @@ window.JfCzGzvGIQB8rrJX = { isProxy: true };
       window.showWindow(5);
     }
   };
-  var iïiìiiì = () => { };
-  var iììîíïì = () => { };
+  var iïiìiiì = () => {};
+  var iììîíïì = () => {};
   var iîiíîîï = iiiîiîï("<div class=\"sub-tab-dot svelte-lri212\" role=\"button\" tabindex=\"0\"></div>");
-  var iìíîiíï = () => { };
-  var iiiiïïí = () => { };
+  var iìíîiíï = () => {};
+  var iiiiïïí = () => {};
   var iíïïîiî = iiiîiîï("<div class=\"sub-tab-dot svelte-lri212\" role=\"button\" tabindex=\"0\"></div>");
-  var iïïïîìï = () => { };
-  var iiìïiíí = () => { };
+  var iïïïîìï = () => {};
+  var iiìïiíí = () => {};
   var iíiiîìì = iiiîiîï("<div class=\"sub-tab-dot svelte-lri212\" role=\"button\" tabindex=\"0\"></div>");
   var iiìîìïî = (Iïiîîìí, Iîììiíì) => {
     if (!Iîììiíì) {
       window.showWindow(5);
     }
   };
-  var iïïìiiï = () => { };
+  var iïïìiiï = () => {};
   var iïïïîîì = () => {
     if (typeof playSelect == "function") {
       playSelect();
     }
     window.prizeWheel(2);
   };
-  var iïiìììí = () => { };
+  var iïiìììí = () => {};
   var iiïîiìî = (Iìiììîí, Iïììiiì) => {
     if (typeof playSelect == "function") {
       playSelect();
     }
     window.prizeWheel(2, null, Iïììiiì.multi);
   };
-  var iïìííîì = () => { };
+  var iïìííîì = () => {};
   var iiïïïiì = iiiîiîï("<div class=\"shop-actions-cell svelte-lri212\"><div class=\"shop-sub-action svelte-lri212\" role=\"button\" tabindex=\"0\" style=\"font-size: 34px !important;\">1x Spin <div class=\"svelte-lri212\"> </div></div> <div class=\"shop-sub-action-sep svelte-lri212\"></div> <div class=\"shop-sub-action svelte-lri212\" role=\"button\" tabindex=\"0\" style=\"font-size: 34px !important;\"> <div class=\"svelte-lri212\"> </div></div></div>");
   var iîîiïíï = () => {
     if (typeof playSelect == "function") {
@@ -89301,7 +89301,7 @@ window.JfCzGzvGIQB8rrJX = { isProxy: true };
     }
     window.prizeWheel(2);
   };
-  var iììîïïi = () => { };
+  var iììîïïi = () => {};
   var iîîíîíï = iiiîiîï("<div class=\"shop-action-cell svelte-lri212\" role=\"button\" tabindex=\"0\">Spend <div class=\"svelte-lri212\"> </div></div>");
   var iîïiîïí = (Iïïîìïí, Iïîìiîi) => {
     if (typeof playSelect == "function") {
@@ -89309,7 +89309,7 @@ window.JfCzGzvGIQB8rrJX = { isProxy: true };
     }
     window.prizeWheel(null, Iïîìiîi.ticketIndex);
   };
-  var iíiïìií = () => { };
+  var iíiïìií = () => {};
   var iïïïïií = iiiîiîï("<div class=\"shop-action-overlay svelte-lri212\"><!> <div style=\"display: table-cell;\" class=\"svelte-lri212\"><div class=\"shop-action-sep svelte-lri212\"></div></div> <div class=\"shop-action-cell svelte-lri212\" role=\"button\" tabindex=\"0\" style=\"font-size: 34px !important;\">Redeem <div class=\"svelte-lri212\"><img class=\"ticket-img svelte-lri212\" alt=\"ticket\" style=\"width: 70px !important;\"></div></div> <div class=\"ticket-count svelte-lri212\"> </div></div>");
   var iííiïiì = (Iíìîíîï, Iïîiîïï) => {
     if (typeof playSelect == "function") {
@@ -89317,18 +89317,18 @@ window.JfCzGzvGIQB8rrJX = { isProxy: true };
     }
     Iïîiîïï(-1);
   };
-  var iîiiïïi = () => { };
+  var iîiiïïi = () => {};
   var iíiïiîì = (Iììïìií, Iìïîiîï) => {
     if (typeof playSelect == "function") {
       playSelect(0.1);
     }
     window.bundlePopup(true, false, iíììíïï(Iìïîiîï).ID);
   };
-  var iíiiíiï = () => { };
+  var iíiiíiï = () => {};
   var iíïìîíì = iiiîiîï("<div class=\"bundle-discount-label svelte-lri212\"> </div>");
   var iïiííìi = iiiîiîï("<div class=\"bundle-original-price svelte-lri212\"> </div>");
   var iïíiiìi = (Iîíîîii, Iiìïììi) => window.viewItem(iíììíïï(Iiìïììi).id);
-  var iïïïîiî = () => { };
+  var iïïïîiî = () => {};
   var iíîîïîî = iiiîiîï("<div class=\"bundle-item-req svelte-lri212\" role=\"button\" tabindex=\"0\"></div>");
   var iíïííîi = iiiîiîï("<div class=\"bundle-item-req svelte-lri212\"></div>");
   var iîïiïíí = iiiîiîï("<div class=\"bundle-item-req svelte-lri212\"><div class=\"bundle-item-more svelte-lri212\"> </div></div>");
@@ -89338,7 +89338,7 @@ window.JfCzGzvGIQB8rrJX = { isProxy: true };
     }
     window.bundlePopup(true, false, iíììíïï(Iiiìîiî).ID);
   };
-  var iîïìiiì = () => { };
+  var iîïìiiì = () => {};
   var iîîíïîí = iiiîiîï("<div class=\"bundle-card svelte-lri212\"><div class=\"bundle-icon svelte-lri212\" role=\"button\" tabindex=\"0\"><div class=\"bundle-item-name svelte-lri212\"> </div> <!> <!></div> <div class=\"bundle-highlights svelte-lri212\"><!> <!></div> <div class=\"bundle-buy-btn svelte-lri212\" role=\"button\" tabindex=\"0\"><div class=\"bundle-buy-btn-text svelte-lri212\"> </div></div></div>");
   var iìíiiîî = (Iìîiííï, Iìíïíìi) => {
     if (typeof playSelect == "function") {
@@ -89346,28 +89346,28 @@ window.JfCzGzvGIQB8rrJX = { isProxy: true };
     }
     Iìíïíìi(1);
   };
-  var iiiìììi = () => { };
+  var iiiìììi = () => {};
   var iiìiíîi = iiiîiîï("<div class=\"home-tab svelte-lri212\"><div class=\"sub-tab-panel svelte-lri212\" role=\"button\" tabindex=\"0\"><div class=\"sub-tab-dots svelte-lri212\"></div> <div class=\"sub-tab-nav svelte-lri212\">Unlock new Items!</div> <div class=\"sub-tab-header svelte-lri212\"><div class=\"sub-tab-subtitle svelte-lri212\" style=\"color: #dd90f9 !important;\">Checkout the</div> Battle Pass</div></div> <div class=\"sub-tab-panel svelte-lri212\" role=\"button\" tabindex=\"0\"><div class=\"sub-tab-dots svelte-lri212\"></div> <div class=\"sub-tab-nav svelte-lri212\">Unlock new skins!</div> <div class=\"sub-tab-header svelte-lri212\"><div class=\"sub-tab-subtitle svelte-lri212\" style=\"color: var(--yellow) !important;\">Purchase</div> 600 KR</div></div> <div class=\"sub-tab-panel svelte-lri212\" role=\"button\" tabindex=\"0\"><div class=\"sub-tab-dots svelte-lri212\"></div> <div class=\"sub-tab-nav svelte-lri212\">Craft new Items!</div> <div class=\"junkyard-display svelte-lri212\"> <span class=\"material-icons svelte-lri212\" style=\"color: #cc51f8; font-size: 38px; margin-left: 8px; vertical-align: top; margin-right: -9px;\">plumbing</span></div> <div class=\"sub-tab-header svelte-lri212\"><div class=\"sub-tab-subtitle svelte-lri212\">Enter the</div> Junkyard</div></div> <div class=\"heroic-spin-card svelte-lri212\" role=\"button\" tabindex=\"0\"><!> <div class=\"heroic-spin-name svelte-lri212\"><!> <div class=\"heroic-spin-price svelte-lri212\"> <div class=\"ticket-img-sep svelte-lri212\">|</div> <img class=\"ticket-img svelte-lri212\" alt=\"ticket\" style=\"width: 56px !important;\"></div></div> <div class=\"heroic-spin-img svelte-lri212\"></div> <div class=\"heroic-img-grad svelte-lri212\"></div></div> <div class=\"bundle-holder svelte-lri212\"><div class=\"bundleSliderH svelte-lri212\"><div class=\"bundleSliderBtn disabled svelte-lri212\" role=\"button\" tabindex=\"0\"><div class=\"bundleSliderArrow svelte-lri212\"></div></div></div> <div class=\"bundleCols svelte-lri212\"></div> <div class=\"bundleSliderH svelte-lri212\"><div class=\"bundleSliderBtn svelte-lri212\" role=\"button\" tabindex=\"0\"><div class=\"bundleSliderArrow right svelte-lri212\"></div></div></div></div></div>");
   const iíiïìîî = {
     hash: "svelte-lri212",
     code: ".home-tab.svelte-lri212 {text-align:center;font-size:0;}.sub-tab-panel.svelte-lri212,\n  .heroic-spin-card.svelte-lri212,\n  .bundle-holder.svelte-lri212,\n  .bundle-card.svelte-lri212 {font-size:16px;}\n\n  .sub-tab-panel.svelte-lri212 {cursor:pointer;vertical-align:top;width:760px;height:360px;position:relative;display:inline-block;border-radius:6px;transition:all 0.1s;text-align:left;border:4px solid white;}.sub-tab-panel.svelte-lri212:hover {transform:scale(0.98);}.sub-tab-dots.svelte-lri212 {position:absolute;right:30px;bottom:40px;}.sub-tab-dot.svelte-lri212 {pointer-events:all;cursor:pointer;width:30px;height:30px;border-radius:50px;display:inline-block;margin:10px;}.sub-tab-dot.svelte-lri212:hover {transform:scale(1.2);}.sub-tab-nav.svelte-lri212 {position:absolute;right:40px;top:30px;z-index:6;font-size:23px;color:#fff;}.sub-tab-header.svelte-lri212 {text-shadow:0px 0px 10px rgb(0 0 0 / 79%);position:absolute;font-size:50px;left:40px;color:#fff;bottom:40px;}.sub-tab-subtitle.svelte-lri212 {font-size:27px;color:#dd90f9 !important;}.junkyard-display.svelte-lri212 {position:absolute;display:inline-block;background:black;padding:10px;padding-left:20px;right:30px;top:60px;border-radius:6px;font-size:28px;color:#fff;}\n\n  .heroic-spin-card.svelte-lri212 {cursor:pointer;vertical-align:top;display:inline-block;position:relative;background:rgba(0, 0, 0, 0.4);margin-left:4px;border:4px solid;width:502px;height:360px;border-radius:6px;text-shadow:0px 0px 30px rgb(0 0 0);overflow:hidden;}\n\n  .shop-action-overlay.svelte-lri212 {z-index:12;text-align:center;position:absolute;opacity:0;left:0px;right:0px;top:0px;bottom:0px;background:rgba(0, 0, 0, 0.8);color:rgba(255, 255, 255, 0.5);transition:opacity 0.15s ease;display:inline-table;width:100%;height:100%;}.heroic-spin-card.svelte-lri212:active .shop-action-overlay.svelte-lri212,\n  .heroic-spin-card.svelte-lri212:hover .shop-action-overlay.svelte-lri212 {z-index:9999999999;opacity:1;}.shop-action-cell.svelte-lri212 {display:table-cell;color:#fff;font-size:21px;cursor:pointer;transition:transform 0.1s ease;width:49%;vertical-align:middle;}.shop-action-cell.svelte-lri212:hover {transform:scale(0.9);}.shop-actions-cell.svelte-lri212 {display:table-cell;color:#fff;font-size:21px;cursor:pointer;transition:transform 0.2s ease;width:49%;vertical-align:middle;}.shop-sub-action.svelte-lri212 {transition:transform 0.2s ease;}.shop-sub-action.svelte-lri212:hover {transform:scale(0.9);}.shop-sub-action-sep.svelte-lri212 {background:#fc9803;width:calc(100% - 20px);opacity:0.8;margin:10px 10px;border-radius:4px;height:5px;}.shop-action-sep.svelte-lri212 {height:calc(100% - 20px);background:#fff;opacity:0.8;margin:10px 0px;border-radius:4px;width:5px;}.ticket-count.svelte-lri212 {color:#2196f3;font-size:12px;position:absolute;bottom:10px;text-align:center;width:100%;left:0;}.ticket-img.svelte-lri212 {width:34px;vertical-align:text-top;display:inline-block;}.ticket-img-sep.svelte-lri212 {display:inline-block;margin:0 5px 0 7px;}\n\n  .heroic-spin-name.svelte-lri212 {font-size:38px;position:absolute;bottom:16px;z-index:6;margin-left:-5px;text-shadow:0px 0px 30px #000,\n      0px 0px 3px #000,\n      0px 0px 6px #000;}.heroic-spin-price.svelte-lri212 {font-size:30px;color:#ffc147;width:514px;text-align:center;pointer-events:none;position:relative;text-shadow:0px 0px 30px rgb(0 0 0);}.heroic-spin-img.svelte-lri212 {position:absolute;background-size:cover;top:10px;left:50%;width:345px;height:345px;transform:translateX(-50%);filter:drop-shadow(0 0 40px rgba(0, 0, 0, 0.4));transition:all 0.2s;}.heroic-spin-card.svelte-lri212:hover .heroic-spin-img.svelte-lri212 {transform:translateX(-50%) scale(1.1);}.heroic-img-grad.svelte-lri212 {position:absolute;bottom:0px;width:100%;height:110px;z-index:5;}\n\n  .bundle-holder.svelte-lri212 {position:relative;display:inline-block;vertical-align:top;cursor:pointer;transition:all 0.1s;}\n\n  .bundleCols {display:inline-block;scroll-behavior:smooth;width:auto;white-space:nowrap;overflow-x:scroll;scrollbar-width:none;-ms-overflow-style:none;max-width:1185px;width:1185px;}.bundleCols::-webkit-scrollbar {width:0;height:0;}.bundle-card.svelte-lri212 {position:relative;width:268px;background:#151515;margin:5px;border-radius:8px;padding:10px;padding-bottom:12px;display:inline-block;}.bundle-icon.svelte-lri212 {display:inline-block;height:242px;width:204px;background:#000;border-radius:4px;cursor:pointer;text-align:center;position:relative;background-repeat:no-repeat;background-size:cover;transition:0.2s;}.bundle-icon.svelte-lri212:hover {transform:scale(0.99);}.bundle-item-name.svelte-lri212 {font-size:15px;cursor:pointer;overflow:hidden;text-overflow:ellipsis;white-space:initial;position:absolute;top:6px;left:8px;text-align:left;width:145px;filter:drop-shadow(0px 0px 4px black);transition:0.2s;color:white;}.bundle-discount-label.svelte-lri212 {position:absolute;bottom:40px;right:8px;background:#ff4444;color:#fff;padding:4px 8px;border-radius:4px;font-size:14px;font-weight:bold;filter:drop-shadow(0px 0px 4px black);z-index:10;}.bundle-original-price.svelte-lri212 {position:absolute;bottom:6px;right:8px;color:rgba(255, 255, 255, 0.9);font-size:14px;filter:drop-shadow(0px 0px 4px black);z-index:10;}.bundle-original-price.svelte-lri212::after {content:'';position:absolute;left:0;top:50%;width:100%;height:2px;background:#ff4444;transform:translateY(-50%);}.bundle-highlights.svelte-lri212 {position:relative;color:#fff;display:inline-block;margin-left:7px;margin-bottom:-10px;vertical-align:top;}.bundle-item-req.svelte-lri212 {position:relative;vertical-align:top;margin-bottom:10px;width:50px;height:50px;background:#000;display:block;border:2px solid dimgrey;border-radius:4px;cursor:pointer;background-size:95%;background-position:center;background-repeat:no-repeat;}.bundle-item-req.svelte-lri212:hover {filter:brightness(1.05);transform:scale(1.1);}.bundle-item-req.svelte-lri212:active {transform:scale(0.96);}.bundle-item-more.svelte-lri212 {font-size:15px;position:absolute;transform:translate(-50%, -50%);left:50%;top:50%;color:rgba(255, 255, 255, 0.75) !important;}.bundle-buy-btn.svelte-lri212 {text-align:center;background:#cc51f8;margin-top:10px;height:36px;border-radius:4px;width:100%;line-height:36px;font-size:16px;cursor:pointer;}.bundle-buy-btn.svelte-lri212:hover {filter:brightness(1.05);transform:scale(0.95);}.bundle-buy-btn.svelte-lri212:active {transform:scale(0.92);}.bundle-buy-btn-text.svelte-lri212 {font-size:16px;color:#fff;}.bundle-buy-btn-discount.svelte-lri212 {background:linear-gradient(135deg, #ff6b6b 0%, #ff4444 100%);box-shadow:0 4px 12px rgba(255, 68, 68, 0.4);\n    animation: svelte-lri212-bundleDiscountGlow 2s ease-in-out infinite;}\n\n  @keyframes svelte-lri212-bundleDiscountGlow {\n    0%,\n    100% {\n      box-shadow: 0 4px 12px rgba(255, 68, 68, 0.4);\n    }\n    50% {\n      box-shadow:\n        0 4px 20px rgba(255, 68, 68, 0.7),\n        0 0 30px rgba(255, 68, 68, 0.3);\n    }\n  }.bundle-buy-btn-discount.svelte-lri212:hover {filter:brightness(1.1);box-shadow:0 6px 16px rgba(255, 68, 68, 0.5);\n    animation: none;}.bundle-buy-btn-discount.svelte-lri212 .bundle-buy-btn-text.svelte-lri212 {color:#fff;font-weight:bold;text-shadow:0 1px 2px rgba(0, 0, 0, 0.3);}"
   };
   iîìîìíï(["click", "keydown", "mousedown"]);
-  var iiîìíìî = () => { };
+  var iiîìíìî = () => {};
   var iïïíìiì = (Iíìïïìï, Iïîïìïi) => {
     if (typeof playSelect == "function") {
       playSelect();
     }
     window.prizeWheel(Iïîïìïi());
   };
-  var iììíîïi = () => { };
+  var iììíîïi = () => {};
   var iìiîíïî = (Iïíïïíí, Iîiiìïí, Iìïíìíi) => {
     if (typeof playSelect == "function") {
       playSelect();
     }
     window.prizeWheel(Iîiiìïí(), null, Iìïíìíi().multi);
   };
-  var iíiiííí = () => { };
+  var iíiiííí = () => {};
   var iíìíïiï = iiiîiîï("<div class=\"shop-actions-cell svelte-1h85reb\"><div class=\"shop-sub-action svelte-1h85reb\" role=\"button\" tabindex=\"0\">1x Spin <div> </div></div> <div class=\"shop-sub-action-sep svelte-1h85reb\"></div> <div class=\"shop-sub-action svelte-1h85reb\" role=\"button\" tabindex=\"0\"> <div> </div></div></div>");
   var iîïíìîï = (Iîiïîïî, Iìììiïí) => {
     if (typeof playSelect == "function") {
@@ -89375,7 +89375,7 @@ window.JfCzGzvGIQB8rrJX = { isProxy: true };
     }
     window.prizeWheel(Iìììiïí());
   };
-  var iïìïìïî = () => { };
+  var iïìïìïî = () => {};
   var iíìiîíî = iiiîiîï("<div class=\"shop-action-cell svelte-1h85reb\" role=\"button\" tabindex=\"0\">Spend <div> </div></div>");
   var iïiiîîî = (Iîiíîíí, Iïîíîíï, Iíìîiiì) => {
     if (typeof playSelect == "function") {
@@ -89383,7 +89383,7 @@ window.JfCzGzvGIQB8rrJX = { isProxy: true };
     }
     window.prizeWheel(Iïîíîíï(), Iíìîiiì().ticketIndex);
   };
-  var iiíiïíi = () => { };
+  var iiíiïíi = () => {};
   var iîiíìïï = iiiîiîï("<div style=\"display: table-cell;\"><div class=\"shop-action-sep svelte-1h85reb\"></div></div> <div class=\"shop-action-cell svelte-1h85reb\" role=\"button\" tabindex=\"0\">Redeem <div><img class=\"ticket-img svelte-1h85reb\" alt=\"ticket\"></div></div> <div class=\"ticket-count svelte-1h85reb\"> </div>", 1);
   var iîííìîï = iiiîiîï("<div class=\"shop-action-overlay svelte-1h85reb\"><!> <!></div>");
   var iîïîïíï = iiiîiîï("<div class=\"ticket-count ticket-count-corner svelte-1h85reb\"> </div>");
@@ -89393,7 +89393,7 @@ window.JfCzGzvGIQB8rrJX = { isProxy: true };
   var iiïìïìï = iiiîiîï("<div class=\"shop-img svelte-1h85reb\"></div>");
   var iîîíîíi = iiiîiîï("<div class=\"shopCard svelte-1h85reb\" role=\"button\" tabindex=\"0\"><!> <!> <div class=\"spin-name svelte-1h85reb\"><!> <div class=\"spin-price svelte-1h85reb\"><!></div></div> <!> <div class=\"shop-img-grad svelte-1h85reb\"></div></div>");
   var iííïïìì = (Iíiìiíî, Iîíiiiï) => Iîíiiiï.viewTickets();
-  var iiiîiîi = () => { };
+  var iiiîiîi = () => {};
   var iìïìîìï = iiiîiîï("<div class=\"prize-wheels-tab svelte-1h85reb\"><div class=\"prize-wheels-header svelte-1h85reb\"><div style=\"color: rgba(255,255,255,0.6); margin-bottom: 10px; margin-top: 0px; width: 100%; text-align: center;\"><!></div></div> <div class=\"prize-wheel-table svelte-1h85reb\"><!> <div class=\"shopCard\" role=\"button\" tabindex=\"0\"><div class=\"spin-name svelte-1h85reb\">View Tickets <div class=\"spin-price svelte-1h85reb\"></div></div> <div class=\"shop-img svelte-1h85reb\"></div> <div class=\"shop-img-grad svelte-1h85reb\"></div></div></div></div>");
   const iïïìiîï = {
     hash: "svelte-1h85reb",
@@ -89401,7 +89401,7 @@ window.JfCzGzvGIQB8rrJX = { isProxy: true };
   };
   iîìîìíï(["click", "keydown"]);
   var iíiìîîî = () => window.showPremiumBenefits();
-  var iîïiïìï = () => { };
+  var iîïiïìï = () => {};
   var iiîïiií = iiiîiîï("<div class=\"shopCard\" role=\"button\" tabindex=\"0\"> <div class=\"spinVal\" style=\"margin-top: 119px; width: 309px; line-height: 63px;\"> <span style=\"color: #fff\">USD</span></div></div>");
   var iíîiìïï = iiiîiîï("<div class=\"premium-time-section svelte-1dbkhl\"><span style=\"color: #fff\">Time Remaining</span> <span class=\"premium-time svelte-1dbkhl\"> </span></div>");
   var iíiìîîï = iiiîiîï("<div class=\"store-list svelte-1dbkhl\"></div> <div class=\"premium-res svelte-1dbkhl\"></div> <!>", 1);
@@ -89411,7 +89411,7 @@ window.JfCzGzvGIQB8rrJX = { isProxy: true };
     code: ".premium-tab.svelte-1dbkhl {color:#fff;}.premium-header.svelte-1dbkhl {margin-left:5px;width:calc(100% - 55px);margin-top:15px;margin-bottom:15px;padding:20px;padding-bottom:5px;padding-top:15px;border-radius:6px;background-color:rgba(0, 0, 0, 0.4);}.store-list.svelte-1dbkhl {margin-top:20px;overflow-x:auto;white-space:nowrap;}.store-list.svelte-1dbkhl::-webkit-scrollbar-track {-webkit-box-shadow:none;box-shadow:none;border-radius:0px;}.store-list.svelte-1dbkhl::-webkit-scrollbar {width:12px;}.store-list.svelte-1dbkhl::-webkit-scrollbar-thumb {border-radius:0px;-webkit-box-shadow:none;box-shadow:none;}.premium-res.svelte-1dbkhl {margin-bottom:10px;color:rgba(255, 255, 255, 0.3);}.premium-time-section.svelte-1dbkhl {margin-left:5px;width:calc(100% - 55px);margin-top:15px;margin-bottom:15px;padding:20px;padding-bottom:5px;padding-top:10px;padding-bottom:10px;border-radius:6px;background-color:rgba(0, 0, 0, 0.4);}.premium-time.svelte-1dbkhl {float:right;color:rgba(255, 255, 255, 0.5);font-size:20px;}.legal-text.svelte-1dbkhl {font-size:15px;text-align:center;margin-bottom:10px;margin-top:10px;color:#d4d4d4;}.terms-text.svelte-1dbkhl {color:#d4d4d4;font-size:16px;text-align:center;margin-bottom:10px;margin-top:10px;}"
   };
   iîìîìíï(["click", "keydown"]);
-  var iïíiíïì = () => { };
+  var iïíiíïì = () => {};
   var iïííííi = iiiîiîï("<div class=\"shopSale\"> </div>");
   var iííìîîî = iiiîiîï("<div class=\"shopCard\" role=\"button\" tabindex=\"0\"><!> <span style=\"color: #fff\">KR</span> <div class=\"spinVal\" style=\"color: #fff\"> </div></div>");
   var iiïìiiï = iiiîiîï("<div class=\"purchase-kr-tab svelte-1ko99up\"><div class=\"purchase-info-table svelte-1ko99up\"></div> <div class=\"legal-text svelte-1ko99up\"><!></div> <div class=\"terms-text svelte-1ko99up\"><!></div></div>");
@@ -90503,7 +90503,7 @@ window.JfCzGzvGIQB8rrJX = { isProxy: true };
     const Iìíìíìî = await iíiïîíi.market.getListings(Iïîiìíí);
     if (Iìíìíìî.error) {
       const Iiííïîi = iîiïîïi(Iìíìíìî.error);
-      console.error(Iiííïîi || "Failed to fetch market listings");
+      throw new Error(Iiííïîi || "Failed to fetch market listings");
     }
     return Iìíìíìî.data || {
       listings: [],
@@ -90514,7 +90514,7 @@ window.JfCzGzvGIQB8rrJX = { isProxy: true };
     const Iìiiííì = await iíiïîíi.market.getInventory();
     if (Iìiiííì.error) {
       const Iíìiíîî = iîiïîïi(Iìiiííì.error);
-      console.error(Iíìiíîî || "Failed to fetch inventory");
+      throw new Error(Iíìiíîî || "Failed to fetch inventory");
     }
     return Iìiiííì.data || [];
   }
@@ -90522,7 +90522,7 @@ window.JfCzGzvGIQB8rrJX = { isProxy: true };
     const Iîïììîí = await iíiïîíi.market.getStats(Iiíîiiî);
     if (Iîïììîí.error) {
       const Iííìîíì = iîiïîïi(Iîïììîí.error);
-      console.error(Iííìîíì || "Failed to fetch market stats");
+      throw new Error(Iííìîíì || "Failed to fetch market stats");
     }
     return Iîïììîí.data || {
       stats: [],
@@ -90540,7 +90540,7 @@ window.JfCzGzvGIQB8rrJX = { isProxy: true };
     const Iiiíïîì = await iíiïîíi.market.listItem(Iiîîíii);
     if (Iiiíïîì.error) {
       const Iíiíííï = iîiïîïi(Iiiíïîì.error);
-      console.error(Iíiíííï || "Failed to list item");
+      throw new Error(Iíiíííï || "Failed to list item");
     }
     return Iiiíïîì.data || {};
   }
@@ -90591,7 +90591,7 @@ window.JfCzGzvGIQB8rrJX = { isProxy: true };
     const Iïíiíìí = await iíiïîíi.market.getHistory(Iiïiîïí);
     if (Iïíiíìí.error) {
       const Iíiìîîí = iîiïîïi(Iïíiíìí.error);
-      console.error(Iíiìîîí || "Failed to fetch market history");
+      throw new Error(Iíiìîîí || "Failed to fetch market history");
     }
     return Iïíiíìí.data || {
       history: [],
@@ -92070,7 +92070,7 @@ window.JfCzGzvGIQB8rrJX = { isProxy: true };
         iìììííi(iÍíïîíì, iìïîiíì([...iíììíïï(iÍíïîíì), ...iIiìììî.history]));
         iìììííi(iÎiìïìi, iìïîiíì(iIiìììî.has_more));
         iìììííi(iÎíìiíî, iìïîiíì(iIiìììî.next_cursor));
-      } catch (iÌìîìîí) { } finally {
+      } catch (iÌìîìîí) {} finally {
         iìììííi(iÏìiìií, false);
       }
     }
@@ -92176,7 +92176,7 @@ window.JfCzGzvGIQB8rrJX = { isProxy: true };
             });
             if (iÍîiiïî.error) {
               const iÎïîïíi = iîiïîïi(iÍîiiïî.error);
-              console.error(iÎïîïíi || "Failed to quick sell item");
+              throw new Error(iÎïîïíi || "Failed to quick sell item");
             }
             const iÎïîiíi = iÍîiiïî.data || {
               funds: 0,
@@ -92858,7 +92858,7 @@ window.JfCzGzvGIQB8rrJX = { isProxy: true };
   var iiiiîiî = iiiîiîï("<div class=\"bm-loading svelte-8w05wa\">Loading...</div>");
   var iííiííî = iiiîiîï("<div class=\"bm-error svelte-8w05wa\"> </div>");
   var iîïiiìí = (iÎïïììì, iÌíiïîï, iIiîìïï) => iÌíiïîï(iíììíïï(iIiîìïï));
-  var iiiíïií = () => { };
+  var iiiíïií = () => {};
   var iïîîìïì = iiiîiîï("<div class=\"bm-spray-img svelte-8w05wa\"></div>");
   var iîïîìîì = iiiîiîï("<img class=\"bm-item-img svelte-8w05wa\" draggable=\"false\">");
   var iiíìíìi = iiiîiîï("<div class=\"bm-item-price svelte-8w05wa\"> <span class=\"kr-label svelte-8w05wa\">KR</span></div>");
@@ -92868,7 +92868,7 @@ window.JfCzGzvGIQB8rrJX = { isProxy: true };
   var iìïïííì = iiiîiîï("<div class=\"bm-req-text svelte-8w05wa\"> </div>");
   var iîìiííi = iiiîiîï("<div class=\"bm-action-btn bm-owned-btn svelte-8w05wa\">Owned</div>");
   var iíîïìíí = (iÏîïíìí, iÏíîîïí, iÌiïiíî) => iÏíîîïí(iíììíïï(iÌiïiíî));
-  var iiiíîiì = () => { };
+  var iiiíîiì = () => {};
   var iíîïiïî = iiiîiîï("<div class=\"bm-action-btn bm-purchase-btn svelte-8w05wa\" role=\"button\" tabindex=\"0\">Purchase</div>");
   var iíïíìîí = iiiîiîï("<div class=\"bm-action-btn bm-locked-btn svelte-8w05wa\"> </div>");
   var iîîììiî = iiiîiîï("<div class=\"bm-card svelte-8w05wa\"><div class=\"bm-card-icon svelte-8w05wa\" role=\"button\" tabindex=\"0\"><!> <div class=\"bm-item-name svelte-8w05wa\"> </div> <!> <!> <!></div> <!> <div class=\"bm-actions svelte-8w05wa\"><!></div></div>");
@@ -92920,7 +92920,7 @@ window.JfCzGzvGIQB8rrJX = { isProxy: true };
   iîìîìíï(["click", "keydown"]);
   var iïíïíìî = iiiîiîï("<div style=\"color: #fff; text-align: center; margin-top: 20px;\"> </div>");
   var iïïiiíî = () => window.showWindow(5);
-  var iîiîìîí = () => { };
+  var iîiîìîí = () => {};
   var iïîiîii = iiiîiîï("<div style=\"color: #fff; text-align: center; margin-top: 20px; cursor: pointer;\" role=\"button\" tabindex=\"0\"><span style=\"color: #31caec\">Register</span> to craft!</div>");
   var iîiííìí = iiiîiîï("<div class=\"junkyard-tab svelte-1g62wi6\"><div class=\"jy-scroll svelte-1g62wi6\"><div class=\"craft-header-img svelte-1g62wi6\"><div class=\"craft-header-name svelte-1g62wi6\">Welcome to the Junkyard</div> <div class=\"craft-header-desc svelte-1g62wi6\">Craft brand new skins & items by using Junk and other Materials, which can be found scattered\n      around every map in the game or earned from challenges.</div></div> <div class=\"craft-grid svelte-1g62wi6\"><!></div></div></div>");
   const iiiîïîi = {
@@ -93669,7 +93669,7 @@ window.JfCzGzvGIQB8rrJX = { isProxy: true };
           const iÎïíììì = await async function (iÎìïííí) {
             const iÏíïïîï = await iíiïîíi.items.getView(iÎìïííí);
             if (iÏíïïîï.error) {
-              console.error(iîiïîïi(iÏíïïîï.error) || "Failed to load item details");
+              throw new Error(iîiïîïi(iÏíïïîï.error) || "Failed to load item details");
             }
             return iÏíïïîï.data || {
               stats: null,
@@ -94039,7 +94039,7 @@ window.JfCzGzvGIQB8rrJX = { isProxy: true };
                   iìììííi(iÌíiîìí, iìïîiíì(await async function (iÎîiíïì, iÎìiîiï = 0) {
                     const iÍíïiïì = await iíiïîíi.items.getSales(iÎîiíïì, iÎìiîiï);
                     if (iÍíïiïì.error) {
-                      console.error(iîiïîïi(iÍíïiïì.error) || "Failed to load item sales history");
+                      throw new Error(iîiïîïi(iÍíïiïì.error) || "Failed to load item sales history");
                     }
                     return iÍíïiïì.data || [];
                   }(iÎíîiîì.item.index, iíììíïï(iIîîiîí))));
@@ -94535,7 +94535,7 @@ window.JfCzGzvGIQB8rrJX = { isProxy: true };
                   iìììííi(iÎïîììì, iìïîiíì([...iíììíïï(iÎïîììì), ...iÏiííìï.listings]));
                   iìììííi(iÍïîîîî, iìïîiíì(iÏiííìï.has_more));
                   iìììííi(iÏiìììí, iìïîiíì(iÏiííìï.next_cursor_id));
-                } catch (iÌìiìíî) { } finally {
+                } catch (iÌìiìíî) {} finally {
                   iìììííi(iÍiîïìî, false);
                 }
               }
@@ -94558,7 +94558,7 @@ window.JfCzGzvGIQB8rrJX = { isProxy: true };
                   });
                   if (iÍìîìiî.error) {
                     const iÍìîiii = iîiïîïi(iÍìîìiî.error);
-                    console.error(iÍìîiii || "Failed to purchase item");
+                    throw new Error(iÍìîiii || "Failed to purchase item");
                   }
                   return iÍìîìiî.data || {};
                 }(iíììíïï(iÍiììiï).marketid);
@@ -94682,7 +94682,7 @@ window.JfCzGzvGIQB8rrJX = { isProxy: true };
                     });
                     if (iÏïìîïí.error) {
                       const iÌíîììî = iîiïîïi(iÏïìîïí.error);
-                      console.error(iÌíîììî || "Failed to unlist item");
+                      throw new Error(iÌíîììî || "Failed to unlist item");
                     }
                     return iÏïìîïí.data || {
                       response: "SUCCESS"
@@ -94884,7 +94884,7 @@ window.JfCzGzvGIQB8rrJX = { isProxy: true };
                         iìììííi(iÎïíìîi, iìïîiíì(iÏííiíì.listings));
                         iìììííi(iÏìíìíî, iìïîiíì(iÏííiíì.has_more));
                         iìììííi(iÏîîïîi, iìïîiíì(iÏííiíì.next_cursor_id));
-                      } catch (iÎïíìîì) { } finally {
+                      } catch (iÎïíìîì) {} finally {
                         iìììííi(iÌîïíîi, false);
                       }
                     }
@@ -94922,7 +94922,7 @@ window.JfCzGzvGIQB8rrJX = { isProxy: true };
                         iìììííi(iÎïíìîi, iìïîiíì([...iíììíïï(iÎïíìîi), ...iIîìiíi.listings]));
                         iìììííi(iÏìíìíî, iìïîiíì(iIîìiíi.has_more));
                         iìììííi(iÏîîïîi, iìïîiíì(iIîìiíi.next_cursor_id));
-                      } catch (iÎiiïii) { } finally {
+                      } catch (iÎiiïii) {} finally {
                         iìììííi(iÍïìììï, false);
                       }
                     }
@@ -94956,7 +94956,7 @@ window.JfCzGzvGIQB8rrJX = { isProxy: true };
                         iìììííi(iÎïíìîi, iìïîiíì(iÎiíiïî.listings));
                         iìììííi(iÏìíìíî, iìïîiíì(iÎiíiïî.has_more));
                         iìììííi(iÏîîïîi, iìïîiíì(iÎiíiïî.next_cursor_id));
-                      } catch (iIíîiíì) { } finally {
+                      } catch (iIíîiíì) {} finally {
                         iìììííi(iÌîïíîi, false);
                       }
                     }
@@ -95034,7 +95034,7 @@ window.JfCzGzvGIQB8rrJX = { isProxy: true };
                                 iìììííi(iÎïíìîi, iìïîiíì(iÍîíiìì.listings));
                                 iìììííi(iÏìíìíî, iìïîiíì(iÍîíiìì.has_more));
                                 iìììííi(iÏîîïîi, iìïîiíì(iÍîíiìì.next_cursor_id));
-                              } catch (iÍïîíîí) { } finally {
+                              } catch (iÍïîíîí) {} finally {
                                 iìììííi(iÌïííiî, false);
                               }
                             }
@@ -95439,7 +95439,7 @@ window.JfCzGzvGIQB8rrJX = { isProxy: true };
                           iìììííi(iÎíìíìi, true);
                           const iÏíiííí = await iïíîîìì();
                           iìììííi(iÍîïììí, iìïîiíì(iÏíiííí.filter(iÍíiìíi => iÍíiìíi.cnt === undefined || iÍíiìíi.cnt > 0)));
-                        } catch (iÎîîíïì) { } finally {
+                        } catch (iÎîîíïì) {} finally {
                           iìììííi(iÎíìíìi, false);
                         }
                       }
@@ -95730,11 +95730,11 @@ window.JfCzGzvGIQB8rrJX = { isProxy: true };
                               const iÎìîiiî = await iíiïîíi.market.getSales();
                               if (iÎìîiiî.error) {
                                 const iÍîiiïí = iîiïîïi(iÎìîiiî.error);
-                                console.error(iÍîiiïí || "Failed to fetch sales");
+                                throw new Error(iÍîiiïí || "Failed to fetch sales");
                               }
                               return iÎìîiiî.data || [];
                             }()));
-                          } catch (iÍììïìi) { } finally {
+                          } catch (iÍììïìi) {} finally {
                             iìììííi(iÏîìïìi, false);
                           }
                         }
@@ -96206,7 +96206,7 @@ window.JfCzGzvGIQB8rrJX = { isProxy: true };
                                 iìììííi(iÌíììíì, iìïîiíì(iÎìiiïî.stats));
                                 iìììííi(iIiïìîi, iìïîiíì(iÎìiiïî.has_more));
                                 iìììííi(iIííïîî, iìïîiíì(iÎìiiïî.next_cursor));
-                              } catch (iIïììíí) { } finally {
+                              } catch (iIïììíí) {} finally {
                                 iìììííi(iIîìììì, false);
                               }
                             }
@@ -96549,7 +96549,7 @@ window.JfCzGzvGIQB8rrJX = { isProxy: true };
                                   iìììííi(iÌíììíì, iìïîiíì([...iíììíïï(iÌíììíì), ...iÍíîííi.stats]));
                                   iìììííi(iIiïìîi, iìïîiíì(iÍíîííi.has_more));
                                   iìììííi(iIííïîî, iìïîiíì(iÍíîííi.next_cursor));
-                                } catch (iÍïíìíï) { } finally {
+                                } catch (iÍïíìíï) {} finally {
                                   iìììííi(iÌiíìîì, false);
                                 }
                               }
@@ -96692,7 +96692,7 @@ window.JfCzGzvGIQB8rrJX = { isProxy: true };
                             const iÌìiíïí = await iíiïîíi.market.getItemSalesStatistics(iÏíïïîî, iÍîiïïí);
                             if (iÌìiíïí.error) {
                               const iÍíìïìï = iîiïîïi(iÌìiíïí.error);
-                              console.error(iÍíìïìï || "Failed to fetch item sales statistics");
+                              throw new Error(iÍíìïìï || "Failed to fetch item sales statistics");
                             }
                             return iÌìiíïí.data || [];
                           }(iÍìíiïï, iíììíïï(iÎïiîìí));
@@ -97426,7 +97426,7 @@ window.JfCzGzvGIQB8rrJX = { isProxy: true };
                     const iÌiïiïî = await iíiïîíi.trades.acceptTrade(iIiiìíi);
                     if (iÌiïiïî.error) {
                       const iÍiìïíï = iîiïîïi(iÌiïiïî.error);
-                      console.error(iÍiìïíï || "Failed to accept trade");
+                      throw new Error(iÍiìïíï || "Failed to accept trade");
                     }
                     return iÌiïiïî.data || {
                       funds: 0
@@ -97450,7 +97450,7 @@ window.JfCzGzvGIQB8rrJX = { isProxy: true };
                         });
                         iìììííi(iIíìîíi, iìïîiíì((iIiíïîî.completed || []).map(iÎïíiíì => iIïîìîi(iÎïíiíì, iÎîììïi().id))));
                         iìììííi(iIïííìí, !!iIiíïîî.completed_has_more);
-                      } catch { }
+                      } catch {}
                     }
                   })();
                 } catch (iÍîìiïi) {
@@ -97502,7 +97502,7 @@ window.JfCzGzvGIQB8rrJX = { isProxy: true };
                           const iÍiìîiï = await iíiïîíi.trades.declineAll();
                           if (iÍiìîiï.error) {
                             const iÏïiiïì = iîiïîïi(iÍiìîiï.error);
-                            console.error(iÏïiiïì || "Failed to decline all trades");
+                            throw new Error(iÏïiiïì || "Failed to decline all trades");
                           }
                           return iÍiìîiï.data || {
                             success: false
@@ -97952,7 +97952,7 @@ window.JfCzGzvGIQB8rrJX = { isProxy: true };
                         const iIìiîìì = await iíiïîíi.market.purchaseBlackMarketItem(iÍiiïíì);
                         if (iIìiîìì.error) {
                           const iÌiiîïî = iîiïîïi(iIìiîìì.error);
-                          console.error(iÌiiîïî || "Failed to purchase black market item");
+                          throw new Error(iÌiiîïî || "Failed to purchase black market item");
                         }
                         return iIìiîìì.data || {
                           funds: 0,
@@ -97991,7 +97991,7 @@ window.JfCzGzvGIQB8rrJX = { isProxy: true };
                       const iÏìíïiï = await iíiïîíi.market.getBlackMarketItems();
                       if (iÏìíïiï.error) {
                         const iÌìíiìí = iîiïîïi(iÏìíïiï.error);
-                        console.error(iÌìíiìí || "Failed to fetch black market items");
+                        throw new Error(iÌìíiìí || "Failed to fetch black market items");
                       }
                       return iÏìíïiï.data || [];
                     }()));
@@ -98525,21 +98525,21 @@ window.JfCzGzvGIQB8rrJX = { isProxy: true };
   async function iìíííìî(iÏiíiìî, iÏiïïïï, iIïïïìì) {
     const iÏîîîíì = await iíiïîíi.leaderboards.getLeaderboard(iÏiíiìî, iÏiïïïï, iIïïïìì);
     if (iÏîîîíì.error) {
-      console.error(iÏîîîíì.error.message || "Failed to fetch leaderboard");
+      throw new Error(iÏîîîíì.error.message || "Failed to fetch leaderboard");
     }
     return iÏîîîíì.data || [];
   }
   async function iîïïîìî() {
     const iIíiiìî = await iíiïîíi.leaderboards.getKrunkCupTeams();
     if (iIíiiìî.error) {
-      console.error(iIíiiìî.error.message || "Failed to fetch KrunkCup teams");
+      throw new Error(iIíiiìî.error.message || "Failed to fetch KrunkCup teams");
     }
     return iIíiiìî.data || [];
   }
   async function iíîîiíi(iÍîïïîï) {
     const iÍìíïîí = await iíiïîíi.leaderboards.getKrunkCupTopPlayers(iÍîïïîï);
     if (iÍìíïîí.error) {
-      console.error(iÍìíïîí.error.message || "Failed to fetch KrunkCup top players");
+      throw new Error(iÍìíïîí.error.message || "Failed to fetch KrunkCup top players");
     }
     return iÍìíïîí.data || [];
   }
@@ -99036,7 +99036,7 @@ window.JfCzGzvGIQB8rrJX = { isProxy: true };
                           iìììííi(iÎîìííî, iìïîiíì(await async function (iÌiíiií, iÍìíiîï = "best_time") {
                             const iÍíìiîî = await iíiïîíi.leaderboards.getRaidLeaderboard(iÌiíiií, iÍìíiîï);
                             if (iÍíìiîî.error) {
-                              console.error(iÍíìiîî.error.message || "Failed to fetch raid leaderboard");
+                              throw new Error(iÍíìiîî.error.message || "Failed to fetch raid leaderboard");
                             }
                             return iÍíìiîî.data || [];
                           }(iÌiíiïï, iÍíîìîì)));
@@ -99045,7 +99045,7 @@ window.JfCzGzvGIQB8rrJX = { isProxy: true };
                           iìììííi(iÎîíïïï, iìïîiíì(await async function (iÌîìiïî, iÍiììíí, iÌíïïíi = "completions") {
                             const iÌiïîiî = await iíiïîíi.leaderboards.getMonthlyRaidLeaderboard(iÌîìiïî, iÍiììíí, iÌíïïíi);
                             if (iÌiïîiî.error) {
-                              console.error(iÌiïîiî.error.message || "Failed to fetch monthly raid leaderboard");
+                              throw new Error(iÌiïîiî.error.message || "Failed to fetch monthly raid leaderboard");
                             }
                             return iÌiïîiî.data || [];
                           }(iÌiíiïï, iÌìîìií, iÍíîìîì)));
@@ -99241,7 +99241,7 @@ window.JfCzGzvGIQB8rrJX = { isProxy: true };
                             iìììííi(iÌíììîî, null);
                             const iÎìiîií = await iîìîïïï.playerProfile.getLeaderboard(40, 0, iIiïíîi, iÍiïîiî);
                             if (iÎìiîií.error) {
-                              console.error(iÎìiîií.error.message || "Failed to load");
+                              throw new Error(iÎìiîií.error.message || "Failed to load");
                             }
                             iìììííi(iÏiïiii, iìïîiíì(iÎìiîií.data?.leaderboard || []));
                           } catch (iÏíìííì) {
@@ -99486,7 +99486,7 @@ window.JfCzGzvGIQB8rrJX = { isProxy: true };
                           iìììííi(iÎîiiìï, iìïîiíì(await async function (iÎííiii) {
                             const iÎîïìïì = await iíiïîíi.leaderboards.getKrunkCupContributors(iÎííiii);
                             if (iÎîïìïì.error) {
-                              console.error(iÎîïìïì.error.message || "Failed to fetch KrunkCup contributors");
+                              throw new Error(iÎîïìïì.error.message || "Failed to fetch KrunkCup contributors");
                             }
                             return iÎîïìïì.data || [];
                           }(iÏìiïíì.id)));
@@ -99772,7 +99772,7 @@ window.JfCzGzvGIQB8rrJX = { isProxy: true };
         const iÍíiïïî = await async function (iÍíìiíi) {
           const iÏííiíï = await iíiïîíi.social.createPost(iÍíìiíi);
           if (iÏííiíï.error) {
-            console.error(iîiïîïi(iÏííiíï.error) || "Failed to create post");
+            throw new Error(iîiïîïi(iÏííiíï.error) || "Failed to create post");
           }
           return iÏííiíï.data || {
             post_id: 0,
@@ -99927,7 +99927,7 @@ window.JfCzGzvGIQB8rrJX = { isProxy: true };
     let iÌiiïïï = null;
     try {
       iÌiiïïï = await ((iÎííìïî = (iÍìïííì = window.FRVR?.auth) === null || iÍìïííì === undefined ? undefined : iÍìïííì.getFreshAccessToken) === null || iÎííìïî === undefined ? undefined : iÎííìïî.call(iÍìïííì));
-    } catch (iÎïîíìì) { }
+    } catch (iÎïîíìì) {}
     if (!iÌiiïïï) {
       iìììííi(iìííïíí, "error");
       iìììííi(iîîìîiî, "Not signed in.");
@@ -100201,7 +100201,7 @@ window.JfCzGzvGIQB8rrJX = { isProxy: true };
         }
       })(iÏïiíîì);
     };
-    iÍíiíìí.onerror = iÍìïíìï => { };
+    iÍíiíìí.onerror = iÍìïíìï => {};
     iÍíiíìí.onclose = iIîiïiï => {
       iîiííîì();
       iìïiiïí = null;
@@ -100377,7 +100377,7 @@ window.JfCzGzvGIQB8rrJX = { isProxy: true };
         if (iìïiiïí) {
           try {
             iìïiiïí.close(1000, "client disconnect");
-          } catch (iÍìîiíï) { }
+          } catch (iÍìîiíï) {}
           iìïiiïí = null;
         }
         iìììííi(iìííïíí, "disconnected");
@@ -100777,7 +100777,7 @@ window.JfCzGzvGIQB8rrJX = { isProxy: true };
                 iìììííi(iIïìïíi, iìïîiíì(await async function (iÍíïìíì) {
                   const iÎîíiíì = await iíiïîíi.social.getFeed(iÍíïìíì, undefined);
                   if (iÎîíiíì.error) {
-                    console.error(iîiïîïi(iÎîíiíì.error) || "Failed to load feed");
+                    throw new Error(iîiïîïi(iÎîíiíì.error) || "Failed to load feed");
                   }
                   return iÎîíiíì.data?.posts || [];
                 }(iÌìîiìî.tab)));
@@ -100862,7 +100862,7 @@ window.JfCzGzvGIQB8rrJX = { isProxy: true };
                 iìììííi(iÌïïìii, iìïîiíì((await async function () {
                   const iIíííîì = await iíiïîíi.social.getNews();
                   if (iIíííîì.error) {
-                    console.error(iîiïîïi(iIíííîì.error) || "Failed to load news");
+                    throw new Error(iîiïîïi(iIíííîì.error) || "Failed to load news");
                   }
                   return iIíííîì.data?.news || [];
                 }()).filter(iÏiïiìi => iÏiïiìi && iÏiïiìi.length > 0)));
@@ -100991,7 +100991,7 @@ window.JfCzGzvGIQB8rrJX = { isProxy: true };
               iîïíîìï().then(() => iíììíïï(iÎiiìiì)?.focus());
               const iÌìïïìì = iíìíiií.history[iÎiiíîi.friend.id];
               if (!iÌìïïìì || !iÌìïïìì.initialised && !iÌìïïìì.loading) {
-                iîïiììì(iÎiiíîi.friend.id, 0, 15).catch(iÌìïïïi => { });
+                iîïiììì(iÎiiíîi.friend.id, 0, 15).catch(iÌìïïïi => {});
               }
             });
             let iÏïîíiî = "";
@@ -101056,7 +101056,7 @@ window.JfCzGzvGIQB8rrJX = { isProxy: true };
                 if (iíììíïï(iÍíiiiî)) {
                   iíììíïï(iÍíiiiî).scrollTop = iíììíïï(iÍíiiiî).scrollHeight - iIïíííî;
                 }
-              } catch (iÌìïiií) { } finally {
+              } catch (iÌìïiií) {} finally {
                 iìììííi(iÎíîïìi, false);
               }
             }
@@ -101359,7 +101359,7 @@ window.JfCzGzvGIQB8rrJX = { isProxy: true };
                   const iÌíiïïï = await async function (iÍiííii, iÍíiìîì = 20) {
                     const iÎïìîîì = await iíiïîíi.players.search(iÍiííii, iÍíiìîì);
                     if (iÎïìîîì.error) {
-                      console.error(iîiïîïi(iÎïìîîì.error) || "Search failed");
+                      throw new Error(iîiïîïi(iÎïìîîì.error) || "Search failed");
                     }
                     return iÎïìîîì.data?.results || [];
                   }(iIïíïìí);
@@ -101588,7 +101588,7 @@ window.JfCzGzvGIQB8rrJX = { isProxy: true };
     let iÎííîíì = null;
     try {
       iÎííîíì = new URL(window.location.href).searchParams.get("game");
-    } catch (iÍiïíïi) { }
+    } catch (iÍiïíïi) {}
     if ((iIiíïîi = window.backToOrigin) !== null && iIiíïîi !== undefined) {
       iIiíïîi.call(window, false, iÎííîíì ? {
         exclude: iÎííîíì
@@ -101720,49 +101720,49 @@ window.JfCzGzvGIQB8rrJX = { isProxy: true };
   async function iíiìîíï(iÏíîíiî) {
     const iÍîîííï = await iíiïîíi.territorialWars.getClanStats(iÏíîíiî);
     if (iÍîîííï.error) {
-      console.error(iÍîîííï.error.message || "Failed to fetch clan stats");
+      throw new Error(iÍîîííï.error.message || "Failed to fetch clan stats");
     }
     return iÍîîííï.data || null;
   }
   async function iìîíîíï(iÍiììíì, iÍïìïìí, iIiiíìi) {
     const iÌiîïïi = await iíiïîíi.territorialWars.getClanPlayers(iÍiììíì, iÍïìïìí, iIiiíìi);
     if (iÌiîïïi.error) {
-      console.error(iÌiîïïi.error.message || "Failed to fetch clan players");
+      throw new Error(iÌiîïïi.error.message || "Failed to fetch clan players");
     }
     return iÌiîïïi.data || [];
   }
   async function iiíîïìî(iÍîíïíí) {
     const iÏìïíií = await iíiïîíi.territorialWars.getClanEarnings(iÍîíïíí);
     if (iÏìïíií.error) {
-      console.error(iÏìïíií.error.message || "Failed to fetch clan earnings");
+      throw new Error(iÏìïíií.error.message || "Failed to fetch clan earnings");
     }
     return iÏìïíií.data || [];
   }
   async function iiiíiîï(iÍííïïî, iÌiïiîï) {
     const iÍíïïïí = await iíiïîíi.territorialWars.getClanPayouts(iÍííïïî, iÌiïiîï);
     if (iÍíïïïí.error) {
-      console.error(iÍíïïïí.error.message || "Failed to fetch clan payouts");
+      throw new Error(iÍíïïïí.error.message || "Failed to fetch clan payouts");
     }
     return iÍíïïïí.data;
   }
   async function iïííìiï(iIíîîïì) {
     const iÌîîìiî = await iíiïîíi.territorialWars.getPlayerProfile(iIíîîïì);
     if (iÌîîìiî.error) {
-      console.error(iÌîîìiî.error.message || "Failed to fetch player profile");
+      throw new Error(iÌîîìiî.error.message || "Failed to fetch player profile");
     }
     return iÌîîìiî.data;
   }
   async function iìîiíîî(iÏiìíïì, iIïiïìî) {
     const iÌiïïìi = await iíiïîíi.territorialWars.getPlayerContributions(iÏiìíïì, iIïiïìî);
     if (iÌiïïìi.error) {
-      console.error(iÌiïïìi.error.message || "Failed to fetch player contributions");
+      throw new Error(iÌiïïìi.error.message || "Failed to fetch player contributions");
     }
     return iÌiïïìi.data || [];
   }
   async function iïiíìíï(iÏîîíiì) {
     const iÏîííií = await iíiïîíi.territorialWars.getPlayerEarnings(iÏîîíiì);
     if (iÏîííií.error) {
-      console.error(iÏîííií.error.message || "Failed to fetch player earnings");
+      throw new Error(iÏîííií.error.message || "Failed to fetch player earnings");
     }
     return iÏîííií.data || [];
   }
@@ -102486,7 +102486,7 @@ window.JfCzGzvGIQB8rrJX = { isProxy: true };
                 const iIìîîïì = await async function () {
                   const iIîiíìi = await iíiïîíi.territorialWars.getStatus();
                   if (iIîiíìi.error) {
-                    console.error(iIîiíìi.error.message || "Failed to fetch territorial wars status");
+                    throw new Error(iIîiíìi.error.message || "Failed to fetch territorial wars status");
                   }
                   return iIîiíìi.data || [];
                 }();
@@ -103335,7 +103335,7 @@ window.JfCzGzvGIQB8rrJX = { isProxy: true };
                           iìììííi(iÎiïíìi, iìïîiíì(await async function (iÏiîìîi, iIïíîîï, iÎïìïîï) {
                             const iIiìîîi = await iíiïîíi.territorialWars.getTopPerformingClans(iÏiîìîi, iIïíîîï, iÎïìïîï);
                             if (iIiìîîi.error) {
-                              console.error(iIiìîîi.error.message || "Failed to fetch top performing clans");
+                              throw new Error(iIiìîîi.error.message || "Failed to fetch top performing clans");
                             }
                             return iIiìîîi.data || [];
                           }(iÍiîîiì, iÎìîïïí, iÍiiìíí)));
@@ -103509,7 +103509,7 @@ window.JfCzGzvGIQB8rrJX = { isProxy: true };
                             iìììííi(iÎîìïïï, iìïîiíì(await async function (iÎïîîïî) {
                               const iÎiìiíì = await iíiïîíi.territorialWars.getTopGrossingClans(iÎïîîïî);
                               if (iÎiìiíì.error) {
-                                console.error(iÎiìiíì.error.message || "Failed to fetch top grossing clans");
+                                throw new Error(iÎiìiíì.error.message || "Failed to fetch top grossing clans");
                               }
                               return iÎiìiíì.data || [];
                             }(iÍiìiíì)));
@@ -103664,7 +103664,7 @@ window.JfCzGzvGIQB8rrJX = { isProxy: true };
                               iìììííi(iÏíiîîí, iìïîiíì(await async function (iÏìììií, iIïìïîi) {
                                 const iÍiîíïï = await iíiïîíi.territorialWars.getTopPerformingPlayers(iÏìììií, iIïìïîi);
                                 if (iÍiîíïï.error) {
-                                  console.error(iÍiîíïï.error.message || "Failed to fetch top performing players");
+                                  throw new Error(iÍiîíïï.error.message || "Failed to fetch top performing players");
                                 }
                                 return iÍiîíïï.data || [];
                               }(iÍiîîîi, iIìíïii)));
@@ -103893,7 +103893,7 @@ window.JfCzGzvGIQB8rrJX = { isProxy: true };
                       const iÏîïíìî = await async function (iÌïìïiï) {
                         const iÌiiîîï = await iíiïîíi.clans.listRecruitment(iÌïìïiï);
                         if (iÌiiîîï.error) {
-                          console.error(iÌiiîîï.error.message || "Failed to fetch recruitment posts");
+                          throw new Error(iÌiiîîï.error.message || "Failed to fetch recruitment posts");
                         }
                         return iÌiiîîï.data || {
                           posts: [],
@@ -104155,7 +104155,7 @@ window.JfCzGzvGIQB8rrJX = { isProxy: true };
                                         await async function (iÍîìïíî) {
                                           const iÎííïîi = await iíiïîíi.clans.applyToClan(iÍîìïíî);
                                           if (iÎííïîi.error) {
-                                            console.error(iÎííïîi.error.message || iÎííïîi.error || "Failed to apply");
+                                            throw new Error(iÎííïîi.error.message || iÎííïîi.error || "Failed to apply");
                                           }
                                           return iÎííïîi.data?.message || "Application sent!";
                                         }(iÍiiîîì.clan_id);
@@ -105263,7 +105263,7 @@ window.JfCzGzvGIQB8rrJX = { isProxy: true };
       } else if (iïiìíïi(iîíiïii).subscribed) {
         iìïïiïî(null);
       }
-    } catch (iÎíîiíï) { }
+    } catch (iÎíîiíï) {}
   }
   async function iîïíïìí(iÍîïîíí) {
     try {
@@ -105312,7 +105312,7 @@ window.JfCzGzvGIQB8rrJX = { isProxy: true };
         iÍìíïîî.onerror = () => iÌîìííî(iÍìíïîî.error);
       });
       iÍîïìii.close();
-    } catch (iÍííííi) { }
+    } catch (iÍííííi) {}
   }
   async function iìîíììî() {
     try {
@@ -105356,7 +105356,7 @@ window.JfCzGzvGIQB8rrJX = { isProxy: true };
           await iîîííïï(iÌìïîíì.id);
         }
       }
-    } catch (iIíîîiï) { }
+    } catch (iIíîîiï) {}
   }
   function iïíïìií(iÌïiíiì) {
     const iIïííïí = (iÌïiíiì + "=".repeat((4 - iÌïiíiì.length % 4) % 4)).replace(/-/g, "+").replace(/_/g, "/");
@@ -105782,7 +105782,7 @@ window.JfCzGzvGIQB8rrJX = { isProxy: true };
         const [iÎìíiïì, iÍíiîïí] = await Promise.all([iîïïîìî(), iíîîiíi(5)]);
         iìììííi(iÎìïïìi, iìïîiíì(iÎìíiïì.slice(0, 5)));
         iìììííi(iÏìiìïí, iìïîiíì(iÍíiîïí.slice(0, 5)));
-      } catch (iIíïiii) { } finally {
+      } catch (iIíïiii) {} finally {
         iìììííi(iÏîiïii, false);
       }
     });
@@ -105995,7 +105995,7 @@ window.JfCzGzvGIQB8rrJX = { isProxy: true };
       symbol: "RP",
       amount: iIíììíi
     }]);
-    function iIîìiiï(iÎiìííï) { }
+    function iIîìiiï(iÎiìííï) {}
     function iÎïiïìî(iÏïîîìí, iÌíïìiî) {
       return iïîììíî(() => ({
         render: () => "<div></div>",
@@ -106490,7 +106490,7 @@ window.JfCzGzvGIQB8rrJX = { isProxy: true };
         }, () => {
           iìììííi(iIïïiïï, iÏïíîìi(iíììíïï(iÌiïiii).length + (iÌiííiî().showPromo && !(iíììíïï(iIììïíî).length < 3) && (iÎïíììí() !== "expanded" || iíììíïï(iIììïíî).length !== 3 && (!(iíììíïï(iIììïíî).length > 3) || iíììíïï(iIììïíî).length % 4 == 0)) ? 1 : 0), iÎïíììí() === "expanded"));
         });
-        iïîîíïî(() => { }, () => {
+        iïîîíïî(() => {}, () => {
           iìììííi(iIiîïìî, 3);
         });
         iïîîíïî(() => iíììíïï(iIiîïìî), () => {
@@ -106603,7 +106603,7 @@ window.JfCzGzvGIQB8rrJX = { isProxy: true };
         }, () => {
           iìììííi(iÌiîïïí, iÎïíììí() === "expanded" ? 4 : Math.min(iíììíïï(iIîìììi).length + (iíììíïï(iÍìííìï) ? 1 : 0), 3));
         });
-        iïîîíïî(() => { }, () => {
+        iïîîíïî(() => {}, () => {
           iìììííi(iÌiîïìí, 4);
         });
         iïîîíïî(() => iíììíïï(iÌiïiii), () => {
@@ -106897,7 +106897,7 @@ window.JfCzGzvGIQB8rrJX = { isProxy: true };
               let [iÎîiïìi, iÌììiìi] = iÏíïîíï;
               iíììïîí.set(iÎîiïìi.slice(0, 3));
               iìiíííï.set(iÌììiìi);
-            }).catch(iÏìíïiî => { }).finally(() => {
+            }).catch(iÏìíïiî => {}).finally(() => {
               iïîîiií = null;
             });
           } else {
@@ -107218,7 +107218,7 @@ window.JfCzGzvGIQB8rrJX = { isProxy: true };
                       iìïïiïî(null);
                     }
                   }
-                } catch (iÏììïïï) { }
+                } catch (iÏììïïï) {}
               }();
               return iïiìíïi(iîíiïii).subscribed;
             } catch (iIîìîïí) {
@@ -107458,7 +107458,7 @@ window.JfCzGzvGIQB8rrJX = { isProxy: true };
               ...iÍìiiîï,
               isClaimed: true
             }));
-          } catch (iÍíìïîï) { } finally {
+          } catch (iÍíìïîï) {} finally {
             iìììííi(iÍìïiíi, false);
           }
         }
@@ -107864,7 +107864,7 @@ window.JfCzGzvGIQB8rrJX = { isProxy: true };
   }
   iîìîìíï(["click"]);
   if ("serviceWorker" in window.navigator) {
-    window.navigator.serviceWorker.register("./service-worker.js").then(iIiiîiì => { }, iIïiííí => { });
+    window.navigator.serviceWorker.register("./service-worker.js").then(iIiiîiì => {}, iIïiííí => {});
   }
   const iïiìiìi = window.currentStorage;
   class iiîìíïí {
@@ -107910,7 +107910,7 @@ window.JfCzGzvGIQB8rrJX = { isProxy: true };
           };
           iIïíiíï = await iÏïíïìï();
         }
-      } catch (iÌiììîí) { }
+      } catch (iÌiììîí) {}
       let iÏííìïî = iÍííîïi.gameId || this.parseQuery();
       let iÍíîïïï = await this.matchmakerSeek(iÍíiîíì, iÏííìïî, iÍííîïi.excludeGame || null, iÍííîïi.dataQuery || null, iÍííîïi.autoChangeGame, iÍííîïi.validationToken, iÍííîïi.captchaToken, iIïíiíï);
       if (!iÍííîïi.skipReplaceState) {
@@ -108105,7 +108105,7 @@ window.JfCzGzvGIQB8rrJX = { isProxy: true };
         let iÎîiiíï = null;
         try {
           iÎîiiíï = await iÍïíiîï.json();
-        } catch (iÏíïiíí) { }
+        } catch (iÏíïiíí) {}
         throw {
           message: iÍïíiîï.statusText,
           response: {
@@ -109384,7 +109384,7 @@ window.JfCzGzvGIQB8rrJX = { isProxy: true };
             iÏïííïï.object.startMaterial(iÏïîìiî.substring(7).trim(), iÏïííïï.materialLibraries);
           } else if (iìïìiîî.test(iÏïîìiî)) {
             iÏïííïï.materialLibraries.push(iÏïîìiî.substring(7).trim());
-          } else if (iîîíìiî.test(iÏïîìiî)); else if (iÏiiííí === "s") {
+          } else if (iîîíìiî.test(iÏïîìiî)) ;else if (iÏiiííí === "s") {
             iIìííïî = iÏïîìiî.split(" ");
             if (iIìííïî.length > 1) {
               const iÌîïíiî = iIìííïî[1].trim().toLowerCase();
@@ -109598,7 +109598,7 @@ window.JfCzGzvGIQB8rrJX = { isProxy: true };
     var iÎïîîìí = iÌìïïíí / 8 | 0;
     return (iÍíììií[iÎïîîìí] | iÍíììií[iÎïîîìí + 1] << 8 | iÍíììií[iÎïîîìí + 2] << 16) >> (iÌìïïíí & 7);
   };
-  var iíììîïï = ["unexpected EOF", "invalid block type", "invalid length/literal", "invalid distance", "stream finished", "no stream handler", , "no callback", "invalid UTF-8 data", "extra field too long", "date not in range 1980-2099", "filename too long", "stream finishing", "invalid zip data"];
+  var iíììîïï = ["unexpected EOF", "invalid block type", "invalid length/literal", "invalid distance", "stream finished", "no stream handler",, "no callback", "invalid UTF-8 data", "extra field too long", "date not in range 1980-2099", "filename too long", "stream finishing", "invalid zip data"];
   var iìíììii = function (iÎììîìi, iÍíîîìî, iÌííiïì) {
     var iÎìíiíí = new Error(iÍíîîìî || iíììîïï[iÎììîìi]);
     iÎìíiíí.code = iÎììîìi;
@@ -109616,7 +109616,7 @@ window.JfCzGzvGIQB8rrJX = { isProxy: true };
     iiïiíïî.decode(iîîìiïî, {
       stream: true
     });
-  } catch (iÌíîîìi) { }
+  } catch (iÌíîîìi) {}
   function iïiìîïí(iIîíîìí, iÌïíîíï, iÌìíïîï) {
     const iÏiïìïî = iÌìíïîï.length - iIîíîìí - 1;
     if (iÌïíîíï >= iÌìíïîï[iÏiïìïî]) {
@@ -109900,10 +109900,10 @@ window.JfCzGzvGIQB8rrJX = { isProxy: true };
           }
           return true;
         }(iÏïïíiì)) {
-          console.error("THREE.FBXLoader: Unknown format.");
+          throw new Error("THREE.FBXLoader: Unknown format.");
         }
         if (iîiiïíî(iÏïïíiì) < 7000) {
-          console.error("THREE.FBXLoader: FBX version not supported, FileVersion: " + iîiiïíî(iÏïïíiì));
+          throw new Error("THREE.FBXLoader: FBX version not supported, FileVersion: " + iîiiïíî(iÏïïíiì));
         }
         iîiìîiî = new iíîííïì().parse(iÏïïíiì);
       }
@@ -111770,7 +111770,7 @@ window.JfCzGzvGIQB8rrJX = { isProxy: true };
       iIiïiìì.skip(23);
       const iÍiiîìî = iIiïiìì.getUint32();
       if (iÍiiîìî < 6400) {
-        console.error("THREE.FBXLoader: FBX version not supported, FileVersion: " + iÍiiîìî);
+        throw new Error("THREE.FBXLoader: FBX version not supported, FileVersion: " + iÍiiîìî);
       }
       const iIìïìiì = new iiiîîíî();
       while (!this.endOfContent(iIiïiìì)) {
@@ -112042,7 +112042,7 @@ window.JfCzGzvGIQB8rrJX = { isProxy: true };
                 }
                 var iÏiíîîï = (1 << iÏïiìiï) - 1;
                 var iIiíïïí = (1 << iIîïïìï) - 1;
-                for (var iÎïiìïî = iÌíïîïî; ; iÎïiìïî = iÌíïîïî) {
+                for (var iÎïiìïî = iÌíïîïî;; iÎïiìïî = iÌíïîïî) {
                   var iÎìîiîi = (iÎiíìïì = iÌîîîìi[iiiìiìi(iÎiíïïï, iÌíïîïî) & iÏiíîîï]) >> 4;
                   if ((iÌíïîïî += iÎiíìïì & 15) > iIíiíîï) {
                     if (iÌïííïì) {
@@ -112142,7 +112142,7 @@ window.JfCzGzvGIQB8rrJX = { isProxy: true };
           }
           break;
         default:
-          console.error("THREE.FBXLoader: Unknown property type " + iÍíiiïì);
+          throw new Error("THREE.FBXLoader: Unknown property type " + iÍíiiïì);
       }
     }
   }
@@ -112290,7 +112290,7 @@ window.JfCzGzvGIQB8rrJX = { isProxy: true };
     if (iÎîîîïí) {
       return parseInt(iÎîîîïí[1]);
     }
-    console.error("THREE.FBXLoader: Cannot find the version number for the file given.");
+    throw new Error("THREE.FBXLoader: Cannot find the version number for the file given.");
   }
   function iîíiìíi(iÌiiîïì) {
     return iÌiiîïì / 46186158000;
@@ -112764,7 +112764,7 @@ window.JfCzGzvGIQB8rrJX = { isProxy: true };
           iIíííiì.add(iIíííiì.target);
           break;
         default:
-          console.error("THREE.GLTFLoader: Unexpected light type: " + iÍîïïîî.type);
+          throw new Error("THREE.GLTFLoader: Unexpected light type: " + iÍîïïîî.type);
       }
       iIíííiì.position.set(0, 0, 0);
       iíííïîï(iIíííiì, iÍîïïîî);
@@ -113179,7 +113179,7 @@ window.JfCzGzvGIQB8rrJX = { isProxy: true };
       const iÏìiìîi = iÌîìïíî.options.ktx2Loader;
       if (!iÏìiìîi) {
         if (iÎïììîì.extensionsRequired && iÎïììîì.extensionsRequired.indexOf(this.name) >= 0) {
-          console.error("THREE.GLTFLoader: setKTX2Loader must be called before loading KTX2 textures");
+          throw new Error("THREE.GLTFLoader: setKTX2Loader must be called before loading KTX2 textures");
         }
         return null;
       }
@@ -113250,7 +113250,7 @@ window.JfCzGzvGIQB8rrJX = { isProxy: true };
         const iÍiîiïî = this.parser.options.meshoptDecoder;
         if (!iÍiîiïî || !iÍiîiïî.supported) {
           if (iÍïïíïi.extensionsRequired && iÍïïíïi.extensionsRequired.indexOf(this.name) >= 0) {
-            console.error("THREE.GLTFLoader: setMeshoptDecoder must be called before loading compressed files");
+            throw new Error("THREE.GLTFLoader: setMeshoptDecoder must be called before loading compressed files");
           }
           return null;
         }
@@ -113366,10 +113366,10 @@ window.JfCzGzvGIQB8rrJX = { isProxy: true };
         length: iÍiíììì.getUint32(8, true)
       };
       if (this.header.magic !== iiììíií) {
-        console.error("THREE.GLTFLoader: Unsupported glTF-Binary header.");
+        throw new Error("THREE.GLTFLoader: Unsupported glTF-Binary header.");
       }
       if (this.header.version < 2) {
-        console.error("THREE.GLTFLoader: Legacy binary file detected.");
+        throw new Error("THREE.GLTFLoader: Legacy binary file detected.");
       }
       const iÎïîíìï = this.header.length - 12;
       const iÎïîììí = new DataView(iÌìíïìì, 12);
@@ -113389,14 +113389,14 @@ window.JfCzGzvGIQB8rrJX = { isProxy: true };
         iIïìiií += iÌíííïì;
       }
       if (this.content === null) {
-        console.error("THREE.GLTFLoader: JSON content not found.");
+        throw new Error("THREE.GLTFLoader: JSON content not found.");
       }
     }
   }
   class iîiììîï {
     constructor(iIïîìii, iÌîìiïì) {
       if (!iÌîìiïì) {
-        console.error("THREE.GLTFLoader: No DRACOLoader instance provided.");
+        throw new Error("THREE.GLTFLoader: No DRACOLoader instance provided.");
       }
       this.name = iiìiìîï.KHR_DRACO_MESH_COMPRESSION;
       this.json = iIïîìii;
@@ -113641,7 +113641,7 @@ window.JfCzGzvGIQB8rrJX = { isProxy: true };
       case Uint16Array:
         return 1 / 65535;
       default:
-        console.error("THREE.GLTFLoader: Unsupported normalized accessor component type.");
+        throw new Error("THREE.GLTFLoader: Unsupported normalized accessor component type.");
     }
   }
   const iïîìïîî = new iïîiììî();
@@ -113863,7 +113863,7 @@ window.JfCzGzvGIQB8rrJX = { isProxy: true };
               return iÏîìíií != this && iÏîìíií.getDependency && iÏîìíií.getDependency(iÏiíìíì, iÎìïïîi);
             });
             if (!iÍìïíîi) {
-              console.error("Unknown type: " + iÏiíìíì);
+              throw new Error("Unknown type: " + iÏiíìíì);
             }
         }
         this.cache.add(iÏïìììì, iÍìïíîi);
@@ -113886,7 +113886,7 @@ window.JfCzGzvGIQB8rrJX = { isProxy: true };
       const iÎíííìî = this.json.buffers[iÍîîíii];
       const iÏïiiíï = this.fileLoader;
       if (iÎíííìî.type && iÎíííìî.type !== "arraybuffer") {
-        console.error("THREE.GLTFLoader: " + iÎíííìî.type + " buffer type is not supported.");
+        throw new Error("THREE.GLTFLoader: " + iÎíííìî.type + " buffer type is not supported.");
       }
       if (iÎíííìî.uri === undefined && iÍîîíii === 0) {
         return Promise.resolve(this.extensions[iiìiìîï.KHR_BINARY_GLTF].body);
@@ -113976,7 +113976,7 @@ window.JfCzGzvGIQB8rrJX = { isProxy: true };
               iÍíìíîí.setW(iÍïiîíí, iIîííìï[iIïîïiï * iÍïïíïï + 3]);
             }
             if (iÍïïíïï >= 5) {
-              console.error("THREE.GLTFLoader: Unsupported itemSize in sparse BufferAttribute.");
+              throw new Error("THREE.GLTFLoader: Unsupported itemSize in sparse BufferAttribute.");
             }
           }
           iÍíìíîí.normalized = iÎiîïìï;
@@ -114049,7 +114049,7 @@ window.JfCzGzvGIQB8rrJX = { isProxy: true };
           return iÌîiïiï;
         });
       } else if (iÏîíiìí.uri === undefined) {
-        console.error("THREE.GLTFLoader: Image " + iÏîiïîì + " is missing URI and bufferView");
+        throw new Error("THREE.GLTFLoader: Image " + iÏîiïîì + " is missing URI and bufferView");
       }
       const iÍììîïî = Promise.resolve(iÌîiïiï).then(function (iÏîiiîì) {
         return new Promise(function (iÍìîíiî, iÌiìîîi) {
@@ -114336,7 +114336,7 @@ window.JfCzGzvGIQB8rrJX = { isProxy: true };
             iIìîîîí = new iïíiiîì(iIìïìii, iÎiìíïï);
           } else {
             if (iIíìíïì.mode !== iiiíïìi.POINTS) {
-              console.error("THREE.GLTFLoader: Primitive mode unsupported: " + iIíìíïì.mode);
+              throw new Error("THREE.GLTFLoader: Primitive mode unsupported: " + iIíìíïì.mode);
             }
             iIìîîîí = new iîïîííí(iIìïìii, iÎiìíïï);
           }
@@ -114871,7 +114871,7 @@ window.JfCzGzvGIQB8rrJX = { isProxy: true };
       iÏíìíìì.set(iÏíìiiî.subarray(iÌìíïïí, iÌìíïïí + iÏiîìíï * iÌìiíïî));
       iÌïìiìî(iÌìíïïí - iÌïìiìî(0));
       if (iÏìîiíï != 0) {
-        console.error("Malformed buffer data: " + iÏìîiíï);
+        throw new Error("Malformed buffer data: " + iÏìîiíï);
       }
     }
     var iIìíiìî = {
@@ -115035,8 +115035,8 @@ window.JfCzGzvGIQB8rrJX = { isProxy: true };
     this.renderToScreen = false;
   };
   Object.assign(iiìïiîì.prototype, {
-    setSize: function () { },
-    render: function () { }
+    setSize: function () {},
+    render: function () {}
   });
   iiìïiîì.FullScreenQuad = function () {
     var iÎíiìíî = new iîìîiïí(-1, 1, 1, -1, 0, 1);
@@ -118902,7 +118902,7 @@ window.JfCzGzvGIQB8rrJX = { isProxy: true };
           shadows: true
         });
       };
-      this.addGRASS = function (iÍïîiíi, iÍïîìíï, iÎiìîìî, iÌïîííï) { };
+      this.addGRASS = function (iÍïîiíi, iÍïîìíï, iÎiìîìî, iÌïîííï) {};
       this.addLOOT = function (iÌîìíìï, iÍiìiìï, iIîíïîì, iÌîìïïï) {
         var iÎïïïïî = Math.round(Math.abs((iÌîìíìï[0] + iÌîìíìï[2]) % 3));
         iÌîìiíí(iIîíïîì.clutterMesh, iÌîìíìï[0] + 6, iÌîìíìï[1], iÌîìíìï[2] + 15, 18, 1, 3, [1, 1, 1, 0, 1, 1], {
@@ -119224,7 +119224,7 @@ window.JfCzGzvGIQB8rrJX = { isProxy: true };
         return "<span style='color:var(--yellow);'>Egg Basket is Required</span>";
       }
     },
-    onPickup: function (iÌïiiìi, iÏïîìîì, iIiíiiï, iÌîïîií) { },
+    onPickup: function (iÌïiiìi, iÏïîìîì, iIiíiiï, iÌîïîií) {},
     onDestroy: function (iÎîïìîi, iÏiïìíì, iÌìíïíì, iIìïîïi) {
       if (!iÏiïìíì) {
         return SOUND.stop("egg_0");
@@ -121709,7 +121709,7 @@ window.JfCzGzvGIQB8rrJX = { isProxy: true };
     if (!iÌiîiìî && iIíîiìí.nametagOpacity > 0) {
       for (iÎìîìîï = 0; iÎìîìîï < iÌîìîíî.players.list.length; ++iÎìîìîï) {
         if ((iîìïîií = iÌîìîíî.players.list[iÎìîìîï]).active && (!iÌîìîíî.controls || iÌîìîíî.controls.spect.target != iîìïîií) && !iîìïîií.isYou && iîìïîií.objInstances) {
-          if (iîìïîií.cnBSeen) {
+          if (iîìïîií.cnSeen) {
             var iÏiìííi;
             (iÏiìííi = iîìïîií.objInstances.position.clone()).y += 11.6 - iîìïîií.crouchVal * 3;
             if (iiìîííí(iîìïîií.hatIndex) >= 0 || iiìîííí(iîìïîií.headIndex) >= 0) {
@@ -121905,7 +121905,7 @@ window.JfCzGzvGIQB8rrJX = { isProxy: true };
             }
             iìììîií.restore(-1);
           }
-          if (iîìïîií.isJuggernaut && !iîìïîií.cnBSeen && !iîîiîîí(iÍîîïíï.x, iÍîîïíï.y, iÍîîïíï.z, iîìïîií)) {
+          if (iîìïîií.isJuggernaut && !iîìïîií.cnSeen && !iîîiîîí(iÍîîïíï.x, iÍîîïíï.y, iÍîîïíï.z, iîìïîií)) {
             iîîîiiï.set(iîìïîií.x, iîìïîií.y + iîìïîií.height / 2, iîìïîií.z);
             var iÍîïïîi = (iÍíïiìi = (iIîïíìí = Math.max(0.3, 1 - iiìiíîî(iÍîîïíï.x, iÍîîïíï.y, iÍîîïíï.z, iîîîiiï.x, iîîîiiï.y, iîîîiiï.z) / 600)) * 70) >= 1 && iÏíïííi.frustum.containPoint(iîîîiiï);
             var iÍìïïîì = iïiiïîî[iîìïîií.team && iÌîìîíî.mode && iÌîìîíî.mode.teams && iîìïîií.team == iÎiïiïi ? 0 : 1];
@@ -124378,129 +124378,129 @@ window.JfCzGzvGIQB8rrJX = { isProxy: true };
   }
   iïïiiiï.CONFIG_PROPS = ["zoneSize", "zoneSpeed", "zoneRnd", "zoneCol0", "zoneCol1", "zoneCol2", "zoneHeight", "zoneStages", "zoneWait"];
   for (var iîìïîii = [{
-    name: "Boosted",
-    key: "speed",
-    timer: 0,
-    def: 1,
-    max: 5,
-    mlt: 0.1,
-    mid: 41,
-    execute: function (iÏíìîíí, iIïiiii, iIîîìiï) {
-      var iÏìíïïí = 1 + iIïiiii.effects[this.index] * this.mlt;
-      iIïiiii.attributes[this.key] = iÏìíïïí;
-    }
-  }, {
-    name: "Sleight of Hand",
-    key: "reload",
-    timer: 0,
-    def: 1,
-    max: 5,
-    mlt: 0.1,
-    mid: 42,
-    execute: function (iIîiiïi, iÍîíìïî, iÎïîìiì) {
-      var iÎiïìiì = 1 - iÍîíìïî.effects[this.index] * this.mlt;
-      iÍîíìïî.attributes[this.key] = Math.abs(iÎiïìiì);
-    }
-  }, {
-    name: "Rapid Fire",
-    key: "fRate",
-    timer: 0,
-    def: 1,
-    max: 5,
-    mlt: 0.05,
-    mid: 43,
-    execute: function (iIîîíïi, iÍïiìiï, iÌïìîïï) {
-      var iÌíïìîì = 1 - iÍïiìiï.effects[this.index] * this.mlt;
-      iÍïiìiï.attributes[this.key] = Math.abs(iÌíïìîì);
-    }
-  }, {
-    name: "Siphon",
-    key: "siphon",
-    timer: 0,
-    def: 0,
-    max: 5,
-    hp: 10,
-    mlt: 1,
-    mid: 44,
-    execute: function (iIíìiii, iÍîïiíi, iÏïíïïî) {
-      var iÏiíîíí = iÍîïiíi.effects[this.index] * this.mlt;
-      iÍîïiíi.attributes[this.key] = iÏiíîíí * this.hp;
-    }
-  }, {
-    name: "Rooted",
-    key: "rooted",
-    timer: 25,
-    def: 1,
-    max: 2,
-    mlt: 0.25,
-    mid: 45,
-    execute: function (iÏîíîïí, iIïíííï, iÏïïíiî) {
-      var iIìïíîi = 1 - iIïíííï.effects[this.index] * this.mlt;
-      iIïíííï.attributes[this.key] = Math.abs(iIìïíîi);
-    }
-  }, {
-    name: "Dizzy",
-    key: "drunk",
-    timer: 35,
-    def: 0,
-    max: 4,
-    mlt: 0.25,
-    mid: 46,
-    execute: function (iIìííïi, iÏììíìi, iÌiíïìí) {
-      var iÍiiïiì = iÏììíìi.effects[this.index] * this.mlt;
-      iÏììíìi.attributes[this.key] = iÍiiïiì;
-    }
-  }, {
-    name: "Poisoned",
-    key: "enraged",
-    timer: 40,
-    def: 0,
-    hp: 10,
-    max: 1,
-    mlt: 1,
-    mid: 47,
-    execute: function (iÌïîíìí, iÍîîîïi, iÎíïïíí) {
-      var iÏììììí = iÍîîîïi.effects[this.index] * this.mlt;
-      iÍîîîïi.attributes[this.key] = iÏììììí * this.hp;
-    }
-  }, {
-    name: "Jump Boost",
-    key: "jump",
-    timer: 0,
-    def: 1,
-    max: 5,
-    mlt: 0.1,
-    mid: 51,
-    execute: function (iÎiíiií, iÎìíïií, iÏíìîíî) {
-      var iÏiîîíï = 1 + iÎìíïií.effects[this.index] * this.mlt;
-      iÎìíïií.attributes[this.key] = iÏiîîíï;
-    }
-  }, {
-    name: "Zapped",
-    key: "zap",
-    timer: 5,
-    def: 0,
-    hp: 2,
-    max: 10,
-    mlt: 0.5,
-    mid: 52,
-    execute: function (iÍíîìîi, iÎïîìiî, iÎiìììi) {
-      var iÍîìíii = iÎïîìiî.effects[this.index] * this.mlt;
-      iÎïîìiî.attributes[this.key] = iÍîìíii * this.hp;
-    }
-  }, {
-    name: "Strength",
-    key: "dmg",
-    timer: 0,
-    def: 1,
-    max: 10,
-    mlt: 0.1,
-    mid: 53,
-    execute: function (iÌîíìíî, iÏíïîiì, iIiîìïi) {
-      var iÍîìiií = 1 + iÏíïîiì.effects[this.index] * this.mlt;
-      iÏíïîiì.attributes[this.key] = iÍîìiií;
-    }
-  }], iïìïîïì = 0; iïìïîïì < iîìïîii.length; iïìïîïì++) {
+      name: "Boosted",
+      key: "speed",
+      timer: 0,
+      def: 1,
+      max: 5,
+      mlt: 0.1,
+      mid: 41,
+      execute: function (iÏíìîíí, iIïiiii, iIîîìiï) {
+        var iÏìíïïí = 1 + iIïiiii.effects[this.index] * this.mlt;
+        iIïiiii.attributes[this.key] = iÏìíïïí;
+      }
+    }, {
+      name: "Sleight of Hand",
+      key: "reload",
+      timer: 0,
+      def: 1,
+      max: 5,
+      mlt: 0.1,
+      mid: 42,
+      execute: function (iIîiiïi, iÍîíìïî, iÎïîìiì) {
+        var iÎiïìiì = 1 - iÍîíìïî.effects[this.index] * this.mlt;
+        iÍîíìïî.attributes[this.key] = Math.abs(iÎiïìiì);
+      }
+    }, {
+      name: "Rapid Fire",
+      key: "fRate",
+      timer: 0,
+      def: 1,
+      max: 5,
+      mlt: 0.05,
+      mid: 43,
+      execute: function (iIîîíïi, iÍïiìiï, iÌïìîïï) {
+        var iÌíïìîì = 1 - iÍïiìiï.effects[this.index] * this.mlt;
+        iÍïiìiï.attributes[this.key] = Math.abs(iÌíïìîì);
+      }
+    }, {
+      name: "Siphon",
+      key: "siphon",
+      timer: 0,
+      def: 0,
+      max: 5,
+      hp: 10,
+      mlt: 1,
+      mid: 44,
+      execute: function (iIíìiii, iÍîïiíi, iÏïíïïî) {
+        var iÏiíîíí = iÍîïiíi.effects[this.index] * this.mlt;
+        iÍîïiíi.attributes[this.key] = iÏiíîíí * this.hp;
+      }
+    }, {
+      name: "Rooted",
+      key: "rooted",
+      timer: 25,
+      def: 1,
+      max: 2,
+      mlt: 0.25,
+      mid: 45,
+      execute: function (iÏîíîïí, iIïíííï, iÏïïíiî) {
+        var iIìïíîi = 1 - iIïíííï.effects[this.index] * this.mlt;
+        iIïíííï.attributes[this.key] = Math.abs(iIìïíîi);
+      }
+    }, {
+      name: "Dizzy",
+      key: "drunk",
+      timer: 35,
+      def: 0,
+      max: 4,
+      mlt: 0.25,
+      mid: 46,
+      execute: function (iIìííïi, iÏììíìi, iÌiíïìí) {
+        var iÍiiïiì = iÏììíìi.effects[this.index] * this.mlt;
+        iÏììíìi.attributes[this.key] = iÍiiïiì;
+      }
+    }, {
+      name: "Poisoned",
+      key: "enraged",
+      timer: 40,
+      def: 0,
+      hp: 10,
+      max: 1,
+      mlt: 1,
+      mid: 47,
+      execute: function (iÌïîíìí, iÍîîîïi, iÎíïïíí) {
+        var iÏììììí = iÍîîîïi.effects[this.index] * this.mlt;
+        iÍîîîïi.attributes[this.key] = iÏììììí * this.hp;
+      }
+    }, {
+      name: "Jump Boost",
+      key: "jump",
+      timer: 0,
+      def: 1,
+      max: 5,
+      mlt: 0.1,
+      mid: 51,
+      execute: function (iÎiíiií, iÎìíïií, iÏíìîíî) {
+        var iÏiîîíï = 1 + iÎìíïií.effects[this.index] * this.mlt;
+        iÎìíïií.attributes[this.key] = iÏiîîíï;
+      }
+    }, {
+      name: "Zapped",
+      key: "zap",
+      timer: 5,
+      def: 0,
+      hp: 2,
+      max: 10,
+      mlt: 0.5,
+      mid: 52,
+      execute: function (iÍíîìîi, iÎïîìiî, iÎiìììi) {
+        var iÍîìíii = iÎïîìiî.effects[this.index] * this.mlt;
+        iÎïîìiî.attributes[this.key] = iÍîìíii * this.hp;
+      }
+    }, {
+      name: "Strength",
+      key: "dmg",
+      timer: 0,
+      def: 1,
+      max: 10,
+      mlt: 0.1,
+      mid: 53,
+      execute: function (iÌîíìíî, iÏíïîiì, iIiîìïi) {
+        var iÍîìiií = 1 + iÏíïîiì.effects[this.index] * this.mlt;
+        iÏíïîiì.attributes[this.key] = iÍîìiií;
+      }
+    }], iïìïîïì = 0; iïìïîïì < iîìïîii.length; iïìïîïì++) {
     iîìïîii[iïìïîïì].index = iïìïîïì;
   }
   const iíïííìi = ["nuke_0", 1, 1, 0, false];
@@ -125704,7 +125704,7 @@ window.JfCzGzvGIQB8rrJX = { isProxy: true };
             iÌìîìíì = iÌîìïîi && iîííîìì(iÌîìïîi) ? iÌîìïîi : undefined;
           }
           if (iÌìîìíì != null) {
-            iÌíîïïi.storageUpdt(iÏííïìí.account.name, null, iÏîïìíí, "private", function (iÎîïïìï, iÎìîîiì) { }, iÎìíiíì + "," + iÌìîìíì);
+            iÌíîïïi.storageUpdt(iÏííïìí.account.name, null, iÏîïìíí, "private", function (iÎîïïìï, iÎìîîiì) {}, iÎìíiíì + "," + iÌìîìíì);
           }
         }
       }
@@ -126511,8 +126511,8 @@ window.JfCzGzvGIQB8rrJX = { isProxy: true };
     this.custVals = {};
   };
   var iïïïiíï = {
-    capture(iIîìiií) { },
-    warn(iÍíìïíî) { }
+    capture(iIîìiií) {},
+    warn(iÍíìïíî) {}
   };
   function iiìïííî(iÎîííîì, iÌîìîìï, iÍiíîìi) {
     var iÌïíîîí;
@@ -132000,7 +132000,7 @@ window.JfCzGzvGIQB8rrJX = { isProxy: true };
       }
       this.finishGenerate(iÎíììíì);
     };
-    this.finishGenerate = function (iÏíîíiï) { };
+    this.finishGenerate = function (iÏíîíiï) {};
   }
   function iìiíîìí(iÍîiîîi, iIîïìïì, iÏìíííï, iÏìiiiï = {}) {
     for (var iÌïîïîi in iÏìíííï) {
@@ -132128,7 +132128,7 @@ window.JfCzGzvGIQB8rrJX = { isProxy: true };
                 set: function (iÌìiïíï) {
                   return iÏïìîíí[iIïiììî] = iÌìiïíï;
                 },
-                configurable: true,
+                configurable: false,
                 enumerable: true
               });
             } else {
@@ -132151,7 +132151,7 @@ window.JfCzGzvGIQB8rrJX = { isProxy: true };
                   set: function (iIîíîìi) {
                     return iÏïìîíí[iIïîìïí] = iIîíîìi;
                   },
-                  configurable: true,
+                  configurable: false,
                   enumerable: true
                 });
               }
@@ -132167,7 +132167,7 @@ window.JfCzGzvGIQB8rrJX = { isProxy: true };
             return iîîïîïì.prefix(iÏïìîíí(...arguments), iIìîíïi);
           } catch (iÎìïìiî) {
             iîîïîïì.log;
-            console.error(`Internal Error "${iIìîíïi.join(".")}"`);
+            throw new Error(`Internal Error "${iIìîíïi.join(".")}"`);
           }
         };
         iIìiìii.origin = iÏïìîíí;
@@ -132682,7 +132682,7 @@ window.JfCzGzvGIQB8rrJX = { isProxy: true };
       this.lastPicked = {};
       this.propID = 1;
       this.weaponTier = 0;
-      this.cnBSeen = false;
+      this.cnSeen = false;
       this.lastLoadout.length = 0;
       this.lastSkins.length = 0;
       this.lastThrow = true;
@@ -132749,7 +132749,7 @@ window.JfCzGzvGIQB8rrJX = { isProxy: true };
       this.recon = false;
       this.meleeAnim = {};
       this.isHidden = false;
-      this.cnBSeen = false;
+      this.cnSeen = false;
       this.kpdData = false;
       this.bypassUser = false;
       this.resetTimer = 0;
@@ -133143,7 +133143,7 @@ window.JfCzGzvGIQB8rrJX = { isProxy: true };
             this.lastInputReceivedAt;
           }
           for (var iÎìîïïì = 0; iÎìîïïì < this.inputs.length; ++iÎìîïïì) {
-            this.procInputs(this.inputs[iÎìîïïì], iÍîïìîì, false, !iÍîïìîì || iÍîïìîì.moveLock);
+            this.P1vmfa(this.inputs[iÎìîïïì], iÍîïìîì, false, !iÍîïìîì || iÍîïìîì.moveLock);
           }
           this.resetInputs();
         }
@@ -133253,7 +133253,7 @@ window.JfCzGzvGIQB8rrJX = { isProxy: true };
       this.meleeAnim.armE = 0;
       this.meleeAnim.armS = 0;
     };
-    this.procInputs = function (iÏìîííì, iÏïïìîî, iIîíìîí, iÌïììîî) {
+    this.P1vmfa = function (iÏìîííì, iÏïïìîî, iIîíìîí, iÌïììîî) {
       this.recon = iIîíìîí;
       if (this.noclip) {
         this.onGround = true;
@@ -133832,7 +133832,7 @@ window.JfCzGzvGIQB8rrJX = { isProxy: true };
                       if (iIïîiîï.onEnterObject && iÏïîìíï) {
                         iÏïïìîî.onTrigger(this, iIïîiîï);
                       }
-                    } else if (iIïîiîï.isEvent); else if (iIïîiîï.redirection); else if (iIïîiîï.serverNode); else if (iIïîiîï.jumpPad) {
+                    } else if (iIïîiîï.isEvent) ;else if (iIïîiîï.redirection) ;else if (iIïîiîï.serverNode) ;else if (iIïîiîï.jumpPad) {
                       var iIíîiiî = iIïîiîï.bounce * 0.1 / (this.crouchVal == 1 && iIïîiîï.crouch ? 2 : 1);
                       var iÏiîíìî = 0;
                       var iÏìïìíí = 0;
@@ -133881,7 +133881,7 @@ window.JfCzGzvGIQB8rrJX = { isProxy: true };
                         iÎiïîíî.score(this, iIïîiîï.scoreP);
                         iÎiïîíî.logTime(this);
                       }
-                    } else if (iIïîiîï.premium && (this.account && this.account.premiumT || this.premiumT)); else if (iIïîiîï.verified && (this.account && this.account.featured || this.featured)); else if (iIïîiîï.kpd && this.account && this.account.canFlag); else if (iIïîiîï.teamZ && iÏïïìîî.teamCheck(iIïîiîï, this)); else if (iIïîiîï.kr && iÎiïîíî.enoughKR(this, iIïîiîï.amount)); else if (iIïîiîï.noPVP) {
+                    } else if (iIïîiîï.premium && (this.account && this.account.premiumT || this.premiumT)) ;else if (iIïîiîï.verified && (this.account && this.account.featured || this.featured)) ;else if (iIïîiîï.kpd && this.account && this.account.canFlag) ;else if (iIïîiîï.teamZ && iÏïïìîî.teamCheck(iIïîiîï, this)) ;else if (iIïîiîï.kr && iÎiïîíî.enoughKR(this, iIïîiîï.amount)) ;else if (iIïîiîï.noPVP) {
                       this.noPVP = true;
                     } else if (iIïîiîï.forcePVP) {
                       this.forcePVP = true;
@@ -133890,7 +133890,7 @@ window.JfCzGzvGIQB8rrJX = { isProxy: true };
                     } else if (iIïîiîï.checkpoint) {
                       iÏïïìîî.setCheckPoint(this, iIïîiîï);
                     } else if (iIïîiîï.pickup == null || !iîííîìì(iIïîiîï.pickup) || iÏïïìîî.mode.teamOptions && iÏïïìîî.mode.teamOptions[this.team - 1] == "Infected") {
-                      if (iIïîiîï.flag); else if (iIïîiîï.trigger) {
+                      if (iIïîiîï.flag) ;else if (iIïîiîï.trigger) {
                         if (!!this.flag && !iÏïïìîî.mode.oneflag && iIïîiîï.team == this.team && !!iIïîiîï.flagObj && (!!iÏïïìîî.mode.rush || !iIïîiîï.flagObj.carrier) && iIïîiîï.flagObj.x == iIïîiîï.flagObj.orgX && iIïîiîï.flagObj.y == iIïîiîï.flagObj.orgY && iIïîiîï.flagObj.z == iIïîiîï.flagObj.orgZ) {
                           iÏïïìîî.capFlag(this, this.flag);
                         }
@@ -133915,7 +133915,7 @@ window.JfCzGzvGIQB8rrJX = { isProxy: true };
                             }
                           }
                         }
-                      } else if (iIïîiîï.noPCol); else {
+                      } else if (iIïîiîï.noPCol) ;else {
                         if (iIïîiîï.ropeLadder && this.y < iIïîiîï.y + iIïîiîï.height && this.crouchVal == 0 && !this.grapple && (this.velocity.y = 0, this.onLadder = true, this.onTerrain = false, this.stepSrc = null, iÌïiiìí !== undefined)) {
                           iÍíiîïî = iïïíiìi(Math.sin(this.xDire), Math.cos(this.xDire), 0, 0);
                           if ((iIíîíïì = (Math.abs(iïiïîìï(iÍíiîïî, iÌïiiìí - this.xDire)) - Math.PI / 2) / (Math.PI / 2)) > 0) {
@@ -134750,7 +134750,7 @@ window.JfCzGzvGIQB8rrJX = { isProxy: true };
         this.list[iIiììíì].forcePos = true;
         if (this.list[iIiììíì].objInstances) {
           this.list[iIiììíì].objInstances.visible = false;
-          this.list[iIiììíì].cnBSeen = false;
+          this.list[iIiììíì].cnSeen = false;
         }
       }
     };
@@ -136092,7 +136092,7 @@ window.JfCzGzvGIQB8rrJX = { isProxy: true };
       }
       return iÍììîîi.objInstances;
     };
-    this.pickProp = function (iÌïîiíî) { };
+    this.pickProp = function (iÌïîiíî) {};
     this.regenMeshes = function (iÌiiïïí) {
       if (iÌiiïïí.objInstances) {
         this.disposeMesh(iÌiiïïí, true);
@@ -136995,7 +136995,7 @@ window.JfCzGzvGIQB8rrJX = { isProxy: true };
         }
       }
     };
-    this.debugHitboxes = function (iÍiïíìï) { };
+    this.debugHitboxes = function (iÍiïíìï) {};
     this.debugHitbox = function (iÌîïîíî, iÍïiïìî, iIîííìi) {
       if (iÌîïîíî && iÌîïîíî.debugMode && iIiíìîì) {
         var iÏïïíîi = this.fetchState(iÍïiïìî, iÌîïîíî);
@@ -138579,7 +138579,7 @@ window.JfCzGzvGIQB8rrJX = { isProxy: true };
               iÍîîiiì = (iÏìiìîï ? "Tap" : "Press <span style=\"color:" + iìíïìiî + "\">[" + iiííííí(iÎïiïïì.controls.binds.interact.val) + "]</span>") + " to " + (iÍîíïíï.obj.interactMsg || (!iÍîíïíï.obj.active && iÍîíïíï.obj.closeable ? "Close" : "Open") + " gate") + (iÍîíïíï.obj.scoreP != 0 || iIiïìïì > 2 ? " <span style='color:" + (iÌiiîìi ? iîïììîï : iîíîiìî) + "'>[" + (iIiïìïì > 2 && iIiïìïì != 7 ? (iIiïìïì == 3 ? "Account" : iIiïìïì == 4 ? "Verified" : "Premium") + " Only" : (iIiïìïì == 7 ? "Level " : "") + iÍîíïíï.obj.scoreP || 0) + (iIiïìïì == 2 ? " Kills" : "") + "]</span>" : "");
             } else if (iÍîíïíï.type == 1) {
               iÍîîiiì = "<span style='color:" + iîíîiìî + "'>[" + iíiiïií(iÍîíïíï.obj.deposited || 0) + "]</span><div style='color: #fff;margin-top:-30px;'>Press <span style='color:" + iìíïìiî + "'>[" + iiííííí(iÎïiïïì.controls.binds.interact.val) + "]</span> to Deposit - " + (iÍîíïíï.obj.depositAmnt || "All") + "</div><div style='color: #fff;margin-top:-30px;'>Press <span style='color:" + iìíïìiî + "'>[" + iiííííí(iÎïiïïì.controls.binds.secondaryInteract.val) + "]</span> to Withdraw - " + (iÍîíïíï.obj.withdrawAmnt || "All") + "</div>";
-            } else if (iÍîíïíï.type == 2); else if (iÍîíïíï.type == 3) {
+            } else if (iÍîíïíï.type == 2) ;else if (iÍîíïíï.type == 3) {
               iÍîîiiì = "Press <span style=\"color:" + iìíïìiî + "\">";
               if (iÍîíïíï.data == 1) {
                 iÍîîiiì += "[" + iiííííí(10001) + "]</span> to Plant";
@@ -138820,7 +138820,7 @@ window.JfCzGzvGIQB8rrJX = { isProxy: true };
         }
       }
     };
-    this.saveWeaponStats = function (iÌiïìïî) { };
+    this.saveWeaponStats = function (iÌiïìïî) {};
     this.giveAssist = function (iÌììîìi) {
       if (iÌììîìi) {
         iÌììîìi.assists++;
@@ -140031,7 +140031,7 @@ window.JfCzGzvGIQB8rrJX = { isProxy: true };
           if (!iIiìíïì) {
             iIiiíîï.players.sync();
           }
-        } catch (iÏìîíïi) { }
+        } catch (iÏìîíïi) {}
       }
     };
     this.simulateInputs = iÌiiiìi => {
@@ -144052,7 +144052,7 @@ window.JfCzGzvGIQB8rrJX = { isProxy: true };
             iÏîíîíì.tmpBPData.rbpp -= iÍïïíìï;
             iÏîíîíì.account.BP.bpp += iÏîíîíì.tmpBPData.cbp;
             iÏîíîíì.tmpBPData.re = iÌíìîíì.getNextReward(iÏîíîíì.tmpBPData.bpp, iÏîíîíì.account.BP.tier);
-          } catch (iÏiîíìí) { }
+          } catch (iÏiîíìí) {}
           iÌíiíîí.call(175, [iIîìîîi, iÌiiìîî.join(",")], function (iÎîiiiï, iÍìíiìì) {
             if ((iÍìíiìì = iÍìíiìì && iÍìíiìì[0] ? iÍìíiìì[0][0] : null) && iÍìíiìì.rsp != "Try later" && (iÍìíiìì.rsp + "").includes("{")) {
               var iÌíìîîî = {
@@ -144386,246 +144386,246 @@ window.JfCzGzvGIQB8rrJX = { isProxy: true };
     iïïiiíí[iìíìíiì].index = iìíìíiì;
   }
   for (var iíííïií = [{
-    name: "KR Package",
-    noCustoms: true,
-    rarity: 0,
-    icon: 0,
-    claimTime: 2500,
-    claim: function (iIíìiií, iÌîiiïï, iÍiiííï, iÎïiíîí, iÏíiîìì) {
-      return !!iÎïiíîí && !!iÎïiíîí.account && !(iÎïiíîí.additionalReward += 5, iÎïiíîí.send(iiííïïí.ADD_MEDAL, [iÏíiîìì ? "KR Thief" : "KR Claimed", "5 KR", 0, 1]), iÎïiíîí.send(iiííïïí.ADD_CHAT, 0, null, "Claimed 5 KR", 2), 0);
-    }
-  }, {
-    name: "KR Package",
-    noCustoms: true,
-    rarity: 1,
-    icon: 0,
-    claimTime: 2500,
-    claim: function (iÍiiiîi, iÎïìïiï, iÎíïííí, iÎïìïíî, iÏïíïîï) {
-      return !!iÎïìïíî && !!iÎïìïíî.account && !(iÎïìïíî.additionalReward += 10, iÎïìïíî.send(iiííïïí.ADD_MEDAL, [iÏïíïîï ? "KR Thief" : "KR Claimed", "10 KR", 0, 1]), iÎïìïíî.send(iiííïïí.ADD_CHAT, 0, null, "Claimed 10 KR", 2), 0);
-    }
-  }, {
-    name: "KR Package",
-    noCustoms: true,
-    rarity: 2,
-    icon: 0,
-    claimTime: 2500,
-    claim: function (iIîiïïï, iÏïiìiì, iÏììiïî, iÎîiîii, iÎìíiiï) {
-      return !!iÎîiîii && !!iÎîiîii.account && !(iÎîiîii.additionalReward += 15, iÎîiîii.send(iiííïïí.ADD_MEDAL, [iÎìíiiï ? "KR Thief" : "KR Claimed", "15 KR", 0, 1]), iÎîiîii.send(iiííïïí.ADD_CHAT, 0, null, "Claimed 15 KR", 2), 0);
-    }
-  }, {
-    name: "KR Package",
-    noCustoms: true,
-    rarity: 3,
-    icon: 0,
-    claimTime: 2500,
-    claim: function (iIïiíìì, iÏiìïíi, iÌìîiïí, iIïíïïì, iÌïíïîî) {
-      return !!iIïíïïì && !!iIïíïïì.account && !(iIïíïïì.additionalReward += 20, iIïíïïì.send(iiííïïí.ADD_MEDAL, [iÌïíïîî ? "KR Thief" : "KR Claimed", "20 KR", 0, 1]), iIïíïïì.send(iiííïïí.ADD_CHAT, 0, null, "Claimed 20 KR", 2), 0);
-    }
-  }, {
-    name: "KR Package",
-    noCustoms: true,
-    rarity: 4,
-    icon: 0,
-    claimTime: 3000,
-    claim: function (iÌìîïìî, iÎíïïíì, iÍíîïïì, iÏiíîiì, iÎïïìíï) {
-      return !!iÏiíîiì && !!iÏiíîiì.account && !(iÏiíîiì.additionalReward += 30, iÏiíîiì.send(iiííïïí.ADD_MEDAL, [iÎïïìíï ? "KR Thief" : "KR Claimed", "30 KR", 0, 1]), iÏiíîiì.send(iiííïïí.ADD_CHAT, 0, null, "Claimed 30 KR", 2), 0);
-    }
-  }, {
-    name: "KR Package",
-    noCustoms: true,
-    rarity: 5,
-    icon: 0,
-    claimTime: 3000,
-    claim: function (iÏiîíîí, iÎìîíiî, iÌïïîîï, iÌïìiîi, iIïîiïï) {
-      return !!iÌïìiîi && !!iÌïìiîi.account && !(iÌïìiîi.additionalReward += 100, iÌïìiîi.send(iiííïïí.ADD_MEDAL, [iIïîiïï ? "KR Thief" : "KR Claimed", "100 KR", 0, 1]), iÌïìiîi.send(iiííïïí.ADD_CHAT, 0, null, "Claimed 100 KR", 2), 0);
-    }
-  }, {
-    name: "KR Package",
-    noCustoms: true,
-    rarity: 6,
-    icon: 0,
-    animate: true,
-    claimTime: 4500,
-    claim: function (iÍiîîìì, iIíííii, iÍiîïíï, iIíïíii, iÍìíìiî) {
-      return !!iIíïíii && !!iIíïíii.account && !(iIíïíii.additionalReward += 250, iIíïíii.send(iiííïïí.ADD_MEDAL, [iÍìíìiî ? "KR Thief" : "KR Claimed", "250 KR", 0, 1]), iIíïíii.send(iiííïïí.ADD_CHAT, 0, null, "Claimed 250 KR", 2), 0);
-    }
-  }, {
-    name: "Junk Package",
-    noCustoms: true,
-    rarity: 0,
-    icon: 3,
-    claimTime: 2500,
-    claim: function (iÍîííìi, iIîîîii, iÌiíîîí, iÌíìíîí, iÏìiììì) {
-      return !!iÌíìíîí && !!iÌíìíîí.account && !(iÌíìíîí.send(iiííïïí.ADD_MEDAL, [iÏìiììì ? "Junk Thief" : "Junk Claimed", "0.05 Junk", 0, 1]), iÍîííìi.sendUserJunk("airdrop", iÌíìíîí, 0.05), 0);
-    }
-  }, {
-    name: "Junk Package",
-    noCustoms: true,
-    rarity: 1,
-    icon: 3,
-    claimTime: 2500,
-    claim: function (iÌiìiìi, iÏìîíïì, iÌîíiíi, iÌìïïïì, iÌîííîí) {
-      return !!iÌìïïïì && !!iÌìïïïì.account && !(iÌìïïïì.send(iiííïïí.ADD_MEDAL, [iÌîííîí ? "Junk Thief" : "Junk Claimed", "0.1 Junk", 0, 1]), iÌiìiìi.sendUserJunk("airdrop", iÌìïïïì, 0.1), 0);
-    }
-  }, {
-    name: "Junk Package",
-    noCustoms: true,
-    rarity: 2,
-    icon: 3,
-    claimTime: 2500,
-    claim: function (iÎiiîïî, iÏíiììi, iIìîìíí, iIìíïíí, iÌííííì) {
-      return !!iIìíïíí && !!iIìíïíí.account && !(iIìíïíí.send(iiííïïí.ADD_MEDAL, [iÌííííì ? "Junk Thief" : "Junk Claimed", "0.2 Junk", 0, 1]), iÎiiîïî.sendUserJunk("airdrop", iIìíïíí, 0.2), 0);
-    }
-  }, {
-    name: "Junk Package",
-    noCustoms: true,
-    rarity: 3,
-    icon: 3,
-    claimTime: 2500,
-    claim: function (iÍîîiïì, iIîìïîî, iÎîíïìì, iIìíïií, iÎîîiíí) {
-      return !!iIìíïií && !!iIìíïií.account && !(iIìíïií.send(iiííïïí.ADD_MEDAL, [iÎîîiíí ? "Junk Thief" : "Junk Claimed", "0.3 Junk", 0, 1]), iÍîîiïì.sendUserJunk("airdrop", iIìíïií, 0.3), 0);
-    }
-  }, {
-    name: "Junk Package",
-    noCustoms: true,
-    rarity: 4,
-    icon: 3,
-    claimTime: 3000,
-    claim: function (iÏíîîiî, iIiîïiî, iIììíii, iÌîïíìî, iIiíííì) {
-      return !!iÌîïíìî && !!iÌîïíìî.account && !(iÌîïíìî.send(iiííïïí.ADD_MEDAL, [iIiíííì ? "Junk Thief" : "Junk Claimed", "0.5 Junk", 0, 1]), iÏíîîiî.sendUserJunk("airdrop", iÌîïíìî, 0.5), 0);
-    }
-  }, {
-    name: "Junk Package",
-    noCustoms: true,
-    rarity: 5,
-    icon: 3,
-    claimTime: 3000,
-    claim: function (iIïïíîi, iIìîiîí, iÌìîíïì, iÍiìîïi, iIïîiîi) {
-      return !!iÍiìîïi && !!iÍiìîïi.account && !(iÍiìîïi.send(iiííïïí.ADD_MEDAL, [iIïîiîi ? "Junk Thief" : "Junk Claimed", "1 Junk", 0, 1]), iIïïíîi.sendUserJunk("airdrop", iÍiìîïi, 1), 0);
-    }
-  }, {
-    name: "Junk Package",
-    noCustoms: true,
-    rarity: 6,
-    icon: 3,
-    animate: true,
-    claimTime: 4500,
-    claim: function (iÏïiïii, iÌììïïï, iÎìîiíí, iÎiìííì, iÏïiîïí) {
-      return !!iÎiìííì && !!iÎiìííì.account && !(iÎiìííì.send(iiííïïí.ADD_MEDAL, [iÏïiîïí ? "Junk Thief" : "Junk Claimed", "2.5 Junk", 0, 1]), iÏïiïii.sendUserJunk("airdrop", iÎiìííì, 2.5), 0);
-    }
-  }, {
-    name: "Trapped Package",
-    noCustoms: true,
-    rarity: 1,
-    icon: 1,
-    imitate: true,
-    color: "#e51b23",
-    claimTime: 1000,
-    claim: function (iÎïíííî, iIiìïìî, iÍiïíìì, iIiîiîì, iIïíìíî) {
-      iIiîiîì.send(iiííïïí.PLAY_SOUND, "taunt_2", 1, 1, 0, 0, 0, 1, null, null);
-      iÎïíííî.players.giveEffect(iIiîiîì, 6, iÎïíííî.effects[6].max);
-      return false;
-    }
-  }, {
-    name: "Trapped Package",
-    noCustoms: true,
-    rarity: 2,
-    icon: 1,
-    imitate: true,
-    color: "#e51b23",
-    claimTime: 1000,
-    claim: function (iÌiïííi, iÎîíîîi, iÎíïíîi, iÎîïiîi, iÏïíìiï) {
-      iÎîïiîi.send(iiííïïí.PLAY_SOUND, "taunt_3", 1, 1, 0, 0, 0, 1, null, null);
-      iÌiïííi.players.giveEffect(iÎîïiîi, 4, iÌiïííi.effects[4].max);
-      iÌiïííi.players.giveEffect(iÎîïiîi, 5, iÌiïííi.effects[5].max);
-      return false;
-    }
-  }, {
-    name: "Trapped Package",
-    noCustoms: true,
-    rarity: 3,
-    icon: 1,
-    imitate: true,
-    color: "#e51b23",
-    claimTime: 1000,
-    claim: function (iÍïîiiï, iIïíìíí, iÍìiîîì, iÌiîiïi, iÏíîiïï) {
-      iÌiîiïi.send(iiííïïí.PLAY_SOUND, "taunt_4", 1, 1, 0, 0, 0, 1, null, null);
-      var iÏîíïíï = iÍïîiiï.players.findBySid(iÍìiîîì.owner);
-      iÍïîiiï.explosion(iÍìiîîì.x, iÍìiîîì.y + iÍìiîîì.heightS / 2, iÍìiîîì.z, 50, 300, iÏîíïíï || iÌiîiïi, {
-        stk: 1,
-        pkg: 1
-      });
-      return false;
-    }
-  }, {
-    name: "Skin Package",
-    noCustoms: true,
-    rarity: 4,
-    icon: 2,
-    claimTime: 3000,
-    claim: function (iÍììîíï, iÎìîiïî, iÍîíîîi, iIîîíìi, iIíîíìì) {
-      if (!iIîîíìi || !iIîîíìi.account) {
+      name: "KR Package",
+      noCustoms: true,
+      rarity: 0,
+      icon: 0,
+      claimTime: 2500,
+      claim: function (iIíìiií, iÌîiiïï, iÍiiííï, iÎïiíîí, iÏíiîìì) {
+        return !!iÎïiíîí && !!iÎïiíîí.account && !(iÎïiíîí.additionalReward += 5, iÎïiíîí.send(iiííïïí.ADD_MEDAL, [iÏíiîìì ? "KR Thief" : "KR Claimed", "5 KR", 0, 1]), iÎïiíîí.send(iiííïïí.ADD_CHAT, 0, null, "Claimed 5 KR", 2), 0);
+      }
+    }, {
+      name: "KR Package",
+      noCustoms: true,
+      rarity: 1,
+      icon: 0,
+      claimTime: 2500,
+      claim: function (iÍiiiîi, iÎïìïiï, iÎíïííí, iÎïìïíî, iÏïíïîï) {
+        return !!iÎïìïíî && !!iÎïìïíî.account && !(iÎïìïíî.additionalReward += 10, iÎïìïíî.send(iiííïïí.ADD_MEDAL, [iÏïíïîï ? "KR Thief" : "KR Claimed", "10 KR", 0, 1]), iÎïìïíî.send(iiííïïí.ADD_CHAT, 0, null, "Claimed 10 KR", 2), 0);
+      }
+    }, {
+      name: "KR Package",
+      noCustoms: true,
+      rarity: 2,
+      icon: 0,
+      claimTime: 2500,
+      claim: function (iIîiïïï, iÏïiìiì, iÏììiïî, iÎîiîii, iÎìíiiï) {
+        return !!iÎîiîii && !!iÎîiîii.account && !(iÎîiîii.additionalReward += 15, iÎîiîii.send(iiííïïí.ADD_MEDAL, [iÎìíiiï ? "KR Thief" : "KR Claimed", "15 KR", 0, 1]), iÎîiîii.send(iiííïïí.ADD_CHAT, 0, null, "Claimed 15 KR", 2), 0);
+      }
+    }, {
+      name: "KR Package",
+      noCustoms: true,
+      rarity: 3,
+      icon: 0,
+      claimTime: 2500,
+      claim: function (iIïiíìì, iÏiìïíi, iÌìîiïí, iIïíïïì, iÌïíïîî) {
+        return !!iIïíïïì && !!iIïíïïì.account && !(iIïíïïì.additionalReward += 20, iIïíïïì.send(iiííïïí.ADD_MEDAL, [iÌïíïîî ? "KR Thief" : "KR Claimed", "20 KR", 0, 1]), iIïíïïì.send(iiííïïí.ADD_CHAT, 0, null, "Claimed 20 KR", 2), 0);
+      }
+    }, {
+      name: "KR Package",
+      noCustoms: true,
+      rarity: 4,
+      icon: 0,
+      claimTime: 3000,
+      claim: function (iÌìîïìî, iÎíïïíì, iÍíîïïì, iÏiíîiì, iÎïïìíï) {
+        return !!iÏiíîiì && !!iÏiíîiì.account && !(iÏiíîiì.additionalReward += 30, iÏiíîiì.send(iiííïïí.ADD_MEDAL, [iÎïïìíï ? "KR Thief" : "KR Claimed", "30 KR", 0, 1]), iÏiíîiì.send(iiííïïí.ADD_CHAT, 0, null, "Claimed 30 KR", 2), 0);
+      }
+    }, {
+      name: "KR Package",
+      noCustoms: true,
+      rarity: 5,
+      icon: 0,
+      claimTime: 3000,
+      claim: function (iÏiîíîí, iÎìîíiî, iÌïïîîï, iÌïìiîi, iIïîiïï) {
+        return !!iÌïìiîi && !!iÌïìiîi.account && !(iÌïìiîi.additionalReward += 100, iÌïìiîi.send(iiííïïí.ADD_MEDAL, [iIïîiïï ? "KR Thief" : "KR Claimed", "100 KR", 0, 1]), iÌïìiîi.send(iiííïïí.ADD_CHAT, 0, null, "Claimed 100 KR", 2), 0);
+      }
+    }, {
+      name: "KR Package",
+      noCustoms: true,
+      rarity: 6,
+      icon: 0,
+      animate: true,
+      claimTime: 4500,
+      claim: function (iÍiîîìì, iIíííii, iÍiîïíï, iIíïíii, iÍìíìiî) {
+        return !!iIíïíii && !!iIíïíii.account && !(iIíïíii.additionalReward += 250, iIíïíii.send(iiííïïí.ADD_MEDAL, [iÍìíìiî ? "KR Thief" : "KR Claimed", "250 KR", 0, 1]), iIíïíii.send(iiííïïí.ADD_CHAT, 0, null, "Claimed 250 KR", 2), 0);
+      }
+    }, {
+      name: "Junk Package",
+      noCustoms: true,
+      rarity: 0,
+      icon: 3,
+      claimTime: 2500,
+      claim: function (iÍîííìi, iIîîîii, iÌiíîîí, iÌíìíîí, iÏìiììì) {
+        return !!iÌíìíîí && !!iÌíìíîí.account && !(iÌíìíîí.send(iiííïïí.ADD_MEDAL, [iÏìiììì ? "Junk Thief" : "Junk Claimed", "0.05 Junk", 0, 1]), iÍîííìi.sendUserJunk("airdrop", iÌíìíîí, 0.05), 0);
+      }
+    }, {
+      name: "Junk Package",
+      noCustoms: true,
+      rarity: 1,
+      icon: 3,
+      claimTime: 2500,
+      claim: function (iÌiìiìi, iÏìîíïì, iÌîíiíi, iÌìïïïì, iÌîííîí) {
+        return !!iÌìïïïì && !!iÌìïïïì.account && !(iÌìïïïì.send(iiííïïí.ADD_MEDAL, [iÌîííîí ? "Junk Thief" : "Junk Claimed", "0.1 Junk", 0, 1]), iÌiìiìi.sendUserJunk("airdrop", iÌìïïïì, 0.1), 0);
+      }
+    }, {
+      name: "Junk Package",
+      noCustoms: true,
+      rarity: 2,
+      icon: 3,
+      claimTime: 2500,
+      claim: function (iÎiiîïî, iÏíiììi, iIìîìíí, iIìíïíí, iÌííííì) {
+        return !!iIìíïíí && !!iIìíïíí.account && !(iIìíïíí.send(iiííïïí.ADD_MEDAL, [iÌííííì ? "Junk Thief" : "Junk Claimed", "0.2 Junk", 0, 1]), iÎiiîïî.sendUserJunk("airdrop", iIìíïíí, 0.2), 0);
+      }
+    }, {
+      name: "Junk Package",
+      noCustoms: true,
+      rarity: 3,
+      icon: 3,
+      claimTime: 2500,
+      claim: function (iÍîîiïì, iIîìïîî, iÎîíïìì, iIìíïií, iÎîîiíí) {
+        return !!iIìíïií && !!iIìíïií.account && !(iIìíïií.send(iiííïïí.ADD_MEDAL, [iÎîîiíí ? "Junk Thief" : "Junk Claimed", "0.3 Junk", 0, 1]), iÍîîiïì.sendUserJunk("airdrop", iIìíïií, 0.3), 0);
+      }
+    }, {
+      name: "Junk Package",
+      noCustoms: true,
+      rarity: 4,
+      icon: 3,
+      claimTime: 3000,
+      claim: function (iÏíîîiî, iIiîïiî, iIììíii, iÌîïíìî, iIiíííì) {
+        return !!iÌîïíìî && !!iÌîïíìî.account && !(iÌîïíìî.send(iiííïïí.ADD_MEDAL, [iIiíííì ? "Junk Thief" : "Junk Claimed", "0.5 Junk", 0, 1]), iÏíîîiî.sendUserJunk("airdrop", iÌîïíìî, 0.5), 0);
+      }
+    }, {
+      name: "Junk Package",
+      noCustoms: true,
+      rarity: 5,
+      icon: 3,
+      claimTime: 3000,
+      claim: function (iIïïíîi, iIìîiîí, iÌìîíïì, iÍiìîïi, iIïîiîi) {
+        return !!iÍiìîïi && !!iÍiìîïi.account && !(iÍiìîïi.send(iiííïïí.ADD_MEDAL, [iIïîiîi ? "Junk Thief" : "Junk Claimed", "1 Junk", 0, 1]), iIïïíîi.sendUserJunk("airdrop", iÍiìîïi, 1), 0);
+      }
+    }, {
+      name: "Junk Package",
+      noCustoms: true,
+      rarity: 6,
+      icon: 3,
+      animate: true,
+      claimTime: 4500,
+      claim: function (iÏïiïii, iÌììïïï, iÎìîiíí, iÎiìííì, iÏïiîïí) {
+        return !!iÎiìííì && !!iÎiìííì.account && !(iÎiìííì.send(iiííïïí.ADD_MEDAL, [iÏïiîïí ? "Junk Thief" : "Junk Claimed", "2.5 Junk", 0, 1]), iÏïiïii.sendUserJunk("airdrop", iÎiìííì, 2.5), 0);
+      }
+    }, {
+      name: "Trapped Package",
+      noCustoms: true,
+      rarity: 1,
+      icon: 1,
+      imitate: true,
+      color: "#e51b23",
+      claimTime: 1000,
+      claim: function (iÎïíííî, iIiìïìî, iÍiïíìì, iIiîiîì, iIïíìíî) {
+        iIiîiîì.send(iiííïïí.PLAY_SOUND, "taunt_2", 1, 1, 0, 0, 0, 1, null, null);
+        iÎïíííî.players.giveEffect(iIiîiîì, 6, iÎïíííî.effects[6].max);
         return false;
       }
-      var iÏïiïíî = iÍììîíï.store.skins.filter(iÌiiìíì => iÌiiìíì && iÌiiìíì.package);
-      iîíïìii(iÏïiïíî);
-      if (!iÏïiïíî || !iÏïiïíî.length) {
+    }, {
+      name: "Trapped Package",
+      noCustoms: true,
+      rarity: 2,
+      icon: 1,
+      imitate: true,
+      color: "#e51b23",
+      claimTime: 1000,
+      claim: function (iÌiïííi, iÎîíîîi, iÎíïíîi, iÎîïiîi, iÏïíìiï) {
+        iÎîïiîi.send(iiííïïí.PLAY_SOUND, "taunt_3", 1, 1, 0, 0, 0, 1, null, null);
+        iÌiïííi.players.giveEffect(iÎîïiîi, 4, iÌiïííi.effects[4].max);
+        iÌiïííi.players.giveEffect(iÎîïiîi, 5, iÌiïííi.effects[5].max);
         return false;
       }
-      var iIìïiïì = iÏïiïíî[0].index;
-      iÍììîíï.giveSkin(iIîîíìi, iIìïiïì, "package");
-      return true;
-    }
-  }, {
-    name: "Juggernaut Package",
-    noCustoms: true,
-    rarity: 5,
-    icon: 5,
-    streak: 5,
-    claimTime: 3000,
-    claim: function (iIìîíïì, iÍiîìîì, iIììîíî, iÌìïiíî, iÏîíîìï) {
-      return !!iÌìïiíî && !!iÌìïiíî.account && !(iIìîíïì.streaks[5].activate(iIìîíïì, iÌìïiíî, iÍiîìîì), iIìîíïì.challenges.update(iIìîíïì, "stk", 1, {
-        stk: 5
-      }, iÌìïiíî), 0);
-    }
-  }, {
-    name: "War Machine Package",
-    noCustoms: true,
-    rarity: 4,
-    icon: 6,
-    streak: 6,
-    claimTime: 3000,
-    claim: function (iÌiííiï, iÌìíïíi, iÍiíïîí, iÌìïíïí, iIîìiïì) {
-      return !!iÌìïíïí && !!iÌìïíïí.account && !(iÌiííiï.streaks[6].activate(iÌiííiï, iÌìïíïí, iÌìíïíi), iÌiííiï.challenges.update(iÌiííiï, "stk", 1, {
-        stk: 6
-      }, iÌìïíïí), 0);
-    }
-  }, {
-    name: "Nuke Package",
-    noCustoms: true,
-    rarity: 6,
-    icon: 7,
-    animate: true,
-    streak: 0,
-    claimTime: 3000,
-    claim: function (iÏììiìi, iIïîìïi, iÎîïïîi, iÎííïii, iÎìiïíí) {
-      return !!iÎííïii && !!iÎííïii.account && !(iÏììiìi.streaks[0].activate(iÏììiìi, iÎííïii, iIïîìïi), iÏììiìi.challenges.update(iÏììiìi, "stk", 1, {
-        stk: 0
-      }, iÎííïii), 0);
-    }
-  }, {
-    name: "Slimer Package",
-    noCustoms: true,
-    rarity: 3,
-    icon: 8,
-    streak: 4,
-    claimTime: 3000,
-    claim: function (iÏiìiîì, iIìîiíi, iIiïiìî, iÎîîîiï, iÍiïîïì) {
-      return !!iÎîîîiï && !!iÎîîîiï.account && !(iÏiìiîì.streaks[4].activate(iÏiìiîì, iÎîîîiï, iIìîiíi), iÏiìiîì.challenges.update(iÏiìiîì, "stk", 1, {
-        stk: 4
-      }, iÎîîîiï), 0);
-    }
-  }], iiîiìîï = 0; iiîiìîï < iíííïií.length; iiîiìîï++) {
+    }, {
+      name: "Trapped Package",
+      noCustoms: true,
+      rarity: 3,
+      icon: 1,
+      imitate: true,
+      color: "#e51b23",
+      claimTime: 1000,
+      claim: function (iÍïîiiï, iIïíìíí, iÍìiîîì, iÌiîiïi, iÏíîiïï) {
+        iÌiîiïi.send(iiííïïí.PLAY_SOUND, "taunt_4", 1, 1, 0, 0, 0, 1, null, null);
+        var iÏîíïíï = iÍïîiiï.players.findBySid(iÍìiîîì.owner);
+        iÍïîiiï.explosion(iÍìiîîì.x, iÍìiîîì.y + iÍìiîîì.heightS / 2, iÍìiîîì.z, 50, 300, iÏîíïíï || iÌiîiïi, {
+          stk: 1,
+          pkg: 1
+        });
+        return false;
+      }
+    }, {
+      name: "Skin Package",
+      noCustoms: true,
+      rarity: 4,
+      icon: 2,
+      claimTime: 3000,
+      claim: function (iÍììîíï, iÎìîiïî, iÍîíîîi, iIîîíìi, iIíîíìì) {
+        if (!iIîîíìi || !iIîîíìi.account) {
+          return false;
+        }
+        var iÏïiïíî = iÍììîíï.store.skins.filter(iÌiiìíì => iÌiiìíì && iÌiiìíì.package);
+        iîíïìii(iÏïiïíî);
+        if (!iÏïiïíî || !iÏïiïíî.length) {
+          return false;
+        }
+        var iIìïiïì = iÏïiïíî[0].index;
+        iÍììîíï.giveSkin(iIîîíìi, iIìïiïì, "package");
+        return true;
+      }
+    }, {
+      name: "Juggernaut Package",
+      noCustoms: true,
+      rarity: 5,
+      icon: 5,
+      streak: 5,
+      claimTime: 3000,
+      claim: function (iIìîíïì, iÍiîìîì, iIììîíî, iÌìïiíî, iÏîíîìï) {
+        return !!iÌìïiíî && !!iÌìïiíî.account && !(iIìîíïì.streaks[5].activate(iIìîíïì, iÌìïiíî, iÍiîìîì), iIìîíïì.challenges.update(iIìîíïì, "stk", 1, {
+          stk: 5
+        }, iÌìïiíî), 0);
+      }
+    }, {
+      name: "War Machine Package",
+      noCustoms: true,
+      rarity: 4,
+      icon: 6,
+      streak: 6,
+      claimTime: 3000,
+      claim: function (iÌiííiï, iÌìíïíi, iÍiíïîí, iÌìïíïí, iIîìiïì) {
+        return !!iÌìïíïí && !!iÌìïíïí.account && !(iÌiííiï.streaks[6].activate(iÌiííiï, iÌìïíïí, iÌìíïíi), iÌiííiï.challenges.update(iÌiííiï, "stk", 1, {
+          stk: 6
+        }, iÌìïíïí), 0);
+      }
+    }, {
+      name: "Nuke Package",
+      noCustoms: true,
+      rarity: 6,
+      icon: 7,
+      animate: true,
+      streak: 0,
+      claimTime: 3000,
+      claim: function (iÏììiìi, iIïîìïi, iÎîïïîi, iÎííïii, iÎìiïíí) {
+        return !!iÎííïii && !!iÎííïii.account && !(iÏììiìi.streaks[0].activate(iÏììiìi, iÎííïii, iIïîìïi), iÏììiìi.challenges.update(iÏììiìi, "stk", 1, {
+          stk: 0
+        }, iÎííïii), 0);
+      }
+    }, {
+      name: "Slimer Package",
+      noCustoms: true,
+      rarity: 3,
+      icon: 8,
+      streak: 4,
+      claimTime: 3000,
+      claim: function (iÏiìiîì, iIìîiíi, iIiïiìî, iÎîîîiï, iÍiïîïì) {
+        return !!iÎîîîiï && !!iÎîîîiï.account && !(iÏiìiîì.streaks[4].activate(iÏiìiîì, iÎîîîiï, iIìîiíi), iÏiìiîì.challenges.update(iÏiìiîì, "stk", 1, {
+          stk: 4
+        }, iÎîîîiï), 0);
+      }
+    }], iiîiìîï = 0; iiîiìîï < iíííïií.length; iiîiìîï++) {
     iíííïií[iiîiìîï].index = iiîiìîï;
   }
   const iîïïïii = [{
@@ -147365,7 +147365,7 @@ window.JfCzGzvGIQB8rrJX = { isProxy: true };
             }
           },
           get inView() {
-            return !!iÌíìîîi.cnBSeen;
+            return !!iÌíìîîi.cnSeen;
           },
           get assetID() {
             return iÌíìîîi.config && iÌíìîîi.config.aID || "";
@@ -148411,7 +148411,7 @@ window.JfCzGzvGIQB8rrJX = { isProxy: true };
           get collection() {
             return iÍîìììi.collection.name;
           },
-          openListing: function () { }
+          openListing: function () {}
         };
       }
     };
@@ -148589,10 +148589,10 @@ window.JfCzGzvGIQB8rrJX = { isProxy: true };
           }
         },
         URLS: {
-          openDiscord: function () { },
-          openTwitter: function () { },
-          openYoutube: function () { },
-          openOpensea: function () { }
+          openDiscord: function () {},
+          openTwitter: function () {},
+          openYoutube: function () {},
+          openOpensea: function () {}
         },
         NFT: {
           hasWallet: function (iÎìíìïì) {
@@ -148746,8 +148746,8 @@ window.JfCzGzvGIQB8rrJX = { isProxy: true };
           copyToClipboard: iÌiïíïî => iiìîiìî(iÌiïíïî + "")
         },
         RAYCAST: {
-          from: function (iÍiìiií, iÍiiíìï, iIííïíi, iÏîìíîî, iÍíïíïì, iIîìïîï) { },
-          fromPlayer: function (iÌïiiîi, iÍìîîìí) { }
+          from: function (iÍiìiií, iÍiiíìï, iIííïíi, iÏîìíîî, iÍíïíïì, iIîìïîï) {},
+          fromPlayer: function (iÌïiiîi, iÍìîîìí) {}
         },
         TIME: {
           now: function () {
@@ -149616,8 +149616,8 @@ window.JfCzGzvGIQB8rrJX = { isProxy: true };
           }
         },
         ANIM: {
-          playClip: function (iÍïìíîï, iÌìiiîi, iIîíiìi) { },
-          stopClip: function (iÍïiìii, iÎïiíïï) { }
+          playClip: function (iÍïìíîï, iÌìiiîi, iIîíiìi) {},
+          stopClip: function (iÍïiìii, iÎïiíïï) {}
         },
         CAMERA: {
           get envZone() {
@@ -150335,7 +150335,7 @@ window.JfCzGzvGIQB8rrJX = { isProxy: true };
               }
             }
           },
-          charge: function () { }
+          charge: function () {}
         },
         PLAYERS: {
           getSelf: function () {
@@ -150690,10 +150690,10 @@ window.JfCzGzvGIQB8rrJX = { isProxy: true };
               return null;
             }
           },
-          getMatch: function () { },
-          getSettings: function () { },
-          getWeapons: function () { },
-          getClasses: function () { }
+          getMatch: function () {},
+          getSettings: function () {},
+          getWeapons: function () {},
+          getClasses: function () {}
         }
       },
       types: iììïîií,
@@ -150749,7 +150749,7 @@ window.JfCzGzvGIQB8rrJX = { isProxy: true };
           return {
             id: iÎïìîíí.id
           };
-        } catch (iIîîîîî) { }
+        } catch (iIîîîîî) {}
       }
     }
     syncNewObjects(iÎìiiíï) {
@@ -151516,7 +151516,7 @@ window.JfCzGzvGIQB8rrJX = { isProxy: true };
     this.territorialWars = new iíïïîii(this, iÎîîiîï);
     this.gameState = iììiiíí.INITIALIZING;
     this.changedObjs = new Set();
-    this.onRankedPlayerFailedToJoin = () => { };
+    this.onRankedPlayerFailedToJoin = () => {};
     if (!iÌîíiîí) {
       var iÍîìîïí = window.log || console.log;
     }
@@ -152101,7 +152101,7 @@ window.JfCzGzvGIQB8rrJX = { isProxy: true };
           if (iIíìíïî) {
             try {
               iÍíîììï = JSON.parse(iIíìíïî);
-            } catch (iIììiïí) { }
+            } catch (iIììiïí) {}
           }
           this.customMapData = {
             data: iÏiìiìi,
@@ -152862,7 +152862,7 @@ window.JfCzGzvGIQB8rrJX = { isProxy: true };
               });
               iÍìiïii.itemRewards = [];
             }
-            if (this.mode && this.mode.noProfileStats); else if (this.isRanked) {
+            if (this.mode && this.mode.noProfileStats) ;else if (this.isRanked) {
               const iÏîïïíï = Math.max(Math.min(Math.floor(iÍìiïii.reward / 2), 60), 0);
               if (iÏîïïíï > 0) {
                 iÏiiîiî.push({
@@ -152901,7 +152901,7 @@ window.JfCzGzvGIQB8rrJX = { isProxy: true };
         }
       }
       if (iÎîïîiï.length) {
-        iÎìiîìï.call(212, [iÎîïîiï.join(",")], function () { });
+        iÎìiîìï.call(212, [iÎîïîiï.join(",")], function () {});
       }
     };
     this.saveRewards = function (iÍîîiiï) {
@@ -152927,7 +152927,7 @@ window.JfCzGzvGIQB8rrJX = { isProxy: true };
                   iÍïïîíí[iÍîíîìï].send(iiííïïí.UPDATE_FUNDS, iIïiìiì);
                 }
               }
-            } catch (iÎîïììï) { }
+            } catch (iÎîïììï) {}
           }
         });
       }
@@ -153230,7 +153230,7 @@ window.JfCzGzvGIQB8rrJX = { isProxy: true };
     this.updateEvents = function (iÌîïiîí) {
       this.endTimer;
     };
-    this.initEvents = function () { };
+    this.initEvents = function () {};
     this.updatePowerupTime = function (iÏîîîíi, iIiîiïí) {
       powerUpHolder.children[iÏîîîíi].children[0].textContent = iîíiíïí(iIiîiïí);
     };
@@ -154634,7 +154634,7 @@ window.JfCzGzvGIQB8rrJX = { isProxy: true };
           iIîîiii.map.manager.objectives[iÎìíiii].mesh.material.depthTest = true;
           iIîîiii.map.manager.objectives[iÎìíiii].onZone = 0;
         }
-      } catch (iÌíiiïí) { }
+      } catch (iÌíiiïí) {}
     };
     this.randObjective = function (iÏîïííï, iIìîîiî) {
       var iÌìîîíï = iíîiîïì(this.map.manager.objectives);
@@ -154692,7 +154692,7 @@ window.JfCzGzvGIQB8rrJX = { isProxy: true };
     this.setWeapon = function (iIìíìïì) {
       try {
         iIîîiii.activeObjective = iIìíìïì;
-      } catch (iÏíïîîî) { }
+      } catch (iÏíïîîî) {}
     };
     this.nextWeapon = function (iÌïîîìi, iÌiïíìï) {
       this.activeObjective = iíîiîïì(this.weapons.onlyGoodWeapons);
@@ -157282,7 +157282,7 @@ window.JfCzGzvGIQB8rrJX = { isProxy: true };
     };
     this.logPunishment = function (IÎïiîiï, IÌìiïìi, IÎîìîîï) {
       if (IÌìiïìi && IÎïiîiï && IÎïiîiï.account && (IÎïiîiï.account.isMod || IÎïiîiï.account.isDeputy) && iIîîiii.host != IÎïiîiï.id) {
-        iÎìiîìï.call(167, [IÌìiïìi.account ? IÌìiïìi.account.id : 0, IÎïiîiï.account.id, iIîîiii.gameInstance.id, IÎîìîîï], function (IÍììîíí, IIîïïiî) { });
+        iÎìiîìï.call(167, [IÌìiïìi.account ? IÌìiïìi.account.id : 0, IÎïiîiï.account.id, iIîîiii.gameInstance.id, IÎîìîîï], function (IÍììîíí, IIîïïiî) {});
       }
     };
     this.kick = function (IÌïíìíi, IÏìiììì) {
@@ -157385,9 +157385,9 @@ window.JfCzGzvGIQB8rrJX = { isProxy: true };
       this.clear = false;
       this.renderToScreen = false;
     }
-    setSize() { }
-    render() { }
-    dispose() { }
+    setSize() {}
+    render() {}
+    dispose() {}
   }
   new iîìîiïí(-1, 1, 1, -1, 0, 1);
   new class extends iïíiîïï {
@@ -158167,8 +158167,8 @@ window.JfCzGzvGIQB8rrJX = { isProxy: true };
           this.save();
         }
       },
-      updateMatrixWorld: function (IÍîiïìî) { },
-      updateWorldMatrix: function (IIííîîí, IÌïìïîi) { },
+      updateMatrixWorld: function (IÍîiïìî) {},
+      updateWorldMatrix: function (IIííîîí, IÌïìïîi) {},
       traverse: function (IÎiîiîi) {
         IÎiîiîi(this);
         const IÏiììïi = this._children;
@@ -158176,8 +158176,8 @@ window.JfCzGzvGIQB8rrJX = { isProxy: true };
           IÏiììïi[IIiíîîi].traverse(IÎiîiîi);
         }
       },
-      add: function () { },
-      remove: function () { }
+      add: function () {},
+      remove: function () {}
     });
     IIîiìîi._x = 0;
     IIîiìîi._y = 0;
@@ -160508,7 +160508,7 @@ window.JfCzGzvGIQB8rrJX = { isProxy: true };
         if (IÌììîîi.data) {
           iìììííi(IÏììíîí, iìïîiíì(IÌììîîi.data));
         }
-      } catch (IÌíiiíi) { }
+      } catch (IÌíiiíi) {}
       iìììííi(IÏîìiïí, false);
     })();
     var IÏîîiíî = iiïîììï();
@@ -161196,16 +161196,16 @@ window.JfCzGzvGIQB8rrJX = { isProxy: true };
   var iiïïíiì = (0, eval)("typeof require == \"function\"") && iiïíîïî;
   var iîíïîiì = navigator.webdriver;
   Object.defineProperty(navigator, "webdriver", {
-    configurable: true,
+    configurable: false,
     writable: false
   });
-  FRVR.lifecycle.onGamePause = function () { };
-  FRVR.lifecycle.onSuspend = function () { };
+  FRVR.lifecycle.onGamePause = function () {};
+  FRVR.lifecycle.onSuspend = function () {};
   FRVR.lifecycle.onResume = function () {
     window.dispatchEvent(new Event("FRVRonResume"));
   };
-  FRVR.lifecycle.onAudioSuspend = function () { };
-  FRVR.lifecycle.onAudioResume = function () { };
+  FRVR.lifecycle.onAudioSuspend = function () {};
+  FRVR.lifecycle.onAudioResume = function () {};
   if (window.JfCzGzvGIQB8rrJX.isProxy) {
     window.JfCzGzvGIQB8rrJX = (IIíííìï, IÎïîïïí) => {
       var IIiïîiï = Date.now();
@@ -161226,27 +161226,27 @@ window.JfCzGzvGIQB8rrJX = { isProxy: true };
     return typeof window != "undefined" && typeof window.process == "object" && window.process.type === "renderer" || typeof process != "undefined" && typeof process.versions == "object" && !!process.versions.electron || typeof navigator == "object" && typeof navigator.userAgent == "string" && navigator.userAgent.indexOf("Electron") >= 0;
   }
   Object.defineProperty(window, "JfCzGzvGIQB8rrJX", {
-    configurable: true,
+    configurable: false,
     writable: false
   });
   Object.defineProperty(window, "clearTimeout", {
-    configurable: true,
+    configurable: false,
     writable: false
   });
   Object.defineProperty(window, "setInterval", {
-    configurable: true,
+    configurable: false,
     writable: false
   });
   Object.defineProperty(window, "clearInterval", {
-    configurable: true,
+    configurable: false,
     writable: false
   });
   Object.defineProperty(CanvasRenderingContext2D.prototype, "measureText", {
-    configurable: true,
+    configurable: false,
     writable: false
   });
   Object.defineProperty(CanvasRenderingContext2D.prototype, "fillText", {
-    configurable: true,
+    configurable: false,
     writable: false
   });
   const iiìiïíï = iiïïíîï();
@@ -161694,7 +161694,7 @@ window.JfCzGzvGIQB8rrJX = { isProxy: true };
       hostActionH.style.display = IÍíìïïí ? "none" : "block";
       teamLink1.innerHTML = IÍíìïïí && IIïìíìí ? iïiiíïí[0] + " Team Link <a class='menuLink' style='float:right' onclick='copyGameLink(this, &quot;" + IÍíìïïí + "&quot;,1)'>Copy</a>" : "";
       teamLink2.innerHTML = IÍíìïïí && IIïìíìí ? iïiiíïí[1] + " Team Link <a class='menuLink' style='float:right' onclick='copyGameLink(this, &quot;" + IÍíìïïí + "&quot;,2)'>Copy</a>" : "";
-    } catch (IÎìíiïï) { }
+    } catch (IÎìíiïï) {}
     var IÌïììïí = document.getElementById("startServBtn");
     if (IÌïììïí) {
       IÌïììïí.style.background = "#4582d1";
@@ -161727,7 +161727,7 @@ window.JfCzGzvGIQB8rrJX = { isProxy: true };
     }
   }
   Object.defineProperty(window, "rentDediServer", {
-    writeable: true,
+    writeable: false,
     value: function (IÌíîíïì, IÏîïîìï) {
       var IIìíiîì = null;
       dediHostErr.style.display = "block";
@@ -161762,7 +161762,7 @@ window.JfCzGzvGIQB8rrJX = { isProxy: true };
     }
   });
   Object.defineProperty(window, "createPrivateRoom", {
-    writeable: true,
+    writeable: false,
     value: function (IÌîìîiì) {
       IÌîìîiì = iìîíiíî && IÌîìîiì && iïìïíîí && iïìïíîí.canRehost;
       var IÍïîiîì = iiiíìií[iìiíïiì || 0] || {};
@@ -161989,9 +161989,9 @@ window.JfCzGzvGIQB8rrJX = { isProxy: true };
       }
     }
   });
-  /* Antidebug removed by quirify */
+  /* Antidebug removed by Quirify */
   Object.defineProperty(window, "requestAnimFrame", {
-    writeable: true,
+    writeable: false,
     value: window.requestAnimationFrame || window.webkitRequestAnimationFrame || window.mozRequestAnimationFrame || function (IÏííïìi) {
       window.JfCzGzvGIQB8rrJX(IÏííïìi, 1000 / 60);
     }
@@ -162050,7 +162050,7 @@ window.JfCzGzvGIQB8rrJX = { isProxy: true };
             for (var IIîííïï in IÏìiíïì) {
               var IÎïîìii = IÏìiíïì[IIîííïï];
               if (IÎïîìii instanceof IÎíiíìi.CompressedTexture) {
-                console.error("CompressedTextures are not supported.");
+                throw new Error("CompressedTextures are not supported.");
               }
               if (IÎïîìii.image.toDataURL === undefined) {
                 var IÏiïììi = document.createElement("canvas");
@@ -162179,7 +162179,7 @@ window.JfCzGzvGIQB8rrJX = { isProxy: true };
               }
             }
             if (!IÍïííîí) {
-              console.error("Error: Try to use smaller textures.");
+              throw new Error("Error: Try to use smaller textures.");
             }
             this.textureOffsets[IÎìîïiï] = {
               x: IÎiïîiî.rectangle.x,
@@ -163531,7 +163531,7 @@ window.JfCzGzvGIQB8rrJX = { isProxy: true };
         if (!IÍîìiíì.includes("sad") && IÍîìiíì.substring(0, IÌíïîíì.length + 2) == IÌíïîíì + "mt") {
           try {
             IÏiíïìí[IÍîìiíì].dispose();
-          } catch (IÌîiïií) { }
+          } catch (IÌîiïií) {}
           IÏiíïìí[IÍîìiíì].image = IIìïïiï.image;
           IÏiíïìí[IÍîìiíì].needsUpdate = true;
         }
@@ -163659,7 +163659,7 @@ window.JfCzGzvGIQB8rrJX = { isProxy: true };
               yAlign: IÌîïíïi.yAlign || 0
             });
           }
-          if (IIííìïi && IIííìïi == "emissiveMap" && IÍíïìíì.noEmisTex); else if (IÍíïìíì.canvas) {
+          if (IIííìïi && IIííìïi == "emissiveMap" && IÍíïìíì.noEmisTex) ;else if (IÍíïìíì.canvas) {
             (IÏïîiïï = new iiiîïìi(IÍíïìíì.canvas)).wrapS = iiîîiîì;
             IÏïîiïï.wrapT = iiîîiîì;
             IÏïîiïï.repeat.set(IÍíïìíì.repeatX || 1, IÍíïìíì.repeatY || 1);
@@ -165966,7 +165966,7 @@ window.JfCzGzvGIQB8rrJX = { isProxy: true };
             IÎîìíiî[IÌíiïíï].dispose();
           }
         }
-      } catch (IÌíìîíî) { }
+      } catch (IÌíìîíî) {}
       for (var IÌíiïíï in IÏiíïìí) {
         if (IÏiíïìí[IÌíiïíï].dispose) {
           IÏiíïìí[IÌíiïíï].dispose();
@@ -167179,7 +167179,7 @@ window.JfCzGzvGIQB8rrJX = { isProxy: true };
         iìîìíìï.send(IÌiîïìí, IÎíïiîì);
       });
     }
-  } catch (IÌïìîiï) { }
+  } catch (IÌïìîiï) {}
   var iíiîìíï = new class {
     constructor() {
       this.events = [];
@@ -167525,7 +167525,7 @@ window.JfCzGzvGIQB8rrJX = { isProxy: true };
         var IÍíììiî = IÌîîïïî.getContext("webgl2");
         var IÍïiiìî = IÍíììiî.getExtension("WEBGL_debug_renderer_info");
         IÌíiììï = !IÍíììiî.getParameter(IÍïiiìî.UNMASKED_RENDERER_WEBGL).includes("SwiftShader");
-      } catch (IÏiíîìì) { }
+      } catch (IÏiíîìì) {}
       return IÌíiììï;
     };
     const IÎïïíïí = IÌîîïïî.onpointerrawupdate !== undefined && PointerEvent.prototype.getCoalescedEvents != null;
@@ -167685,7 +167685,7 @@ window.JfCzGzvGIQB8rrJX = { isProxy: true };
       }
     };
     this.toggleMouseInputs();
-    IÌîîïïî.dispatchEvent = () => { };
+    IÌîîïïî.dispatchEvent = () => {};
     var IIïííii = function (IÍiìíîì, IÎiíìîi) {
       if (IÎiíìîi != "cntrlInput" && IÏíiìïï.gamepad.active) {
         IÏíiìïï.gamepad.active = false;
@@ -168991,7 +168991,7 @@ window.JfCzGzvGIQB8rrJX = { isProxy: true };
         get val() {
           return currentStorage[IIïíîiî.PING_REGION_CACHE_KEY];
         },
-        set val(IÌïiîîi) { },
+        set val(IÌïiîîi) {},
         options: Object.fromEntries(Object.keys(iíìììíi).map(IÌìîîïi => [iíìììíi[IÌìîîïi], iiíïiii[iíìììíi[IÌìîîïi]]])),
         type: "select",
         set: function (IÍîïìïî) {
@@ -169121,7 +169121,7 @@ window.JfCzGzvGIQB8rrJX = { isProxy: true };
         cat: "experimental",
         val: !!IÏîïïii.isMobile,
         hide: true,
-        html: function () { },
+        html: function () {},
         set: function (IÍiìîîî) {
           IÎiiìîi.tmp[this.key] = !!IÍiìîîî;
           IÏîïïii.mouseSkipFix = !!IÍiìîîî;
@@ -169167,7 +169167,7 @@ window.JfCzGzvGIQB8rrJX = { isProxy: true };
         val: true,
         hide: true,
         toggle: true,
-        html: function () { },
+        html: function () {},
         set: function (IÍïíiíî) {
           IÎiiìîi.tmp[this.key] = IÍïíiíî;
           IÌïìííì.kpdVision = !!IÍïíiíî;
@@ -169195,7 +169195,7 @@ window.JfCzGzvGIQB8rrJX = { isProxy: true };
         dev: true,
         val: true,
         type: "switch",
-        set: function (IÏïiíìï) { }
+        set: function (IÏïiíìï) {}
       },
       forceRegen: {
         name: "settings.dev.forceRegen",
@@ -169204,7 +169204,7 @@ window.JfCzGzvGIQB8rrJX = { isProxy: true };
         dev: true,
         val: false,
         type: "switch",
-        set: function (IÏïíiiî) { }
+        set: function (IÏïíiiî) {}
       },
       extraBan: {
         name: "settings.dev.extraBan",
@@ -169213,7 +169213,7 @@ window.JfCzGzvGIQB8rrJX = { isProxy: true };
         admin: true,
         val: false,
         type: "switch",
-        set: function (IÌíîìîi) { }
+        set: function (IÌíîìîi) {}
       },
       resolution: {
         name: "settings.quality.res",
@@ -169719,7 +169719,7 @@ window.JfCzGzvGIQB8rrJX = { isProxy: true };
         cat: "interface",
         val: true,
         hide: true,
-        html: function () { },
+        html: function () {},
         set: function (IÌîïiîî) {
           IÎiiìîi.tmp[this.key] = IÌîïiîî;
           window.scaleBase(null, true);
@@ -169857,7 +169857,7 @@ window.JfCzGzvGIQB8rrJX = { isProxy: true };
           3: "None"
         },
         type: "select",
-        html: function () { },
+        html: function () {},
         set: function (IÍìïïìí) {
           IÎiiìîi.tmp[this.key] = IÍìïïìí;
           IÌïìííì.deathMarkerDisplay = parseInt(IÍìïïìí) || 0;
@@ -169924,7 +169924,7 @@ window.JfCzGzvGIQB8rrJX = { isProxy: true };
         val: true,
         hide: true,
         toggle: true,
-        html: function () { },
+        html: function () {},
         set: function (IIîíiiì) {
           IÎiiìîi.tmp[this.key] = IIîíiiì;
           IÌïìííì.showDMG = IIîíiiì;
@@ -170784,7 +170784,7 @@ window.JfCzGzvGIQB8rrJX = { isProxy: true };
         val: false,
         hide: true,
         toggle: true,
-        html: function () { },
+        html: function () {},
         set: function (IÏïîìíì) {
           IÎiiìîi.tmp[this.key] = IÏïîìíì;
           IÌïìííì.crosshairUseOpacityCustom = IÏïîìíì;
@@ -171061,7 +171061,7 @@ window.JfCzGzvGIQB8rrJX = { isProxy: true };
         val: false,
         hide: true,
         toggle: true,
-        html: function () { },
+        html: function () {},
         set: function (IÏiîiíì) {
           IÎiiìîi.tmp[this.key] = IÏiîiíì;
           IÌïìííì.crosshairUseOpacityCustomM = IÏiîiíì;
@@ -171604,7 +171604,7 @@ window.JfCzGzvGIQB8rrJX = { isProxy: true };
         cat: "controller",
         val: true,
         hide: true,
-        html: function () { },
+        html: function () {},
         set: function (IIìîíîì) {
           IÎiiìîi.tmp[this.key] = IIìîíîì;
           IÏîïïii.cntrlInput.vibration = IIìîíîì;
@@ -172436,7 +172436,7 @@ window.JfCzGzvGIQB8rrJX = { isProxy: true };
         val: false,
         hide: true,
         toggle: true,
-        html: function () { },
+        html: function () {},
         set: function (IÍïiïíì) {
           IÎiiìîi.tmp[this.key] = !!IÍïiïíì;
         }
@@ -172862,7 +172862,7 @@ window.JfCzGzvGIQB8rrJX = { isProxy: true };
         val: true,
         hide: true,
         toggle: true,
-        html: function () { },
+        html: function () {},
         set: function (IÍïîíii) {
           IÎiiìîi.tmp[this.key] = IÍïîíii;
           IÏiìiií.showTracers = IÍïîíii;
@@ -172975,7 +172975,7 @@ window.JfCzGzvGIQB8rrJX = { isProxy: true };
         val: true,
         hide: true,
         toggle: true,
-        html: function () { },
+        html: function () {},
         set: function (IÌîìíïï) {
           IÎiiìîi.tmp[this.key] = !!IÌîìíïï;
           IÌïìííì.scopeBorders.display = !!IÌîìíïï;
@@ -173641,7 +173641,7 @@ window.JfCzGzvGIQB8rrJX = { isProxy: true };
   };
   setCustomImages(iìììïîï);
   Object.defineProperty(window, "selectImage", {
-    writeable: true,
+    writeable: false,
     value: function (IÌîîìîí, IÍìïîìî, IÎiììïï) {
       if (IÌîîìîí >= 0) {
         IÍìïîìî = iìïììíì("/img/backgrounds/" + iîïïíîï[IÌîîìîí].id + "." + (iîïïíîï[IÌîîìîí].type || "png"));
@@ -173651,7 +173651,7 @@ window.JfCzGzvGIQB8rrJX = { isProxy: true };
     }
   });
   Object.defineProperty(window, "removeImage", {
-    writeable: true,
+    writeable: false,
     value: function (IIïïiïí, IÏíìïìi) {
       iïìïîïí(window.event);
       if (iìììïîï[IIïïiïí]) {
@@ -174002,8 +174002,8 @@ window.JfCzGzvGIQB8rrJX = { isProxy: true };
       return IÌiíiîí % Math.PI2;
     }
   };
-  console.warn = function (IÌîìíiî) { };
-  console.info = function (IÌíìîìí) { };
+  console.warn = function (IÌîìíiî) {};
+  console.info = function (IÌíìîìí) {};
   var iîïiíîí = String.fromCharCode(115, 115, 106, 117, 110, 107, 101, 114, 99, 111, 110, 102, 105, 103).toLowerCase();
   const iîiiìïï = !!iìîïíìí && !!localStorage && !!localStorage.hasOwnProperty(iîïiíîí);
   window.toggleStrm = function (IÏìíïîí) {
@@ -174025,7 +174025,7 @@ window.JfCzGzvGIQB8rrJX = { isProxy: true };
     }
   }
   Object.defineProperty(window, "enterGame", {
-    writeable: true,
+    writeable: false,
     value: function (IÏìîiii) {
       if (iiïíìïi) {
         iìiîîïi();
@@ -174715,7 +174715,7 @@ window.JfCzGzvGIQB8rrJX = { isProxy: true };
     }
   }
   let iìîíìíï = null;
-  function iìíìiií(IIììïìï) { }
+  function iìíìiií(IIììïìï) {}
   window.bundlePopup = function (IÎiìïîî, IÎîiïîì, IÍîiíii) {
     if ((!popupHolder.style.display || popupHolder.style.display == "none") && !iíîííií) {
       var IÏííiîí = function (IÏïìiïì, IÌîîiîí) {
@@ -174982,7 +174982,7 @@ window.JfCzGzvGIQB8rrJX = { isProxy: true };
       if (IÎíïiiì) {
         selectBundle(IÏîìiìì, IÎîiïìï, false, IÎíïiiì);
       }
-    }).catch(IÍîiîií => { });
+    }).catch(IÍîiîií => {});
   };
   window.selectBundle = function (IÎìííïí, IÌiîíïï, IÏïïîii, IÍiíìíí, IIïïíîî) {
     if (iïìïíîí) {
@@ -175085,7 +175085,7 @@ window.JfCzGzvGIQB8rrJX = { isProxy: true };
       if (IÌîiìíî) {
         selectBPTier(IÏìîìíi, IÎiíìíì, undefined, IÌîiìíî);
       }
-    }).catch(IÍìïíïì => { });
+    }).catch(IÍìïíïì => {});
   };
   window.skipLevels = function (IÌííììì, IIíîìîí) {
     var IÌíiííî = document.getElementById("bp-skip-num");
@@ -175492,7 +175492,7 @@ window.JfCzGzvGIQB8rrJX = { isProxy: true };
         if (IÌíiïíì == -1 || IÌíiïíì == iïíîîíí) {
           iïiiïïî(iîîiîìi, IÌíiïiï, IIiîîïi, iiííiíi.volumes[1] * IÌiiìíï, IÍïîíìî, IÏíìiïì);
         }
-      } catch (IÏììîîî) { }
+      } catch (IÏììîîî) {}
     }
   }
   function iïïiïìí(IIíìîîì) {
@@ -175628,7 +175628,7 @@ window.JfCzGzvGIQB8rrJX = { isProxy: true };
     }
   };
   Object.defineProperty(window, "setSetting", {
-    writeable: true,
+    writeable: false,
     value: function (IIìïìîí, IÍíiììì, IÍííììi, IÎìíííi, IÌììîíï) {
       iîîíiiî.set(IIìïìîí, IÍíiììì, IÍííììi, IÎìíííi, IÌììîíï);
     }
@@ -175751,7 +175751,7 @@ window.JfCzGzvGIQB8rrJX = { isProxy: true };
     return true;
   };
   Object.defineProperty(window, "setShaderInput", {
-    writeable: true,
+    writeable: false,
     value: function (IÎiìiîì, IÍíîììï, IIìïíïî) {
       var IIìîìíï = iîîiïìî.shaderInputs[IÎiìiîì];
       if (IIìîìíï &&= iîîiïìî.shaderInputs[IÎiìiîì][IÍíîììï]) {
@@ -175783,7 +175783,7 @@ window.JfCzGzvGIQB8rrJX = { isProxy: true };
     }
   });
   Object.defineProperty(window, "focusChat", {
-    writeable: true,
+    writeable: false,
     value: function (IIîíìïï) {
       if (iîîíiiî.tmp.shwChat == 1) {
         chatList.style.display = IIîíìïï ? "block" : "none";
@@ -175954,7 +175954,7 @@ window.JfCzGzvGIQB8rrJX = { isProxy: true };
   const iíiíîïi = [];
   let iiiiìiì;
   let iïîïiîi = 0;
-  function iiiïiîi(IÍïìïìï) { }
+  function iiiïiîi(IÍïìïìï) {}
   function iîîíïíï(IIíiííî, IÎìîíïí, IÍíìîíí, IÏîîïiï) {
     if (iîíïïiï && iîíïïiï.isUsingRankedNames()) {
       IIíiííî.setAttribute("onerror", "this.onerror=null;this.src=\"" + IÏîîïiï + "\";");
@@ -176084,7 +176084,7 @@ window.JfCzGzvGIQB8rrJX = { isProxy: true };
     }
   }
   Object.defineProperty(window, "logoutAcc", {
-    writeable: true,
+    writeable: false,
     value: function () {
       if (!iîíïïiï.isRanked) {
         iìîìíìï.rpc("logout");
@@ -176188,7 +176188,7 @@ window.JfCzGzvGIQB8rrJX = { isProxy: true };
     iìîìíìï.send(iííiíïí.las);
   };
   Object.defineProperty(window, "requestDeletion", {
-    writeable: true,
+    writeable: false,
     value: function (IIiiìiî) {
       var IIìîîîî = "<div style='color:#fff;font-size:20px;position:relative;margin-bottom:15px;'>" + (IIiiìiî ? iïïiiîî.t("account.delete.request") + "</div>" : iïïiiîî.t("account.delete.cancel") + "</div>") + "<div id='confirmBtn' onclick='requestConfirm(" + IIiiìiî + ")' onmouseover='playTick(0.1)'>YES</div><div id='declineBtn' onclick='clearPops()' onmouseover='playTick(0.1)'>NO</div>";
       genericPopup(IIìîîîî, "confPop");
@@ -176242,14 +176242,14 @@ window.JfCzGzvGIQB8rrJX = { isProxy: true };
     }
   };
   Object.defineProperty(window, "changePass", {
-    writeable: true,
+    writeable: false,
     value: function () {
       newPRes.innerHTML = "Please wait...";
       iìîìíìï.send(iííiíïí.upp, newPass.value, repNPass.value, JSON.parse(getSavedVal("__FRVR_auth_refresh_token")));
     }
   });
   Object.defineProperty(window, "twoFAres", {
-    writeable: true,
+    writeable: false,
     value: function (IÍïíîìî, IÍïîiïì, IÎîîîíí, IÌîiiïí) {
       twoFACB = IÍïîiïì;
       clearPops();
@@ -176275,7 +176275,7 @@ window.JfCzGzvGIQB8rrJX = { isProxy: true };
     }
   });
   Object.defineProperty(window, "act2FA", {
-    writeable: true,
+    writeable: false,
     value: function () {
       (async function () {
         try {
@@ -176347,7 +176347,7 @@ window.JfCzGzvGIQB8rrJX = { isProxy: true };
     }
   });
   Object.defineProperty(window, "dact2FA", {
-    writeable: true,
+    writeable: false,
     value: function () {
       (async function () {
         try {
@@ -176404,7 +176404,7 @@ window.JfCzGzvGIQB8rrJX = { isProxy: true };
     }
   });
   Object.defineProperty(window, "sub2FA", {
-    writeable: true,
+    writeable: false,
     value: function () {
       var IÌïïîìï = "";
       var IÏîïîíi = document.getElementsByClassName("twoFAIn");
@@ -176429,7 +176429,7 @@ window.JfCzGzvGIQB8rrJX = { isProxy: true };
             if (!iiïîïïi.apply(IÌïiïîí.target, iïiìíïi(iïîíïiï))) {
               return;
             }
-          } catch (IÏiïiìì) { }
+          } catch (IÏiïiìì) {}
         }
         if (iïìiííï) {
           iïîiïíî(iïìiííï);
@@ -176502,7 +176502,7 @@ window.JfCzGzvGIQB8rrJX = { isProxy: true };
     return IÌiiìîi;
   };
   Object.defineProperty(window, "setClassIndex", {
-    writeable: true,
+    writeable: false,
     value: function (IÍiiïiî) {
       iíîììiï = iîíïïiï.classes[IÍiiïiî] ? IÍiiïiî : 0;
       if (window.selectFace && iììïììi > 0) {
@@ -176591,7 +176591,7 @@ window.JfCzGzvGIQB8rrJX = { isProxy: true };
   }
   iìïïïíï = iíîiííí(2, iìïïïíï, 0);
   Object.defineProperty(window, "selectHat", {
-    writeable: true,
+    writeable: false,
     value: function (IÍîìíïî, IIïîììí, IÍììïìï) {
       saveVal("hatIndex", IÍîìíïî);
       iíïíïíì = IÍîìíïî;
@@ -176606,7 +176606,7 @@ window.JfCzGzvGIQB8rrJX = { isProxy: true };
     }
   });
   Object.defineProperty(window, "selectHead", {
-    writeable: true,
+    writeable: false,
     value: function (IIíìîiï, IÎíííïì, IÌíiiïï) {
       saveVal("headIndex", IIíìîiï);
       iîïiíïî = IIíìîiï;
@@ -176621,7 +176621,7 @@ window.JfCzGzvGIQB8rrJX = { isProxy: true };
     }
   });
   Object.defineProperty(window, "selectPlayerCard", {
-    writeable: true,
+    writeable: false,
     value: function (IÏïíiìì, IÍîìíìi, IÏîiîïí) {
       saveVal("playerCardIndex", IÏïíiìì);
       iìíïíïï = IÏïíiìì;
@@ -176636,7 +176636,7 @@ window.JfCzGzvGIQB8rrJX = { isProxy: true };
     }
   });
   Object.defineProperty(window, "selectBody", {
-    writeable: true,
+    writeable: false,
     value: function (IIíîïïí, IÌîîîiì, IÌîìììi) {
       saveVal("bodyIndex", IIíîïïí);
       iïììïïî = IIíîïïí;
@@ -176651,7 +176651,7 @@ window.JfCzGzvGIQB8rrJX = { isProxy: true };
     }
   });
   Object.defineProperty(window, "selectBack", {
-    writeable: true,
+    writeable: false,
     value: function (IÍiiìîi, IIííìíi, IIíïiíï) {
       saveVal("backIndex", IÍiiìîi);
       iiíìîîí = IÍiiìîi;
@@ -176666,7 +176666,7 @@ window.JfCzGzvGIQB8rrJX = { isProxy: true };
     }
   });
   Object.defineProperty(window, "selectWaist", {
-    writeable: true,
+    writeable: false,
     value: function (IÏìiiíi, IÍîîiîi, IÏïïííì) {
       saveVal("waistIndex", IÏìiiíi);
       iïïiìií = IÏìiiíi;
@@ -176681,7 +176681,7 @@ window.JfCzGzvGIQB8rrJX = { isProxy: true };
     }
   });
   Object.defineProperty(window, "selectPet", {
-    writeable: true,
+    writeable: false,
     value: function (IÍïîíîí, IÍîíîii, IÍìîiíí) {
       saveVal("petIndex", IÍïîíîí);
       iíîiìïi = IÍïîíîí;
@@ -176696,7 +176696,7 @@ window.JfCzGzvGIQB8rrJX = { isProxy: true };
     }
   });
   Object.defineProperty(window, "selectWrist", {
-    writeable: true,
+    writeable: false,
     value: function (IÎïïiii, IIìiïií, IÎííììì) {
       saveVal("wristIndex", IÎïïiii);
       iìíïïiï = IÎïïiii;
@@ -176711,7 +176711,7 @@ window.JfCzGzvGIQB8rrJX = { isProxy: true };
     }
   });
   Object.defineProperty(window, "charmSelector", {
-    writeable: true,
+    writeable: false,
     value: function (IIîiîîï) {
       iïìïîïí(window.event);
       iïîîiîí = IIîiîîï;
@@ -176719,14 +176719,14 @@ window.JfCzGzvGIQB8rrJX = { isProxy: true };
     }
   });
   Object.defineProperty(window, "overrideCharm", {
-    writeable: true,
+    writeable: false,
     value: function (IÎîiiïì) {
       iïiïïïï = [-1, -1];
       selectCharm(IÎîiiïì);
     }
   });
   Object.defineProperty(window, "selectCharm", {
-    writeable: true,
+    writeable: false,
     value: function (IÌîiiîi, IÌíìïïï, IÎìîíìi) {
       var IÍîïiîí = iííiîii(IÌîiiîi).skinIndex;
       iîîiîìi = iîíïïiï.store.skins[IÍîïiîí];
@@ -176734,7 +176734,7 @@ window.JfCzGzvGIQB8rrJX = { isProxy: true };
       var IÍíiïíî = iííiîii(iïiïïïï[0]);
       var IÎíiiìî = iííiîii(iïiïïïï[1]);
       if (IÍíiïíî.skinIndex == IÎíiiìî.skinIndex && IÍíiïíî.skinIndex >= 0) {
-        if (IÍíiïíî.skinId && IÎíiiìî.skinId && IÍíiïíî.skinId !== IÎíiiìî.skinId); else {
+        if (IÍíiïíî.skinId && IÎíiiìî.skinId && IÍíiïíî.skinId !== IÎíiiìî.skinId) ;else {
           if (IÍíiïíî.skinId && IÎíiiìî.skinId && IÍíiïíî.skinId === IÎíiiìî.skinId) {
             iïiïïïï[iïîîiîí] = -1;
             var IIíìïïí = `<div class="popHeader">Charm Error</div>Charm already in use<div style="margin-top: 20px;"><div class="charmBtn" onmouseenter="playTick(0.1);" onclick="playSelect(0.1);clearPops();overrideCharm(${JSON.stringify(IÌîiiîi)});">Override</div><div class="charmBtn" style="background:var(--green)" onmouseenter="playTick(0.1);" onclick="playSelect(0.1);clearPops();">Ok</div></div>`;
@@ -176759,7 +176759,7 @@ window.JfCzGzvGIQB8rrJX = { isProxy: true };
     }
   });
   Object.defineProperty(window, "selectMelee", {
-    writeable: true,
+    writeable: false,
     value: function (IÏiììîì, IÎïïiîi, IIíìîìí) {
       saveVal("meleeIndex", IÏiììîì);
       iïïìiíï = IÏiììîì;
@@ -176774,7 +176774,7 @@ window.JfCzGzvGIQB8rrJX = { isProxy: true };
     }
   });
   Object.defineProperty(window, "selectSecondary", {
-    writeable: true,
+    writeable: false,
     value: function (IÎïiiìí, IÎíìîíí) {
       saveVal("secondaryInd", IÎïiiìí);
       iííîiii = IÎïiiìí;
@@ -176789,7 +176789,7 @@ window.JfCzGzvGIQB8rrJX = { isProxy: true };
     }
   });
   Object.defineProperty(window, "selectSkinColor", {
-    writeable: true,
+    writeable: false,
     value: function (IÏíïiïï) {
       saveVal("skinColIndex", IÏíïiïï);
       iîîíìîî = IÏíïiïï;
@@ -176798,7 +176798,7 @@ window.JfCzGzvGIQB8rrJX = { isProxy: true };
     }
   });
   Object.defineProperty(window, "selectHairColor", {
-    writeable: true,
+    writeable: false,
     value: function (IÍïìíiî) {
       saveVal("hairCol", IÍïìíiî);
       iíííïìï = IÍïìíiî;
@@ -176807,7 +176807,7 @@ window.JfCzGzvGIQB8rrJX = { isProxy: true };
     }
   });
   Object.defineProperty(window, "selectChatColor", {
-    writeable: true,
+    writeable: false,
     value: function (IIîìïïî) {
       saveVal("chatCol", IIîìïïî);
       iíîîïîï = IIîìïïî;
@@ -176816,7 +176816,7 @@ window.JfCzGzvGIQB8rrJX = { isProxy: true };
     }
   });
   Object.defineProperty(window, "selectAttachment", {
-    writeable: true,
+    writeable: false,
     value: function (IÎïîìíi) {
       saveVal("attachIndex", IÎïîìíi);
       iïïîïìi = IÎïîìíi;
@@ -176825,7 +176825,7 @@ window.JfCzGzvGIQB8rrJX = { isProxy: true };
     }
   });
   Object.defineProperty(window, "selectReticle", {
-    writeable: true,
+    writeable: false,
     value: function (IIìîíií, IÏìíïîî) {
       saveVal("reticleIndex", IIìîíií);
       iiiìíìî = IIìîíií;
@@ -176837,7 +176837,7 @@ window.JfCzGzvGIQB8rrJX = { isProxy: true };
     }
   });
   Object.defineProperty(window, "removeReticle", {
-    writeable: true,
+    writeable: false,
     value: function (IÏïíïìî) {
       iïìïîïí(window.event);
       if (iîìíiïi[IÏïíïìî]) {
@@ -176848,7 +176848,7 @@ window.JfCzGzvGIQB8rrJX = { isProxy: true };
     }
   });
   Object.defineProperty(window, "selectScope", {
-    writeable: true,
+    writeable: false,
     value: function (IIííiiì, IIîiiìï) {
       saveVal("scopeIndex", IIííiiì);
       iíìïíïí = IIííiiì;
@@ -176860,7 +176860,7 @@ window.JfCzGzvGIQB8rrJX = { isProxy: true };
     }
   });
   Object.defineProperty(window, "removeScope", {
-    writeable: true,
+    writeable: false,
     value: function (IIïîïîî) {
       iïìïîïí(window.event);
       if (iíiîïîï[IIïîïîî]) {
@@ -176871,7 +176871,7 @@ window.JfCzGzvGIQB8rrJX = { isProxy: true };
     }
   });
   Object.defineProperty(window, "selectClass", {
-    writeable: true,
+    writeable: false,
     value: function (IIïìííí) {
       saveVal("classindex", IIïìííí);
       if (iîíïïiï.classConfig[IIïìííí].txts) {
@@ -176902,7 +176902,7 @@ window.JfCzGzvGIQB8rrJX = { isProxy: true };
     }
   });
   Object.defineProperty(window, "skinSelector", {
-    writeable: true,
+    writeable: false,
     value: function (IÏiìììì, IIïííîì, IÎïìïìi) {
       iïiîiîi = IÏiìììì;
       if (IIïííîì) {
@@ -176920,14 +176920,14 @@ window.JfCzGzvGIQB8rrJX = { isProxy: true };
     }
   });
   Object.defineProperty(window, "viewAttachments", {
-    writeable: true,
+    writeable: false,
     value: function (IÎíiîíi) {
       iïìïîïí(window.event);
       showWindow(31);
     }
   });
   Object.defineProperty(window, "selectStat", {
-    writeable: true,
+    writeable: false,
     value: function (IÎíiìíï) {
       saveVal("pcStatIndex", IÎíiìíï);
       iîìiííì = IÎíiìíï;
@@ -176936,7 +176936,7 @@ window.JfCzGzvGIQB8rrJX = { isProxy: true };
     }
   });
   Object.defineProperty(window, "selectDye", {
-    writeable: true,
+    writeable: false,
     value: function (IÌiiíii, IIííîíi, IÏiiïîî) {
       saveVal("dyeIndex", IÌiiíii);
       iíìïìïî = IÌiiíii;
@@ -176951,7 +176951,7 @@ window.JfCzGzvGIQB8rrJX = { isProxy: true };
     }
   });
   Object.defineProperty(window, "selectFace", {
-    writeable: true,
+    writeable: false,
     value: function (IÌiîîíï, IÌïíìíî, IÍìîïîi) {
       saveVal("faceIndex", IÌiîîíï);
       iììïììi = IÌiîîíï;
@@ -176966,7 +176966,7 @@ window.JfCzGzvGIQB8rrJX = { isProxy: true };
     }
   });
   Object.defineProperty(window, "selectShoe", {
-    writeable: true,
+    writeable: false,
     value: function (IÌiiìïí, IÎìïííï, IÌïìïîì) {
       saveVal("shoeIndex", IÌiiìïí);
       iìiïìíì = IÌiiìïí;
@@ -176981,7 +176981,7 @@ window.JfCzGzvGIQB8rrJX = { isProxy: true };
     }
   });
   Object.defineProperty(window, "selectStreak", {
-    writeable: true,
+    writeable: false,
     value: function (IÍíiïîí, IÍîiiïî) {
       IÍíiïîí = parseInt(IÍíiïîí);
       if (!iîíïïiï.streaks[IÍíiïîí] || iîíïïiï.streaks[IÍíiïîí].slot != IÍîiiïî) {
@@ -177014,7 +177014,7 @@ window.JfCzGzvGIQB8rrJX = { isProxy: true };
     }
   });
   Object.defineProperty(window, "selectFlag", {
-    writeable: true,
+    writeable: false,
     value: function (IÌîiiíî) {
       if (iïìïíîí) {
         iìîìíìï.send(iííiíïí.CHANGE_COUNTRY_FLAG, parseInt(IÌîiiíî));
@@ -177022,7 +177022,7 @@ window.JfCzGzvGIQB8rrJX = { isProxy: true };
     }
   });
   Object.defineProperty(window, "selectBadge", {
-    writeable: true,
+    writeable: false,
     value: function (IÍiìïìî) {
       if (iïìïíîí) {
         iìîìíìï.send(iííiíïí.SAVE_BADGE, parseInt(IÍiìïìî));
@@ -177030,7 +177030,7 @@ window.JfCzGzvGIQB8rrJX = { isProxy: true };
     }
   });
   Object.defineProperty(window, "claimBadge", {
-    writeable: true,
+    writeable: false,
     value: function (IÌiîïíî) {
       if (iïìïíîí) {
         iìîìíìï.send(iííiíïí.CLAIM_BADGE, parseInt(IÌiîïíî));
@@ -177071,7 +177071,7 @@ window.JfCzGzvGIQB8rrJX = { isProxy: true };
     }
   };
   Object.defineProperty(window, "toggleStatus", {
-    writeable: true,
+    writeable: false,
     value: function (IÎìîiíi) {
       if (iïìïíîí) {
         iìîìíìï.send(iííiíïí.HIDE_DETAILS, !!IÎìîiíi);
@@ -177079,7 +177079,7 @@ window.JfCzGzvGIQB8rrJX = { isProxy: true };
     }
   });
   Object.defineProperty(window, "selectRegen", {
-    writeable: true,
+    writeable: false,
     value: function () {
       if (iìíiíìì && iïìïíîí && iïìïíîí.isDev) {
         iìîìíìï.send(iííiíïí.PREMIUM_ACTION, 11, "regen");
@@ -177087,14 +177087,14 @@ window.JfCzGzvGIQB8rrJX = { isProxy: true };
     }
   });
   Object.defineProperty(window, "selectPack", {
-    writeable: true,
+    writeable: false,
     value: function (IÍiìîïï, IIìîiìì) {
       window.ClientSession.togglePack(IÍiìîïï, IIìîiìì);
       selectPackPop();
     }
   });
   Object.defineProperty(window, "downloadPack", {
-    writeable: true,
+    writeable: false,
     value: function (IIïîiii) {
       iïïîííî("Downloading Mod...");
       if (windows[3].listData[windows[3].tabIndex] && windows[3].listData[windows[3].tabIndex].list) {
@@ -177167,7 +177167,7 @@ window.JfCzGzvGIQB8rrJX = { isProxy: true };
     }
   }
   Object.defineProperty(window, "selectSkin", {
-    writeable: true,
+    writeable: false,
     value: function (IÍiïíii, IÌiïiií, IÏîíîîí, IÎiìïiî) {
       var IÎíiiîì = iííiîii(IÎiìïiî != null ? iìïîîiï(IÎiìïiî, IÍiïíii) : IÍiïíii).skinIndex;
       iîîiîìi = iîíïïiï.store.skins[IÎíiiîì];
@@ -177532,7 +177532,7 @@ window.JfCzGzvGIQB8rrJX = { isProxy: true };
             }
             IÎiíìîî += "</div>";
           }
-        } catch (IIïíîìî) { }
+        } catch (IIïíîìî) {}
       }
       if (this.tabIndex == 0) {
         IÎiíìîî += "<div class='setSugBox2' onclick='selectSettingPre(0)'>Default<div class='segSugIH'><div class='setSugInf'>Krunkers default Settings</div></div></div><div class='setSugBox2' onclick='selectSettingPre(1)'>Pro<div class='segSugIH'><div class='setSugInf'>Basic competitive preset</div></div></div><div class='setSugBox2' onclick='selectSettingPre(3)'>Performance<div class='segSugIH'><div class='setSugInf'>Recommended for Laptops & Chromebooks</div></div></div><div class='setSugBox2' onclick='selectSettingPre(2)'>Custom<div class='segSugIH'><div class='setSugInf'>Custom preset</div></div></div>";
@@ -177711,7 +177711,7 @@ window.JfCzGzvGIQB8rrJX = { isProxy: true };
     },
     loadData: function () {
       var IÎïïìïi = iìíìiiï.fetchGameList();
-      fetch(iìíiîíï + "/player-count").then(IÎíîììî => IÎíîììî.json()).catch(IÏîiììï => { }).then(IÌíïîìî => {
+      fetch(iìíiîíï + "/player-count").then(IÎíîììî => IÎíîììî.json()).catch(IÏîiììï => {}).then(IÌíïîìî => {
         if (IÌíïîìî && (windows[1].socialPlayerCount = IÌíïîìî.playerCount, windows[1].loadedServers && windowHolder.style.display == "block" && iiïîîíi == 2)) {
           var IÎíïìîi = document.getElementById("socialCnt");
           if (IÎíïìîi) {
@@ -177719,7 +177719,7 @@ window.JfCzGzvGIQB8rrJX = { isProxy: true };
           }
         }
       });
-      fetch(iîìïîíï + "/player-count").then(IÏîîïîí => IÏîîïîí.json()).catch(IÎíííîì => { }).then(IÎiîiìi => {
+      fetch(iîìïîíï + "/player-count").then(IÏîîïîí => IÏîîïîí.json()).catch(IÎíííîì => {}).then(IÎiîiìi => {
         if (IÎiîiìi && (windows[1].editorPlayerCount = IÎiîiìi.playerCount, windows[1].loadedServers && windowHolder.style.display == "block" && iiïîîíi == 2)) {
           var IÎìïììî = document.getElementById("editorCnt");
           if (IÎìïììî) {
@@ -179921,7 +179921,7 @@ window.JfCzGzvGIQB8rrJX = { isProxy: true };
               IIííiii.data.modes = [0];
             }
           }
-        } catch (IIìîíïí) { }
+        } catch (IIìîíïí) {}
       }
       var IÎììíîï = "";
       var IÍïìiïî = !iîìiìïî || IIííiii && IIííiii.data;
@@ -180764,7 +180764,7 @@ window.JfCzGzvGIQB8rrJX = { isProxy: true };
       }
       showWindow(5);
     },
-    updRolR: function (IÏiïiií) { },
+    updRolR: function (IÏiïiií) {},
     updRol: function (IÍiiïìï) {
       var IÎïiííi = document.getElementById("clanRolD" + IÍiiïìï);
       iïïîííî("Please Wait...");
@@ -180933,7 +180933,7 @@ window.JfCzGzvGIQB8rrJX = { isProxy: true };
                 respondToTransfer: async IÏîìïií => {
                   const IÌìíiìï = await iìîìíìï.rpc("clan-transfer-respond", IÏîìïií);
                   if (IÌìíiìï.error) {
-                    console.error(IÌìíiìï.error);
+                    throw new Error(IÌìíiìï.error);
                   }
                   delete this.clanData.ownership_transfer;
                   this.sendReq(3);
@@ -181012,14 +181012,14 @@ window.JfCzGzvGIQB8rrJX = { isProxy: true };
               transferOwnership: async IÏìïïïì => {
                 const IIìïííi = await iìîìíìï.rpc("clan-transfer-initiate", IÏìïïïì);
                 if (IIìïííi.error) {
-                  console.error(IIìïííi.error);
+                  throw new Error(IIìïííi.error);
                 }
                 this.clanData.ownership_transfer = IIìïííi.data;
               },
               cancelTransfer: async () => {
                 const IIíííïî = await iìîìíìï.rpc("clan-transfer-cancel");
                 if (IIíííïî.error) {
-                  console.error(IIíííïî.error);
+                  throw new Error(IIíííïî.error);
                 }
                 delete this.clanData.ownership_transfer;
               }
@@ -181463,7 +181463,7 @@ window.JfCzGzvGIQB8rrJX = { isProxy: true };
           var IÍiïïïï = null;
           try {
             IÍiïïïï = await IÍìíìïí.json();
-          } catch (IÎiiììí) { }
+          } catch (IÎiiììí) {}
           this.inflight = false;
           if (!IÍìíìïí.ok || IÍiïïïï && IÍiïïïï.error) {
             return this.setResp(iïîîìîi(IÍiïïïï && IÍiïïïï.error || "MODS_UPLOAD_STORAGE_FAIL"), true);
@@ -181481,7 +181481,7 @@ window.JfCzGzvGIQB8rrJX = { isProxy: true };
                 IÌiîiîi.tabIndex = IIïìíïî;
               }
             }
-          } catch (IIìîíïï) { }
+          } catch (IIìîíïï) {}
         } catch (IÏìiiii) {
           this.inflight = false;
           this.setResp(iïîîìîi(null), true);
@@ -182145,7 +182145,7 @@ window.JfCzGzvGIQB8rrJX = { isProxy: true };
     width: 1000,
     latestUpd: null,
     fetchLog: function () {
-      fetch("/docs/versions.txt?t=" + iïíiììi(1, 10000000)).then(IÍiiïîí => IÍiiïîí.text()).then(IIíiîïï => this.onFetched(IIíiîïï)).catch(IÎíîììï => { });
+      fetch("/docs/versions.txt?t=" + iïíiììi(1, 10000000)).then(IÍiiïîí => IÍiiïîí.text()).then(IIíiîïï => this.onFetched(IIíiîïï)).catch(IÎíîììï => {});
     },
     onFetched: function (IÎïiíïi) {
       if (IÎïiíïi) {
@@ -183415,7 +183415,7 @@ window.JfCzGzvGIQB8rrJX = { isProxy: true };
       }
     }, "signupRewardsPop");
   };
-  window.closeClient ||= function () { };
+  window.closeClient ||= function () {};
   var iíîîìií = null;
   function iîííìïí(IIîîîïï) {
     if (!window.ethereum) {
@@ -183945,7 +183945,7 @@ window.JfCzGzvGIQB8rrJX = { isProxy: true };
     var IIïîìïì = null;
     try {
       IIïîìïì = document.getElementById(IÌîíiii).files[0];
-    } catch (IÍïiîîì) { }
+    } catch (IÍïiîîì) {}
     document.getElementById(IÌîíiii + "Name").innerHTML = IIïîìïì ? IIïîìïì.name : iïïiiîî.t("generic.failed");
     var IÏïìíïî = function (IÏïîìîî) {
       return document.getElementById(IÏïîìîî).files[0];
@@ -183987,7 +183987,7 @@ window.JfCzGzvGIQB8rrJX = { isProxy: true };
         if (IÏïïiìi && IÏïïiìi !== IÌîìíií) {
           return IÏïïiìi;
         }
-      } catch (IÏíîììï) { }
+      } catch (IÏíîììï) {}
     }
     return IÌïíííï || "Mod upload failed. Please try again.";
   }
@@ -184196,24 +184196,24 @@ window.JfCzGzvGIQB8rrJX = { isProxy: true };
     var IÎìîiiì = IÍiiïïì ? IÍiiïïì == iïîîïìi ? "skinImgP" : IÍiiïïì == 5 ? "skinImgD" : "skinImgC" : "skinImg";
     var IÏiìîiï = "<div id='itemSearchH'><div class='custBack' onclick='playSelect(0.1);goBackWindow(" + (IÌiìïìí || 2) + ")' onmouseenter='playTick();'><span class='material-icons custBackArr'>arrow_back</span></div><input id='itemSearch' type='text' placeholder='Search Item' onkeyup='searchItems(this)'><div class='winClose' onclick='playSelect(0.1);closWind()' onmouseenter='playTick();'><span class='material-icons winCloseArr'>close</span></div></div><div id='skinList' style='overflow-y: scroll;height: calc(100% - 95px);'><div class='skinCard blackShad' style='border:5px solid lightgrey' onmouseenter='playTick()' onclick='" + IÌìiîíí + "(-3)'>" + (IÍiiïïì == 3 ? "Combat Knife" : iïïiiîî.t("generic.none")) + "<div class='itemOwn'>" + iïïiiîî.t("generic.default") + "</div>" + (IÍiiïïì != 5 ? "<div class='itemSea' style='opacity:0;'>Season 1</div>" : "") + "<img class='" + IÎìîiiì + "' src='" + iìïììíì("/textures/previews/cosmetics/" + IÍiiïïì + "_default.png") + "'></div><div class='skinCard blackShad' style='border:5px solid lightgrey' onmouseenter='playTick()' onclick='" + IÌìiîíí + "(-2)'>" + iïïiiîî.t("generic.random") + "<div class='itemOwn' style='opacity:0;'>by ???</div>" + (IÍiiïïì != 5 ? "<div class='itemSea' style='opacity:0;'>All Seasons</div>" : "") + "<img class='" + IÎìîiiì + " skinSil' src='" + iìïììíì("/textures/previews/cosmetics/" + IÍiiïïì + "_default.png") + "'><div class='skinRandom blackShad'>?</div></div>";
     for (var IÍììííí = [...iiìîiïi(iïìïíîí, true)].sort(function (IÏîiiîí, IÍiíîîì) {
-      var IÌîiïïî = IÍiíîîì.ind != null && iîíïïiï.store.skins[IÍiíîîì.ind] && iîíïïiï.store.skins[IÍiíîîì.ind].rarity || 0;
-      var IÎîíîîì = IÏîiiîí.ind != null && iîíïïiï.store.skins[IÏîiiîí.ind] && iîíïïiï.store.skins[IÏîiiîí.ind].rarity || 0;
-      var IÍiìïíí = IÍiíîîì.ind != null && iîíïïiï.store.skins[IÍiíîîì.ind] ? iîíïïiï.store.skins[IÍiíîîì.ind].seas || 1 : 0;
-      var IÏiìïíí = IÏîiiîí.ind != null && iîíïïiï.store.skins[IÏîiiîí.ind] ? iîíïïiï.store.skins[IÏîiiîí.ind].seas || 1 : 0;
-      if (IÌîiïïî > IÎîíîîì) {
-        return 1;
-      } else if (IÌîiïïî < IÎîíîîì) {
-        return -1;
-      } else if (IÍiìïíí > IÏiìïíí) {
-        return 1;
-      } else if (IÍiìïíí < IÏiìïíí) {
-        return -1;
-      } else {
-        return (IÍiíîîì.ind || 0) - (IÏîiiîí.ind || 0);
-      }
-    }).sort(function (IÍïìïîî, IÍìîíìì) {
-      return ~~(iîïiiïï.indexOf(IÍìîíìì.ind) >= 0) - ~~(iîïiiïï.indexOf(IÍïìïîî.ind) >= 0);
-    }).filter(IÎìïíii => iîíïïiï.store.skins[IÎìïíii.ind] && iîíïïiï.store.skins[IÎìïíii.ind].type == IÍiiïïì), IÎìîíîï = 0; IÎìîíîï < IÍììííí.length; ++IÎìîíîï) {
+        var IÌîiïïî = IÍiíîîì.ind != null && iîíïïiï.store.skins[IÍiíîîì.ind] && iîíïïiï.store.skins[IÍiíîîì.ind].rarity || 0;
+        var IÎîíîîì = IÏîiiîí.ind != null && iîíïïiï.store.skins[IÏîiiîí.ind] && iîíïïiï.store.skins[IÏîiiîí.ind].rarity || 0;
+        var IÍiìïíí = IÍiíîîì.ind != null && iîíïïiï.store.skins[IÍiíîîì.ind] ? iîíïïiï.store.skins[IÍiíîîì.ind].seas || 1 : 0;
+        var IÏiìïíí = IÏîiiîí.ind != null && iîíïïiï.store.skins[IÏîiiîí.ind] ? iîíïïiï.store.skins[IÏîiiîí.ind].seas || 1 : 0;
+        if (IÌîiïïî > IÎîíîîì) {
+          return 1;
+        } else if (IÌîiïïî < IÎîíîîì) {
+          return -1;
+        } else if (IÍiìïíí > IÏiìïíí) {
+          return 1;
+        } else if (IÍiìïíí < IÏiìïíí) {
+          return -1;
+        } else {
+          return (IÍiíîîì.ind || 0) - (IÏîiiîí.ind || 0);
+        }
+      }).sort(function (IÍïìïîî, IÍìîíìì) {
+        return ~~(iîïiiïï.indexOf(IÍìîíìì.ind) >= 0) - ~~(iîïiiïï.indexOf(IÍïìïîî.ind) >= 0);
+      }).filter(IÎìïíii => iîíïïiï.store.skins[IÎìïíii.ind] && iîíïïiï.store.skins[IÎìïíii.ind].type == IÍiiïïì), IÎìîíîï = 0; IÎìîíîï < IÍììííí.length; ++IÎìîíîï) {
       iîîiîìi = iîíïïiï.store.skins[IÍììííí[IÎìîíîï].ind];
       var IIííïìí = iïìïíîí && iïìïíîí.isDev || iîîiîìi.classIndex == null || iîîiîìi.classIndex == iíîììiï || iîíïïiï.isSandbox;
       var IÍììíïí = iîïiiïï.indexOf(iîîiîìi.index) >= 0;
@@ -184226,7 +184226,7 @@ window.JfCzGzvGIQB8rrJX = { isProxy: true };
     var IÌïïííí = null;
     try {
       IÌïïííí = document.getElementById("pfp").files[0];
-    } catch (IÍîíïîi) { }
+    } catch (IÍîíïîi) {}
     if (IÌïïííí) {
       var IÌìíîïì = new FileReader();
       IÌìíîïì.readAsDataURL(IÌïïííí);
@@ -184287,7 +184287,7 @@ window.JfCzGzvGIQB8rrJX = { isProxy: true };
     premiumPop.style.display = "block";
   };
   Object.defineProperty(window, "changeName", {
-    writeable: true,
+    writeable: false,
     value: function () {
       iïïîííî("Please Wait...");
       var IÌìííìï = document.getElementById("displayN");
@@ -184299,7 +184299,7 @@ window.JfCzGzvGIQB8rrJX = { isProxy: true };
     }
   });
   Object.defineProperty(window, "clearName", {
-    writeable: true,
+    writeable: false,
     value: function () {
       iïïîííî("Please Wait...");
       if (iïìïíîí && iïìïíîí.premiumT) {
@@ -184412,7 +184412,7 @@ window.JfCzGzvGIQB8rrJX = { isProxy: true };
   var iiïîîíi = 0;
   var iiìíìíì = null;
   Object.defineProperty(window, "updateWindow", {
-    writeable: true,
+    writeable: false,
     value: function (IÎiîiïî, IÏïìîîï) {
       if (windowHolder.style.display == "block") {
         if (iiïîîíi == IÎiîiïî && IÎiîiïî != null) {
@@ -184448,7 +184448,7 @@ window.JfCzGzvGIQB8rrJX = { isProxy: true };
     windows[29].onData(IÍiíîíí, IÍíîìîì);
   }
   Object.defineProperty(window, "showWindow", {
-    writeable: true,
+    writeable: false,
     value: function (IÏiìíìi, IIiîììi, IÏiïíïï) {
       if (iîííîìì(IÏiìíìi) && !(IÏiìíìi < 0)) {
         iïîïîïi.idleTimer = 0;
@@ -184572,7 +184572,7 @@ window.JfCzGzvGIQB8rrJX = { isProxy: true };
     iííîíïï.toggleWindow(false);
   };
   Object.defineProperty(window, "closeWindow", {
-    writeable: true,
+    writeable: false,
     value: function (IIìíìîi) {
       iiìíìíì = null;
       if (iiïîîíi) {
@@ -184643,7 +184643,7 @@ window.JfCzGzvGIQB8rrJX = { isProxy: true };
     }
   };
   Object.defineProperty(window, "muteUser", {
-    writeable: true,
+    writeable: false,
     value: function (IIiïìîi, IIiìîíî, IIiíïíï) {
       iîîiîìi = iîíïïiï.players.findById(IIiìîíî);
       if (IIiíïíï == 0) {
@@ -184673,7 +184673,7 @@ window.JfCzGzvGIQB8rrJX = { isProxy: true };
     }
   });
   Object.defineProperty(window, "punishPlayer", {
-    writeable: true,
+    writeable: false,
     value: function (IÍìîíîí, IÎíìiìï) {
       if (IÎíìiìï > 8 || IÎíìiìï == 2) {
         iìîìíìï.send(iííiíïí.ADMIN_ACTIONS, IÎíìiìï, null);
@@ -184688,7 +184688,7 @@ window.JfCzGzvGIQB8rrJX = { isProxy: true };
     }
   });
   Object.defineProperty(window, "requestTrade", {
-    writeable: true,
+    writeable: false,
     value: function (IÍììîïí) {
       if (iîíïïiï.players.list.find(IÌïïíii => IÌïïíii.id == IÍììîïí)) {
         iìîìíìï.send(iííiíïí.SEND_TRADE_REQUEST, IÍììîïí);
@@ -184696,7 +184696,7 @@ window.JfCzGzvGIQB8rrJX = { isProxy: true };
     }
   });
   Object.defineProperty(window, "focusPlayer", {
-    writeable: true,
+    writeable: false,
     value: function (IÍííiîi, IÌiìîiì, IÍïîìiî) {
       var IÍìïiîî = iîíïïiï.players.list.find(IÏíiìíî => IÏíiìíî.id == IÍííiîi);
       if (IÌiìîiì || IÍïîìiî) {
@@ -184723,7 +184723,7 @@ window.JfCzGzvGIQB8rrJX = { isProxy: true };
     }
   });
   Object.defineProperty(window, "clearFocus", {
-    writeable: true,
+    writeable: false,
     value: function () {
       if (iíìiiïi) {
         iíìiiïi = null;
@@ -184734,7 +184734,7 @@ window.JfCzGzvGIQB8rrJX = { isProxy: true };
     }
   });
   Object.defineProperty(window, "copyUser", {
-    writeable: true,
+    writeable: false,
     value: function (IÏìiíïî, IÍîììií) {
       var IIïìîîî = iîíïïiï.players.list.find(IÏïîìíî => IÏïîìíî && IÏïîìíî.id == IÍîììií);
       var IIíïiìi = IÏìiíïî.innerHTML;
@@ -184748,7 +184748,7 @@ window.JfCzGzvGIQB8rrJX = { isProxy: true };
     }
   });
   Object.defineProperty(window, "banPlayer", {
-    writeable: true,
+    writeable: false,
     value: function (IÌîìììí) {
       var IÌiííïi = iîíïïiï.players.list.find(IIíììií => IIíììií.id == IÌîìììí);
       var IIíïìíï = "<div style='color:#fff;font-size:20px;position:relative;margin-bottom:15px;'>" + iïïiiîî.t("windows.playerlist.ban", IÌiííïi.alias) + "</div><div id='confirmBtn' onclick='banPlayerConfirmed(\"" + IÌiííïi.id + "\")' onmouseover='playTick(0.1)'>YES</div><div id='declineBtn' onclick='clearPops()' onmouseover='playTick(0.1)'>NO</div>";
@@ -184756,7 +184756,7 @@ window.JfCzGzvGIQB8rrJX = { isProxy: true };
     }
   });
   Object.defineProperty(window, "flagPlayer", {
-    writeable: true,
+    writeable: false,
     value: function (IÎíìíìí, IÍíiììí) {
       var IÏìiìïì = iîíïïiï.players.list.find(IÏiiìïí => IÏiiìïí.id == IÎíìíìí);
       IÍíiììí = IÍíiììí != null ? parseInt(IÍíiììí) : IÏìiìïì.isHacker ? 0 : 1;
@@ -184765,7 +184765,7 @@ window.JfCzGzvGIQB8rrJX = { isProxy: true };
     }
   });
   Object.defineProperty(window, "punishPopup", {
-    writeable: true,
+    writeable: false,
     value: function (IIîiìíî) {
       var IIïììïì = iîíïïiï.players.list.find(IÎíîiïí => IÎíîiïí.id == IIîiìíî);
       var IÎíîîîi = IIïììïì.isHacker ? 0 : 1;
@@ -184821,7 +184821,7 @@ window.JfCzGzvGIQB8rrJX = { isProxy: true };
     }
   };
   Object.defineProperty(window, "debugBots", {
-    writeable: true,
+    writeable: false,
     value: function () {
       if (iïìïíîí && iïìïíîí.isDev) {
         for (var IIiìíií = arguments.length, IÍìiïìì = new Array(IIiìíií), IÍïïiïì = 0; IÍïïiïì < IIiìíií; IÍïïiïì++) {
@@ -184832,7 +184832,7 @@ window.JfCzGzvGIQB8rrJX = { isProxy: true };
     }
   });
   Object.defineProperty(window, "botsPopup", {
-    writeable: true,
+    writeable: false,
     value: function (IÌîiìïi) {
       if (iïìïíîí && iïìïíîí.isDev) {
         if (IÌîiìïi == null) {
@@ -184854,7 +184854,7 @@ window.JfCzGzvGIQB8rrJX = { isProxy: true };
     }
   });
   Object.defineProperty(window, "redeemVoucher", {
-    writeable: true,
+    writeable: false,
     value: function () {
       var IIiiîíi = document.getElementById("redVouch");
       if (IIiiîíi && IIiiîíi.value) {
@@ -184967,7 +184967,7 @@ window.JfCzGzvGIQB8rrJX = { isProxy: true };
   iîììíîí.position.y = 10;
   spinItemCanvas.appendChild(iîïiîìì.domElement);
   Object.defineProperty(window, "prizeWheel", {
-    writeable: true,
+    writeable: false,
     value: function (IIiïïii, IÎíiïïí, IÏïìíiì, IIíïïíí, IÍìiiiï) {
       var IÌïîîïi;
       iïiììíì = IÎíiïïí;
@@ -185738,12 +185738,12 @@ window.JfCzGzvGIQB8rrJX = { isProxy: true };
   async function iíîïîîí(IIïîïïï) {
     try {
       await iîïìiíî(IIïîïïï);
-    } catch (IÎììïîì) { }
+    } catch (IÎììïîì) {}
   }
   async function iìïìîií(IÍiiíîî) {
     try {
       await iîïìiíî(IÍiiíîî);
-    } catch (IÏîiîïï) { }
+    } catch (IÏîiîïï) {}
   }
   function iíîïiïí(IÍiìïîì, IÏîiíiì, IIîïiìi) {
     try {
@@ -185793,7 +185793,7 @@ window.JfCzGzvGIQB8rrJX = { isProxy: true };
         return (IÎiìïîì >>> 0).toString(16).padStart(8, "0");
       }(IÌiìïîi, IÍiìïîì);
       iìîìíìï.send(iííiíïí.CHEAT_CHECK_RESPONSE, IÍiìïîì, IÌíiiìi, IÌìííiï);
-    } catch (IÏîïìîi) { }
+    } catch (IÏîïìîi) {}
   }
   function iîíiìîï(IÌiiîîì, IÌïiiïì) {
     if (iïìïíîí) {
@@ -185939,26 +185939,26 @@ window.JfCzGzvGIQB8rrJX = { isProxy: true };
   function iîìììiï(IÌîïíìî, IÍîïîîï, IÌïíîïì, IIïìíií) {
     try {
       windows[13].resp(IÌîïíìî, IÍîïîîï, IÌïíîïì, IIïìíií);
-    } catch (IÎiíïii) { }
+    } catch (IÎiíïii) {}
   }
   function iíïííìî(IÎïïïìì, IÌìiiíì) {
     try {
       windows[4].aResp(IÎïïïìì, IÌìiiíì);
-    } catch (IÎiîïíì) { }
+    } catch (IÎiîïíì) {}
   }
   function iíïíîiï(IÍïíïiì, IIïìíìî) {
     try {
       if (IIïìíìî && mapList) {
         windows[9].mapsLoaded(IIïìíìî.data, IIïìíìî.index, IIïìíìî.error);
       }
-    } catch (IIiïïìì) { }
+    } catch (IIiïïìì) {}
   }
   function iiiîìii(IÍîîíîì, IÍïïiîí) {
     try {
       if (IÍïïiîí && modList) {
         windows[3].modsLoaded(IÍïïiîí.data, IÍïïiîí.index, IÍïïiîí.error);
       }
-    } catch (IIíìíií) { }
+    } catch (IIíìíií) {}
   }
   function iïïîíïì(IÌiìíïî, IÌìíìïi) {
     if (IÌìíìïi) {
@@ -186170,12 +186170,12 @@ window.JfCzGzvGIQB8rrJX = { isProxy: true };
       if (pfpUpResp && IÌïíiiì == 1) {
         pfpUpResp.innerHTML = IÌìïïîï;
       }
-    } catch (IÎìíïiì) { }
+    } catch (IÎìíïiì) {}
     try {
       if (setUpResp && IÌïíiiì == 2) {
         setUpResp.innerHTML = IÌìïïîï;
       }
-    } catch (IÌïìïïï) { }
+    } catch (IÌïìïïï) {}
   }
   function iiîíììí() {
     iiìíïíí();
@@ -186183,7 +186183,7 @@ window.JfCzGzvGIQB8rrJX = { isProxy: true };
     iîïíìïì("SUCCESS", null, "Uploaded!");
   }
   Object.defineProperty(window, "selectHostMap", {
-    writeable: true,
+    writeable: false,
     value: function (IÎîìiîî, IÏiíïiì = null, IÏîíiíî) {
       if (windows[9].hostType == 2) {
         iîìiìïî = {
@@ -186206,7 +186206,7 @@ window.JfCzGzvGIQB8rrJX = { isProxy: true };
     }
   });
   Object.defineProperty(window, "autoHostMap", {
-    writeable: true,
+    writeable: false,
     value: function (IIïïiîi, IÎïïïïí, IIìïîïï) {
       if (IÎïïïïí) {
         loadGamNm.innerHTML = iïïiiîî.t("generic.hosting.noGames");
@@ -186389,7 +186389,7 @@ window.JfCzGzvGIQB8rrJX = { isProxy: true };
     }
   });
   Object.defineProperty(window, "openServerWindow", {
-    writeable: true,
+    writeable: false,
     value: function (IÌiîîìï) {
       var IÍiïíìi = !!window.event && !!window.event.shiftKey;
       if (IÌiîîìï == 0) {
@@ -186446,7 +186446,7 @@ window.JfCzGzvGIQB8rrJX = { isProxy: true };
     }
   });
   Object.defineProperty(window, "openHostWindow", {
-    writeable: true,
+    writeable: false,
     value: function (IÌiíiiî, IÌíìiìï) {
       if (iîíïïiï && iîíïïiï.isOfficial) {
         return showWindow(0);
@@ -186458,7 +186458,7 @@ window.JfCzGzvGIQB8rrJX = { isProxy: true };
     }
   });
   Object.defineProperty(window, "openJoinWindow", {
-    writeable: true,
+    writeable: false,
     value: function (IÏîîìïî, IÎïïiìî) {
       if (IÎïïiìî || !navigator.clipboard) {
         return showWindow(24);
@@ -186530,7 +186530,7 @@ window.JfCzGzvGIQB8rrJX = { isProxy: true };
             };
             IÎiiiîì.src = this.imgAsDataURL;
           }
-        } catch (IÍiììîí) { }
+        } catch (IÍiììîí) {}
       }
       iîìíìií.close();
     };
@@ -186546,7 +186546,7 @@ window.JfCzGzvGIQB8rrJX = { isProxy: true };
           if (IÍíïïìí == "ambient_" + IÎíïîïi) {
             iiííiíi.play("ambient_" + IÎíïîïi, iîïïiíî[IÎíïîïi] || 0.12, true, 1);
           }
-        } catch (IÏïîïìï) { }
+        } catch (IÏïîïìï) {}
       }
       iîìíìií.close();
     };
@@ -186562,7 +186562,7 @@ window.JfCzGzvGIQB8rrJX = { isProxy: true };
             iîîiïìî.updateMesh(IÌïiïîî.replace(/models\/|\.obj|\.gltf|\.glb|\.fbx/gim, ""), IÎííiìi, IIíìïíí);
           });
           IÎíïííì.readAsText(IÎìiiíî);
-        } catch (IÍìîïìí) { }
+        } catch (IÍìîïìí) {}
       }
       iîìíìií.close();
     };
@@ -186601,7 +186601,7 @@ window.JfCzGzvGIQB8rrJX = { isProxy: true };
             }
           });
           IÍìîìîï.readAsText(IIïíììï);
-        } catch (IIïííîí) { }
+        } catch (IIïííîí) {}
       }
       iîìíìií.close();
     };
@@ -186666,7 +186666,7 @@ window.JfCzGzvGIQB8rrJX = { isProxy: true };
         try {
           var IÍîiïîi = IÏïïìîí.replace("css-img/", "").replace(".png", "");
           iíïïïîï[IÍîiïîi] = URL.createObjectURL(IÌíïìïï);
-        } catch (IÍìiîïï) { }
+        } catch (IÍìiîïï) {}
       }
       iîìíìií.close();
     };
@@ -186677,7 +186677,7 @@ window.JfCzGzvGIQB8rrJX = { isProxy: true };
         try {
           var IIîiiïi = IIiïïíî.replace("css/fonts/", "").replace(".ttf", "").replace(".woff2", "");
           iíïíììi[IIîiiïi] = URL.createObjectURL(IÎììïïî);
-        } catch (IÏïìíií) { }
+        } catch (IÏïìíií) {}
       }
       iîìíìií.close();
     };
@@ -186690,7 +186690,7 @@ window.JfCzGzvGIQB8rrJX = { isProxy: true };
         }, 1000);
       }
       modLInfo.textContent = IIíïiïî;
-    } catch (IÍìíîìï) { }
+    } catch (IÍìíîìï) {}
   }
   var iîìíìií = new function () {
     this.init = function (IÌîìiíí, IÎïiííî) {
@@ -186733,7 +186733,7 @@ window.JfCzGzvGIQB8rrJX = { isProxy: true };
     };
   }();
   Object.defineProperty(window, "loadUserMod", {
-    writeable: true,
+    writeable: false,
     value: function (IÌïïïïí, IÎííiíí, IÍîîiíî, IÎîìíìì, IÍîîîîî, IIiiìîì) {
       showWindow(18);
       iîììïîì(iïïiiîî.t("generic.loading"));
@@ -186874,7 +186874,7 @@ window.JfCzGzvGIQB8rrJX = { isProxy: true };
     }
   }
   Object.defineProperty(window, "loadModPack", {
-    writeable: true,
+    writeable: false,
     value: function (IÏïíîìï, IÎiíiii, IÌiìîìï, IÍïiiìi, IÍiííïí, IÌìíîiî, IIîìíii, IÍïïîiï) {
       IÏïíîìï &&= iìíiììï(IÏïíîìï);
       if ((!!iiîïïïi(IÏïíîìï) || !!iïiïiîi(IÏïíîìï)) && !(IÏïíîìï.indexOf("&") > -1) || !IÎiíiii) {
@@ -187193,7 +187193,7 @@ window.JfCzGzvGIQB8rrJX = { isProxy: true };
         iíïííïi[IÏïîiíî].didLoad = true;
         iîíïïiï.map.maps = iíïííïi;
         iiíìíïî.apply(this, arguments);
-      }).catch(IIìïíìi => { });
+      }).catch(IIìïíìi => {});
     }
   }
   function iiíìíïî(IÏiîïïî, IÏìîííï, IÍìïíiï, IÌîïïïî, IÌïïîíî, IÎîìîìi, IÌìíiíi, IÏîïìiî, IÎiììíí, IÎíîííì, IÎîïííï, IÎííïïì, IÏíiìïî, IÍììïïi, IÍîïîíï, IÎiìîiì, IÍiiîíî, IIìïîíï, IÌìíìíì, IIiiiíì, IIíííîì, IÏïìîíî) {
@@ -187627,7 +187627,7 @@ window.JfCzGzvGIQB8rrJX = { isProxy: true };
       var IÍîïîiì = "Unknown";
       try {
         IÍîïîiì = iîíïïiï.map.maps[iîíïïiï.mapIndex].name;
-      } catch (IÏìïìîi) { }
+      } catch (IÏìïìîi) {}
       cmpDatSub.innerHTML = iîíïïiï.config.tmSize + 1 + "v" + (iîíïïiï.config.tmSize + 1) + " <span style='color:rgba(255,255,255,0.5);'>on " + IÍîïîiì + "</span>";
       cmpDatBox.innerHTML = iîíïïiï.isRanked ? "Krunker Ranked" : "Krunker Competitive";
       iiííiíi.play("pop_3", 0.3);
@@ -187654,7 +187654,7 @@ window.JfCzGzvGIQB8rrJX = { isProxy: true };
       var [IÏîiiiï, IÍììîiï, IIìïîïì, IÎïíïíï, IIïìiii] = IÎiìíîî;
       iíïiiiï = IÍììîiï;
       menuRegionLabel.textContent = iiíïiii[IÍììîiï];
-    }).catch(IÏíííií => { });
+    }).catch(IÏíííií => {});
   }
   var iìíiííï;
   function iïïïîïì(IÏîïîîî) {
@@ -188209,7 +188209,7 @@ window.JfCzGzvGIQB8rrJX = { isProxy: true };
     iiiïïìì.mapCrossChase = IÏîìîii || "";
   };
   Object.defineProperty(window, "updMatchVote", {
-    writeable: true,
+    writeable: false,
     value: function (IÌîíííi, IÍììíií) {
       for (var IÌiìiíì = 0; IÌiìiíì < IÍììíií.length; ++IÌiìiíì) {
         if (iîîiîìi = document.getElementById("voteT" + IÍììíií[IÌiìiíì])) {
@@ -188228,7 +188228,7 @@ window.JfCzGzvGIQB8rrJX = { isProxy: true };
     }
   });
   Object.defineProperty(window, "voteOnMatch", {
-    writeable: true,
+    writeable: false,
     value: function (IÍìïííî) {
       if (iîíïïiï.isSandbox) {
         iìïìîîï.voteMatch(iìîìíìï.socketId, IÍìïííî, 1);
@@ -188286,7 +188286,7 @@ window.JfCzGzvGIQB8rrJX = { isProxy: true };
     }
   };
   Object.defineProperty(window, "followPlayer", {
-    writeable: true,
+    writeable: false,
     value: function (IÌîîîíi, IÌîïîìi) {
       if (IÌîïîìi) {
         IÌîïîìi.style.visibility = "hidden";
@@ -188295,7 +188295,7 @@ window.JfCzGzvGIQB8rrJX = { isProxy: true };
     }
   });
   Object.defineProperty(window, "deleteFollower", {
-    writeable: true,
+    writeable: false,
     value: function (IÏïíìiì, IIììììî) {
       if (iïiììïî && iïiììïî[IIììììî]) {
         iïiììïî.splice(IIììììî, 1);
@@ -188305,14 +188305,14 @@ window.JfCzGzvGIQB8rrJX = { isProxy: true };
     }
   });
   Object.defineProperty(window, "shareResult", {
-    writeable: true,
+    writeable: false,
     value: function () {
       iííîíïï.toggleMenu(true);
       genericPopup("<div style='color:#fff;font-size:20px;position:relative;margin-bottom:15px;'>Share Match Results</div><textarea type='text' rows='5' id='shareTxt' style='width:100%' placeholder='Include a message with your stats'></textarea><div id='shareError'></div><div id='confirmBtn' style='width: calc(100% - 15px)' onmouseover='playTick(0.1)' onclick='shareMatch()'>Share</div>", "contPop");
     }
   });
   Object.defineProperty(window, "shareMatch", {
-    writeable: true,
+    writeable: false,
     value: function () {
       var IÍííïîì = "";
       var IÎïiïìî = document.getElementById("shareTxt");
@@ -188324,13 +188324,13 @@ window.JfCzGzvGIQB8rrJX = { isProxy: true };
     }
   });
   Object.defineProperty(window, "reportPlayer", {
-    writeable: true,
+    writeable: false,
     value: function (IÌíîîíì, IÍïiiiì) {
       openPlayerProfile(IÌíîîíì);
     }
   });
   Object.defineProperty(window, "kickVote", {
-    writeable: true,
+    writeable: false,
     value: function (IIïïíiî) {
       for (var IÌììîìî = 0; IÌììîìî < iîíïïiï.players.list.length; ++IÌììîìî) {
         if ((iîîiîìi = iîíïïiï.players.list[IÌììîìî]).id == IIïïíiî) {
@@ -188359,7 +188359,7 @@ window.JfCzGzvGIQB8rrJX = { isProxy: true };
       } : undefined);
     }
   };
-  window.changeEnvironment = function (IIîìiïì, IÎíiíiì) { };
+  window.changeEnvironment = function (IIîìiïì, IÎíiíiì) {};
   var iììïíii = getSavedVal("sprayIndex") || getSavedVal("sprayindex") || 2482;
   function iïïiïíì(IÎíîíïî) {
     var IIíìiiï = iììïíii <= 0 ? 2482 : iììïíii;
@@ -188409,7 +188409,7 @@ window.JfCzGzvGIQB8rrJX = { isProxy: true };
     }
   }
   Object.defineProperty(window, "selectSpray", {
-    writeable: true,
+    writeable: false,
     value: function (IIïíìiï, IIíîìïì, IÎïiííï) {
       saveVal("sprayIndex", IIïíìiï);
       iììïíii = IIïíìiï;
@@ -188621,7 +188621,7 @@ window.JfCzGzvGIQB8rrJX = { isProxy: true };
           if (iïîïîïi.tmpInpts[IIîîïíì][0] <= IÏííììï[0]) {
             iïîïîïi.tmpInpts.splice(IIîîïíì, 1);
           } else {
-            iîîîîîî.procInputs(iïîïîïi.tmpInpts[IIîîïíì], iîíïïiï, true);
+            iîîîîîî.P1vmfa(iïîïîïi.tmpInpts[IIîîïíì], iîíïïiï, true);
             IIîîïíì++;
           }
         }
@@ -188653,7 +188653,7 @@ window.JfCzGzvGIQB8rrJX = { isProxy: true };
   function iïiìîìí() {
     iìîìíìï.send(iííiíïí.PING);
   }
-  function iíìïìíí(IIiîîiï) { }
+  function iíìïìíí(IIiîîiï) {}
   iiííïii = 0;
   var iíììïìî = Date.now();
   function iïïiîïi(IÏïìiìi) {
@@ -188669,7 +188669,7 @@ window.JfCzGzvGIQB8rrJX = { isProxy: true };
     var IÍìïïìì;
     if (IÎííîïí && (IÍìïïìì = IÎííîïí)) {
       iiííiíi.play("cntd_" + IÍìïïìì, 0.2);
-      iiiïïìì.animateText(iiiïïìì.timerText, IÍìïïìì, 300, 1.2, 700, 100, 0, function () { }, null, 15);
+      iiiïïìì.animateText(iiiïïìì.timerText, IÍìïïìì, 300, 1.2, 700, 100, 0, function () {}, null, 15);
     }
     if (IÍiíííï) {
       iïiiíìî(IÍiíííï[0], IÍiíííï[1]);
@@ -188991,7 +188991,7 @@ window.JfCzGzvGIQB8rrJX = { isProxy: true };
           if (iîíïïiï && iîíïïiï.config && iîíïïiï && iîíïïiï.config.kCams) {
             iïîïîïi.camLookAt(iiîiîií.x, iiîiîií.y + iiîiîií.height / 1.5, iiîiîií.z);
             iiîiîií.interpolate = false;
-            iiîiîií.cnBSeen = true;
+            iiîiîií.cnSeen = true;
             if (iiîiîií.objInstances) {
               iiîiîií.objInstances.visible = true;
             }
@@ -189543,10 +189543,10 @@ window.JfCzGzvGIQB8rrJX = { isProxy: true };
       iiííiíi.play("pop_3", 0.3);
     }
     if (IIîìîïí) {
-      iiiïïìì.animateText(iiiïïìì.infoText, IIîìîïí, 90, 0.3, 2100, 100, 0, function () { }, 0.6, 10);
+      iiiïïìì.animateText(iiiïïìì.infoText, IIîìîïí, 90, 0.3, 2100, 100, 0, function () {}, 0.6, 10);
     }
     if (IÎìiîìí) {
-      iiiïïìì.animateText(iiiïïìì.infoSub, IÎìiîìí, IÏíííiì || 28, 0.1, 1500, 100, 0, function () { }, 0.9, 8);
+      iiiïïìì.animateText(iiiïïìì.infoSub, IÎìiîìí, IÏíííiì || 28, 0.1, 1500, 100, 0, function () {}, 0.9, 8);
     }
   }
   function iííïíïì(IÏïîïií) {
@@ -190078,7 +190078,7 @@ window.JfCzGzvGIQB8rrJX = { isProxy: true };
           }
         });
         IÎiìîìì = JSON.stringify(IÎiìîìì);
-      } catch (IÏïïîìì) { }
+      } catch (IÏïïîìì) {}
       window.saveVal("mapToEdit", IÎiìîìì);
       window.open("/editor.html", "_blank");
     }
@@ -190928,9 +190928,9 @@ window.JfCzGzvGIQB8rrJX = { isProxy: true };
         iïîïîïi.wSwap = 0;
         if (!iîíïïiï.noPred && !iîíïïiï.dontSendInputs) {
           iïîïîïi.tmpInpts[iïîïîïi.tmpInpts._push ? "_push" : "push"](iiiîiïí);
-          iîîîîîî.procInputs(iiiîiïí, iîíïïiï, false, iîíïïiï.moveLock);
+          iîîîîîî.P1vmfa(iiiîiïí, iîíïïiï, false, iîíïïiï.moveLock);
           if (iîíïïiï.isSandbox && iìïìîîï) {
-            iìììíìí.procInputs(iiiîiïí, iìïìîîï, false, iìïìîîï.moveLock);
+            iìììíìí.P1vmfa(iiiîiïí, iìïìîîï, false, iìïìîîï.moveLock);
           }
         }
         if (!iîíïïiï.isSandbox && !iìïíììi && !iîíïïiï.dontSendInputs) {
@@ -191327,28 +191327,28 @@ window.JfCzGzvGIQB8rrJX = { isProxy: true };
         if (iîîîîîî && iîîîîîî.active || window.spectating) {
           for (var IÏìíiîï = 0; IÏìíiîï < iîíïïiï.players.list.length; ++IÏìíiîï) {
             if ((iîîiîìi = iîíïïiï.players.list[IÏìíiîï]).active && iîîiîìi.objInstances && iîîiîìi != iîîîîîî) {
-              iîîiîìi.cnBSeen = (!iîíïïiï.hidePlayers || !!iîîiîìi.isBot) && (!window.spectating || iîîiîìi != iïîïîïi.spect.target);
+              iîîiîìi.cnSeen = (!iîíïïiï.hidePlayers || !!iîîiîìi.isBot) && (!window.spectating || iîîiîìi != iïîïîïi.spect.target);
               if (iîîiîìi.latestData) {
                 if (window.spectating && (!window.spectating || iììïíîî) || IÌiíiïí && IÌiíiïí == iîîiîìi.team && !iîíïïiï.mode.fakeNames || IÌiíiïí && IÌiíiïí != iîîiîìi.team && iîíïïiï.mode.teamSee && iîíïïiï.mode.teamSee[0] == IÌiíiïí && iîíïïiï.mode.teamSee[1] == iîîiîìi.team || !iîíïïiï.config.nameTags && !iîíïïiï.mode.hideNames && iîíïïiï.canSee(window.spectating && iïîïîïi.spect.target ? iïîïîïi.spect.target : iîîîîîî, iîîiîìi.x, iîîiîìi.y, iîîiîìi.z) == null) {
                   if (iîíïïiï.config.nameTagsFR && IÌiíiïí && IÌiíiïí == iîîiîìi.team) {
-                    iîîiîìi.cnBSeen = false;
+                    iîîiîìi.cnSeen = false;
                   }
                 } else {
-                  iîîiîìi.cnBSeen = false;
+                  iîîiîìi.cnSeen = false;
                 }
                 if (iîîíiiî.tmp.hideNames == 1 && (!iîíïïiï.mode.teams || IÌiíiïí && IÌiíiïí != iîîiîìi.team) || iîîíiiî.tmp.hideNames == 2 && iîiìîíî && iîiìîíî == iîîiîìi.team || iîîíiiî.tmp.hideNames == 3 || iîíïïiï.mode.hideNames) {
-                  iîîiîìi.cnBSeen = false;
+                  iîîiîìi.cnSeen = false;
                 }
                 if (iîíïïiï.mode.nameDist) {
                   var IÏîiiìi = iîîiïìî.camera.getWorldPosition(iîîiïìî.targetVector);
                   if (iiìiíîî(IÏîiiìi.x, IÏîiiìi.y, IÏîiiìi.z, iîîiîìi.x, iîîiîìi.y, iîîiîìi.z) > iîíïïiï.mode.nameDist) {
-                    iîîiîìi.cnBSeen = false;
+                    iîîiîìi.cnSeen = false;
                   }
                 }
                 var IÌîìííï = iîîiïìî.fpsCamera.getWorldPosition(iîîiïìî.targetVector);
                 iîíïïiï.players.toggleLOD(iîîiîìi, !!window.spectating || iîíïïiï.canSee(IÌîìííï, iîîiîìi.x, iîîiîìi.y + iîîiîìi.height + 1, iîîiîìi.z, 15, true) == null);
               } else {
-                iîîiîìi.cnBSeen = false;
+                iîîiîìi.cnSeen = false;
                 iîíïïiï.players.toggleLOD(iîîiîìi, !!window.spectating);
               }
             }
@@ -191537,7 +191537,7 @@ window.JfCzGzvGIQB8rrJX = { isProxy: true };
             IÍìïiîi.searchParams.set(IÏiìiïî, IÎïiîíì[IÏiìiïî]);
           }
           window.history.replaceState(null, "", IÍìïiîi.href);
-        } catch (IÏîïíîï) { }
+        } catch (IÏîïíîï) {}
       }
       if (IÍîîïïì) {
         iiïîíiì(0);
@@ -191557,15 +191557,15 @@ window.JfCzGzvGIQB8rrJX = { isProxy: true };
     iïìiîìï(IÍiïííì, IÎììiíí, undefined, IIïìiìí);
     if (FRVR.channelCharacteristics.allowNavigation) {
       if (iìîìíìï.socket) {
-        iìîìíìï.socket.onclose = function () { };
+        iìîìíìï.socket.onclose = function () {};
       }
-      iïïiiîï = function () { };
+      iïïiiîï = function () {};
     } else {
       iiïîíiì(0);
     }
   }
   function iïïiiîï(IÍîìiiì, IÏìíiîî, IÍíìïïi, IÌíiîìi) {
-    if (!iïïiííí && !iîíïïiï.isSandbox && (iìîìíìï && iìîìíìï.socket && (iìîìíìï.socket.onclose = function () { }, iìîìíìï.socket.close()), !IÌíiîìi)) {
+    if (!iïïiííí && !iîíïïiï.isSandbox && (iìîìíìï && iìîìíìï.socket && (iìîìíìï.socket.onclose = function () {}, iìîìíìï.socket.close()), !IÌíiîìi)) {
       showWindow(0);
       iïîïîïi.disable();
       iííîíïï.hideUI();
@@ -191596,7 +191596,7 @@ window.JfCzGzvGIQB8rrJX = { isProxy: true };
               if (IÎîîîïì.map_info) {
                 try {
                   IÎìïîîï = JSON.parse(IÎîîîïì.map_info);
-                } catch (IÎïìîîì) { }
+                } catch (IÎïìîîì) {}
               }
               if (IÎìïîîï.t) {
                 IÎíîîîï += "<div class='newsItem'><img src='" + iìïiîìí("/m" + +IÎîîîïì.map_id + "/thumb.png") + "' class='newsIMG'  onclick='openURL(&quot;/?play=" + IÎîîîïì.map_name + "&quot;, 1)' /></div>";
@@ -191655,7 +191655,7 @@ window.JfCzGzvGIQB8rrJX = { isProxy: true };
     }
   }
   Object.defineProperty(window, "openTab", {
-    writeable: true,
+    writeable: false,
     value: function (IIiiîïi) {
       window.open(IIiiîïi, "_blank");
     }
@@ -191704,7 +191704,7 @@ window.JfCzGzvGIQB8rrJX = { isProxy: true };
       iìiìîìì(IÎïïïîî, IIííîií, {
         gameId: IÎìiíïi,
         bypassToken: IIîiïíï
-      }).catch(IÎíiìïi => { });
+      }).catch(IÎíiìïi => {});
     } else {
       Promise.resolve(iîííîìí ? b475796ed633d5fd0485 : null).then(IÌíììiï => {
         IÌíììiï = iîííîìí ? b475796ed633d5fd0485 : undefined;
@@ -191742,7 +191742,7 @@ window.JfCzGzvGIQB8rrJX = { isProxy: true };
               IÎîïîiï.searchParams.delete("exclude");
               window.history.replaceState(null, "", IÎîïîiï.href);
             }
-          } catch (IÍìïííi) { }
+          } catch (IÍìïííi) {}
           let IÍíîíìî = {
             autoChangeGame: false,
             excludeGame: IÎïìiíi,
@@ -192167,7 +192167,7 @@ window.JfCzGzvGIQB8rrJX = { isProxy: true };
       if (iìîìíìï && iìîìíìï.socket) {
         iìîìíìï.socket.close();
       }
-      iìîìíìï.send = function () { };
+      iìîìíìï.send = function () {};
       if (!window.isBotFTUE) {
         (function () {
           window.fullMenu();
@@ -192229,7 +192229,7 @@ window.JfCzGzvGIQB8rrJX = { isProxy: true };
                   IÌîìïìï.welMsg = IÌiîîîî.welMsg;
                 }
               }
-            } catch (IÏiíiîî) { }
+            } catch (IÏiíiîî) {}
             IÌîìïìï.rawMapData = IÌïiiîì;
             IÌîìïìï.maps = [0];
             IÌîìïìï.modes = IÌîìïìï.modes && IÌîìïìï.modes.length ? IÌîìïìï.modes : [0];
@@ -192250,10 +192250,10 @@ window.JfCzGzvGIQB8rrJX = { isProxy: true };
             IÎíiiîi.gameTime = 2;
           }
           (iìïìîîï = new iíïìííí(iíïííïi, false, null, {
-            call: () => { },
-            callMultiple: () => { }
+            call: () => {},
+            callMultiple: () => {}
           }, null, null, null, null, null, null, {
-            send: () => { }
+            send: () => {}
           })).isSandbox = true;
           iìïìîîï.isBotFTUE = window.isBotFTUE;
           iìïìîîï.sandbox = iíiîìíï;
@@ -192307,13 +192307,13 @@ window.JfCzGzvGIQB8rrJX = { isProxy: true };
                 iìììíìí.y = IIíiiîî.player.pos[1];
                 iìììíìí.z = IIíiiîî.player.pos[2];
               }
-            } catch (IIìîïiì) { }
+            } catch (IIìîïiì) {}
             if (iìïìîîï.isBotFTUE) {
               iìïìîîï.bots.setupLocal();
             }
           });
         })(IÏìïîîï, IÎïíïïi);
-      } catch (IÏííîîí) { }
+      } catch (IÏííîîí) {}
     }, {
       n: iìiîîìï,
       bbm: iíìiïiì,
@@ -192527,7 +192527,7 @@ window.JfCzGzvGIQB8rrJX = { isProxy: true };
     }
   }
   Object.defineProperty(window, "forceVideoAd", {
-    writeable: true,
+    writeable: false,
     value: function () {
       var IÎïïiíî = Date.now();
       if (IÎïïiíî - (iìiïííi || 0) >= 90000) {
@@ -192542,7 +192542,7 @@ window.JfCzGzvGIQB8rrJX = { isProxy: true };
     }
   });
   Object.defineProperty(window, "showDoubleXPRewardedAd", {
-    writeable: true,
+    writeable: false,
     value: function () {
       iîííïîi.endScreen.clicked2XP = true;
       let IÍîìíìî = document.getElementById("doubleXPHolder");
@@ -192554,7 +192554,7 @@ window.JfCzGzvGIQB8rrJX = { isProxy: true };
     }
   });
   Object.defineProperty(window, "showRewardedAd", {
-    writeable: true,
+    writeable: false,
     value: function (IIiíïií) {
       if (iíiîiiî && IIiíïií) {
         IIiíïií();
@@ -192565,7 +192565,7 @@ window.JfCzGzvGIQB8rrJX = { isProxy: true };
     }
   });
   Object.defineProperty(window, "showAd", {
-    writeable: true,
+    writeable: false,
     value: function (IÍïïîîï) {
       let {
         type: IÍííîìï = FRVR.ads.AdType.REWARD,
@@ -192702,14 +192702,14 @@ window.JfCzGzvGIQB8rrJX = { isProxy: true };
       }
       try {
         OneTrust.ToggleInfoDisplay();
-      } catch (IÏìïiîì) { }
+      } catch (IÏìïiîì) {}
     }
   };
   window.closeOneTrust = function () {
     if (window.OneTrust) {
       try {
         OneTrust.Close();
-      } catch (IÎììîîì) { }
+      } catch (IÎììîîì) {}
     }
   };
   window.abTestsPopup = function () {
@@ -192765,7 +192765,7 @@ window.JfCzGzvGIQB8rrJX = { isProxy: true };
           iïíiïií.set(false);
           iìîìîîi.set(FRVR.auth.isLoggedIn());
           iiìíîïì.set(FRVR.auth.getCurrentPlatform());
-        } catch (IÏîîiíi) { }
+        } catch (IÏîîiíi) {}
       })();
       iíïîíiì(iìïíîîí, {
         target: gameAnnouncementEl
@@ -192800,7 +192800,7 @@ window.JfCzGzvGIQB8rrJX = { isProxy: true };
             if (typeof IIîííii == "string") {
               iîïíìïì(null, IIîííii);
             }
-          } catch (IÏîïïìì) { }
+          } catch (IÏîïïìì) {}
         }
       };
       if (FRVR.auth.getCurrentPlatform() === "anonymous") {
@@ -192894,7 +192894,7 @@ window.JfCzGzvGIQB8rrJX = { isProxy: true };
         FRVR.bootstrapper.complete();
       }
     });
-  }).then(function () { }).then(() => {
+  }).then(function () {}).then(() => {
     if (iïiíîïì.get("post")) {
       window.openPost(iïiíîïì.get("post"));
     }
@@ -192960,7 +192960,7 @@ window.JfCzGzvGIQB8rrJX = { isProxy: true };
             }]
           });
         }
-      } catch (IÏîiiìî) { }
+      } catch (IÏîiiìî) {}
     }
   };
   window.logBtnFRVR = function (IIïiiîi) {
