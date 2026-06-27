@@ -1,4 +1,4 @@
-window.JfCzGzvGIQB8rrJX = { isProxy: true };
+window.JfCzGzvGIQB8rrJX = window.setTimeout; window.JfCzGzvGIQB8rrJX.isProxy = true;
 (function () {
   "use strict";
   var iííîííí = typeof document != "undefined" ? document.currentScript : null;
